@@ -7,3 +7,6 @@
     --font: "Comfortaa", sans-serif;
 }
 
+.footer{
+    background: linear-gradient(var(--secondary-color1), var(--secondary-color2));
+}
