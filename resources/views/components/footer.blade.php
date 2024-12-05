@@ -1,26 +1,27 @@
 <!-- Footer -->
-<footer class=" text-center ">
+<footer class=" text-center footer ">
     <!-- Grid container -->
     <div class="container p-4">
   
       <!-- Section: Social media -->
       <section class="mb-4">
         <!-- Facebook -->
-        <a class="btn btn-primary btn-floating m-1" style="background-color: #3b5998" href="#!" role="button"><i class="fab fa-facebook-f"></i></a>
+        <a class="btn btn-primary btn-floating m-1 rounded-5" style="background-color: #3b5998" href="#!" role="button"><i class="bi bi-facebook"></i></a>
   
         <!-- Twitter -->
-        <a class="btn btn-primary btn-floating m-1" style="background-color: #55acee" href="#!" role="button"></a>
+        <a class="btn btn-primary btn-floating m-1 rounded-5" style="background-color: #55acee" href="#!" role="button"><i class="bi bi-twitter-x"></i></a>
   
         <!-- Google -->
-        <a class="btn btn-primary btn-floating m-1" style="background-color: #dd4b39" href="#!" role="button"></a>
+        <a class="btn btn-primary btn-floating m-1 rounded-5" style="background-color: #dd4b39" href="#!" role="button"><i class="bi bi-google"></i></a>
   
         <!-- Instagram -->
-        <a class="btn btn-primary btn-floating m-1" style="background-color: #ac2bac" href="#!" role="button"></a>
+        <a class="btn btn-primary btn-floating m-1 rounded-5" style="background-color: #ac2bac" href="#!" role="button"><i class="bi bi-instagram"></i></a>
   
         <!-- Linkedin -->
-        <a class="btn btn-primary btn-floating m-1" style="background-color: #0082ca" href="#!" role="button"></a>
+        <a class="btn btn-primary btn-floating m-1 rounded-5" style="background-color: #0082ca" href="#!" role="button"><i class="bi bi-linkedin"></i></a>
+
         <!-- Github -->
-        <a class="btn btn-primary btn-floating m-1" style="background-color: #333333" href="#!" role="button"></a>
+        <a class="btn btn-primary btn-floating m-1 rounded-5" style="background-color: #333333" href="#!" role="button"><i class="bi bi-github"></i></a>
       </section>
       <!-- Section: Social media -->
   
