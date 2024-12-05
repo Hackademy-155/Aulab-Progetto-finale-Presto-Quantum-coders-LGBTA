@@ -7,3 +7,6 @@
     --font: "Comfortaa", sans-serif;
 }
 
+.bg-form{
+    background: linear-gradient(to right, var(--secondary-color1), var(--main-color1));
+}
