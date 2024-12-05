@@ -1,4 +1,9 @@
 <x-layout>
-<h1>Hello world</h1>
+    <header class="header-hero vh-100">
 
+
+
+
+    </header>
+    
 </x-layout>
