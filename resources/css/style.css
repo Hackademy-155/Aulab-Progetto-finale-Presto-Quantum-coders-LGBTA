@@ -6,19 +6,4 @@
     --acc: #FE938C;
     --font: "Comfortaa", sans-serif;
 }
-body{
-    padding: 0px;
-    margin: 0px;
-    font-family: var(--font);
-}
-.navbar-custom{
-    background-color: var(--main-color2);
-}
-.header-hero{
-    background: url('/resources/media/header-hero.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    height: fit-content;
-    
-}
+
