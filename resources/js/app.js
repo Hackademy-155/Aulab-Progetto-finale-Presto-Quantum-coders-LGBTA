@@ -1,3 +1,4 @@
 import './bootstrap';
 import 'bootstrap';
-import 'main.js'
+// import 'bootstrap-icons';
+import './main.js'
