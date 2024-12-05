@@ -18,4 +18,6 @@ class ProductController extends Controller implements HasMiddleware
     public function createPage(){
         return view('products.product-create');
     }
+
+  
 }
