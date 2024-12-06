@@ -1,11 +1,11 @@
-<nav class="navbar navbar-expand-lg p-3 fixed-top">
+<nav class="navbar navbar-expand-lg p-3 fixed-top navBar">
     <div class="container-fluid">
-        
+
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse d-flex justify-content-evenly align-items-center" id="navbarSupportedContent">
+    <div class="collapse navbar-collapse d-md-flex justify-content-md-evenly align-items-md-center" id="navbarSupportedContent">
         <ul class="navbar-nav">
             <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="{{ route('home') }}">Home</a>
@@ -13,14 +13,14 @@
             <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="{{ route('product.index') }}">I nostri prodotti</a>
             </li>
-            
+
             @auth
             <li class="nav-item" aria-current="page">
                 <a class="nav-link active"  href="{{route('product.create')}}">Aggiungi prodotto</a>
             </li>
             @endauth
         </ul>
-        
+
         @guest
         <ul class="navbar-nav ">
             <li class="nav-item dropdown ">
@@ -35,7 +35,7 @@
         </li>
     </ul>
     @endguest
-    
+
     @auth
     <ul class="navbar-nav justify-content-end">
         <li class="nav-item dropdown">

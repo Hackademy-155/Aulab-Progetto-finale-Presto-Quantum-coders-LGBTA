@@ -13,12 +13,26 @@
 }
 
 .navBar{
-    background-color:#9CAFB7;
+    /* background-color:var(--main-color2); */
+    background: linear-gradient(180deg, rgba(156,175,183,0.5914740896358543) 0%, rgba(66,129,164,0) 86%);
+    backdrop-filter: blur(20px);
 }
 
-body{
+body, html{
     background-color: #9CAFB7;
     margin: 0px;
+    transition: 2s;
+    transition-property: all;
+    transition-timing-function: ease;
+    animation-name: opapage;
+    animation-duration: 1s;
+    animation-iteration-count: initial;
+}
+
+
+@keyframes opapage {
+    from { opacity: 0;}
+    to { opacity: 1;}
 }
 
 header{
@@ -26,19 +40,13 @@ header{
     background-size: contain;
     background-position: left;
     background-repeat: no-repeat;
-    
+
 }
 .title-home{
     letter-spacing: 0.5rem;
     color: var(--secondary-color1);
 }
-.buttonHome{
-    margin-top: 50px;
-    border-bottom: 3px solid var(--acc);
-    border-right: 3px solid var(--acc);
-    background-color:var(--secondary-color2);
-    box-shadow: 2px 2px var(--acc);
-}
+
 
 .footer{
     background: linear-gradient(to top, var(--secondary-color1), var(--main-color2));
@@ -72,7 +80,7 @@ a{
     display: none;
     font-size: 3rem;
     color: var(--main-color1);
-    text-shadow: 2px 8px 6px rgba(254,147,140,0.65);
+    text-shadow: 5px 8px 20px black;
 }
 
 /* icone footer colore background */
@@ -95,9 +103,13 @@ a{
     background-color: #333333;
 }
 @media screen and (max-width: 604px ) {
+    .title-home{
+        font-size: 2rem;
+    }
+
     .neu-button{
         display: none;
-    } 
+    }
     .btnphone{
         display: block;
         width: 100%;
