@@ -2,6 +2,9 @@
     <div class="container-fluid">
         <div class="row min-vh-100 justify-content-center align-items-center bg-custom px-5">
             <h1 class="display-1 text-center fw-bold">I nostri prodotti</h1>
+
+
+
             @foreach ($products as $product)
             <div class="col-2">
                 <div class="card mb-3">
@@ -12,6 +15,7 @@
                                 <p>Categoria: {{$categories[$product->category_id]->name}}<p>
                                 <p class="card-text">{{ $product->description }}</p>
                                 <p class="card-text">Prezzo: {{ $product->price }}€</p>
+                                <a href="" class="btn btn-primary">Info</a>
                             </div>
                         </div>
                     </div>

@@ -11,7 +11,7 @@ class ProductCreate extends Component
 {
     #[Validate('required|min:3|max:25')]
     public $title;
-    #[Validate('required')]
+    #[Validate('required|numeric')]
     public $price;
     #[Validate('required|min:10|max:150')]
     public $description;

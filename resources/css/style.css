@@ -7,6 +7,28 @@
     --font: "Comfortaa", sans-serif;
 }
 
+
+*{
+    font-family: var(--font);
+}
+
+.navBar{
+    background-color:#9CAFB7;
+}
+
+body{
+    background-color: #9CAFB7;
+}
+
+header{
+    background-image:url('/public/media/header.png');
+    background-size: contain;
+    background-position: left;
+    background-repeat: no-repeat;
+
+}
+
+
 .footer{
     background: linear-gradient(var(--secondary-color1), var(--secondary-color2));
 }

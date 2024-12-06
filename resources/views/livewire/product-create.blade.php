@@ -4,6 +4,7 @@
         {{session('success')}}
     </div>
     @endif
+    
     <form wire:submit="create" class="shadow p-5 rounded-4 bg-form">
         <h1 class="fw-bold text-center mb-5">Aggiungi il tuo prodotto</h1>
         <div class="mb-3">
@@ -11,9 +12,9 @@
             <input type="text" class="form-control" id="title" wire:model.live.blur="title">
         </div>
         <div class="mb-3">
-            <label for=""></label>
+            <label for="">Categoria</label>
             <select id="category" wire:model="category" class="form-select mb-3">
-                <option label disabled selected>Seleziona la caegoria</option>
+                <option label disabled selected>Seleziona la categoria</option>
                 @foreach ($categories as $category)
                     <option value="{{$category->id}}">{{$category->name}}</option>
                 @endforeach
@@ -21,7 +22,7 @@
         </div>
         <div class="mb-3">
             <label for="price" class="form-label">Prezzo</label>
-            <input type="text" class="form-control" id="price" wire:model.live.blur="price">
+            <input type="number" class="form-control" id="price" wire:model.live.blur="price">
         </div>
         <div class="mb-3">
             <label for="description" class="form-label">Descrizione</label>
