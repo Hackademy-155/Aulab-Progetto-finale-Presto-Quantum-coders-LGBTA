@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg p-3 navBar">
+<nav class="navbar navbar-expand-lg p-3 navBar fixed-top">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">Navbar</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"

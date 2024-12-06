@@ -28,6 +28,13 @@ header{
 
 }
 
+.buttonHome{
+    margin-top: 50px;
+    border-bottom: 3px solid var(--acc);
+    border-right: 3px solid var(--acc);
+    background-color:var(--secondary-color2);
+    box-shadow: 2px 2px var(--acc);
+}
 
 .footer{
     background: linear-gradient(var(--secondary-color1), var(--secondary-color2));

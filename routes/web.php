@@ -11,3 +11,4 @@ Route::get('/', [PublicController::class, 'home']
 // CRUD
 Route::get('/Product/Create', [ProductController::class, 'createPage'])->name('product.create');
 Route::get('Product/index', [ProductController::class, 'index'])->name('product.index');
+Route::get('Product/show/{product}', [ProductController::class, 'show'])->name('product.show');

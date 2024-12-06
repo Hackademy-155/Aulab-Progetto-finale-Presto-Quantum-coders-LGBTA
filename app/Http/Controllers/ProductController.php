@@ -22,8 +22,13 @@ class ProductController extends Controller implements HasMiddleware
 
 
     public function index(){
-        $products = Product::all();
+
+        $products = Product::orderBy('created_at', 'desc')->paginate(6);
         return view('products.product-index', compact('products'));
     }
 
+
+    public function show(Product $product){
+        return view('products.product-show', compact('product'));
+    }
 }
