@@ -9,22 +9,22 @@ use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
 {
-     public $categories = [
-        'Elettronica', 
+    public $categories = [
+        'Elettronica',
         'Abbigliamento',
         'Salute e Benessere',
         'Sport',
         'Giocattoli',
-        'Libri e Riviste',    
+        'Libri e Riviste',
         'Vinili e CD',
         'Giardinaggio',
-        'Accessori',    
+        'Accessori',
         'Motori',
         'Pesca',
         'Videogiochi',
 
 
-     ];
+    ];
     public function run(): void
     {
         foreach ($this->categories as $category) {
@@ -41,5 +41,5 @@ class DatabaseSeeder extends Seeder
 
 
     }
-    
+
 }

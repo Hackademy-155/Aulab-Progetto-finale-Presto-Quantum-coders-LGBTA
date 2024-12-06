@@ -11,8 +11,4 @@ class PublicController extends Controller
         return view('home');
     }
 
-    public function index(){
-        $products = Product::all();
-        return view('products.product-index', compact('products'));
-    }
 }

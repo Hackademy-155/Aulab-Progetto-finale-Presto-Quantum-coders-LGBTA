@@ -11,6 +11,15 @@
             <input type="text" class="form-control" id="title" wire:model.live.blur="title">
         </div>
         <div class="mb-3">
+            <label for=""></label>
+            <select id="category" wire:model="category" class="form-select mb-3">
+                <option label disabled selected>Seleziona la caegoria</option>
+                @foreach ($categories as $category)
+                    <option value="{{$category->id}}">{{$category->name}}</option>
+                @endforeach
+            </select>
+        </div>
+        <div class="mb-3">
             <label for="price" class="form-label">Prezzo</label>
             <input type="text" class="form-control" id="price" wire:model.live.blur="price">
         </div>

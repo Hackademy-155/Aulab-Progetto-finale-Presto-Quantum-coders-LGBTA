@@ -15,14 +15,18 @@ class ProductCreate extends Component
     public $price;
     #[Validate('required|min:10|max:150')]
     public $description;
+    #[Validate('required')]
+    public $category;
+    public $product;
 
     public function create(){
         $this->validate();
 
-        Product::create([
+        $this->product = Product::create([
             'title'=>$this->title,
             'price'=>$this->price,
             'description'=>$this->description,
+            'category_id'=>$this->category,
             'user_id'=>Auth::user()->id
         ]);
         $this->reset();
