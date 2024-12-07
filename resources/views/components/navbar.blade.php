@@ -18,6 +18,20 @@
                 <a class="nav-link active"  href="{{route('product.create')}}">Aggiungi prodotto</a>
             </li>
             @endauth
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Categorie
+                </a>
+                <ul class="dropdown-menu">
+                    @foreach ($categories as $category)
+                        <li>
+                            <a class="dropdown-item" href="{{route('filterByCategory', $category)}}">{{$category->name}}</a>
+                        </li>
+                    @endforeach
+                </ul>
+
+            </li>
         </ul>
 
         @guest
@@ -28,8 +42,8 @@
                 Accedi/Registrati
             </a>
             <ul class="dropdown-menu">
-                <li><a class="dropdown-item active" href="{{route('login')}}">Accedi</a></li>
-                <li><a class="dropdown-item active" href="{{route('register')}}">Registrati</a></li>
+                <li><a class="dropdown-item" href="{{route('login')}}">Accedi</a></li>
+                <li><a class="dropdown-item" href="{{route('register')}}">Registrati</a></li>
             </ul>
         </li>
     </ul>

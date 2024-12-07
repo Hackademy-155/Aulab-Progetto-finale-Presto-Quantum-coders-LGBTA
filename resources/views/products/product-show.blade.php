@@ -1,5 +1,5 @@
 <x-layout>
-  
+
   <div class="container ">
     <div class="row">
       <div class="col-12 mt-5 ">
@@ -7,8 +7,8 @@
       </div>
     </div>
   </div>
-  
-  
+
+
   <div class="container">
     <div class="row justify-content-between align-items-center my-5 bg-body-secondary p-5 rounded-3 shadow">
       <div class="col-4 p-0">
@@ -39,7 +39,7 @@
           </button>
         </div>
       </div>
-      
+
       <div class="col-5 text-center ">
         <p>Descrizione: {{$product->description}}</p>
         <div class="d-flex justify-content-around">
@@ -49,6 +49,6 @@
       </div>
     </div>
   </div>
-  
-  
+
+
 </x-layout>
