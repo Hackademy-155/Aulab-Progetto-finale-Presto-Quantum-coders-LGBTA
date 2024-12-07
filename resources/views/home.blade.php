@@ -28,7 +28,7 @@
                             <div class="col-md-8">
                                 <div class="card-body">
                                     <h5 class="card-title">{{ $product->title }}</h5>
-                                    <p>Categoria: {{$categories[$product->category_id]->name ?? 'Sconosciuta'}}<p>
+                                    <p>Categoria: {{ $product->category->name ?? 'Sconosciuta' }}<p>
                                         <p class="card-text">{{ $product->description }}</p>
                                         <p class="card-text">Prezzo: {{ $product->price }}€</p>
                                         <a href="{{route('product.show', compact('product'))}}" class="neu-button">Info</a>

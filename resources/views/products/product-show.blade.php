@@ -44,7 +44,7 @@
         <p>Descrizione: {{$product->description}}</p>
         <div class="d-flex justify-content-around">
           <p class="small">Prezzo del prodotto: {{$product->price}}$</p>
-          <p class="small">{{{$categories[$product->category_id]->name ?? 'Sconosciuta'}}}</p>
+          <p class="small">{{ $product->category->name ?? 'Sconosciuta' }}</p>
         </div>
       </div>
     </div>

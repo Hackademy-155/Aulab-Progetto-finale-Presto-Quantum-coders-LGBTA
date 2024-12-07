@@ -10,18 +10,18 @@ use Illuminate\Database\Seeder;
 class DatabaseSeeder extends Seeder
 {
     public $categories = [
-        '1'=>'Elettronica',
-        '2'=>'Abbigliamento',
-        '3'=>'Salute e Benessere',
-        '4'=>'Sport',
-        '5'=>'Giocattoli',
-        '6'=>'Libri e Riviste',
-        '7'=>'Vinili e CD',
-        '8'=>'Giardinaggio',
-        '9'=>'Accessori',
-        '10'=>'Motori',
-        '11'=>'Pesca',
-        '12'=>'Videogiochi',
+        'Elettronica',
+        'Abbigliamento',
+        'Salute e Benessere',
+        'Sport',
+        'Giocattoli',
+        'Libri e Riviste',
+        'Vinili e CD',
+        'Giardinaggio',
+        'Accessori',
+        'Motori',
+        'Pesca',
+        'Videogiochi',
 
 
     ];

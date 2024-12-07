@@ -10,24 +10,24 @@
                         <div class="col-md-8">
                             <div class="card-body">
                                 <h5 class="card-title">{{ $product->title }}</h5>
-                                <p>Categoria: {{$categories[$product->category_id]->name ?? 'Sconosciuta'}}<p>
-                                    <p class="card-text">{{ $product->description }}</p>
-                                    <p class="card-text">Prezzo: {{ $product->price }}€</p>
-                                    <a href="{{route('product.show', compact('product'))}}" class="btn btn-primary">Info</a>
-                                </div>
+                                <p>Categoria: {{ $product->category->name ?? 'Sconosciuta' }}</p>
+                                <p class="card-text">{{ $product->description }}</p>
+                                <p class="card-text">Prezzo: {{ $product->price }}€</p>
+                                <a href="{{ route('product.show', compact('product')) }}" class="btn btn-primary">Info</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                @endforeach
-                
             </div>
+            @endforeach
+            
+            
         </div>
-        
-        <div class="d-flex justify-content-center mb-3">
-            <div>
-                {{$products->links()}}
-            </div>
-        </div>   
-    </x-layout>
+    </div>
     
+    <div class="d-flex justify-content-center mb-3">
+        <div>
+            {{$products->links()}}
+        </div>
+    </div>   
+</x-layout>
