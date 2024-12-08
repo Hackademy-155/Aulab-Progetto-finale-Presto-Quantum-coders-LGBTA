@@ -1,10 +1,10 @@
 <div>
     @if (session('success'))
     <div class="alert alert-success">
-        {{session('success')}}
+        {{ session('success') }}
     </div>
     @endif
-    
+
     <form wire:submit="create" class="shadow p-5 rounded-4 bg-form">
         <h1 class="fw-bold text-center mb-5">Aggiungi il tuo prodotto</h1>
         <div class="mb-3">
@@ -12,11 +12,11 @@
             <input type="text" class="form-control" id="title" wire:model.live.blur="title">
         </div>
         <div class="mb-3">
-            <label for="">Categoria</label>
+            <label for="category">Categoria</label>
             <select id="category" wire:model="category" class="form-select mb-3">
-                <option label disabled selected>Seleziona la categoria</option>
+                <option value="" disabled selected>Seleziona la categoria</option>
                 @foreach ($categories as $category)
-                <option value="{{$category->id}}">{{$category->name}}</option>
+                <option value="{{ $category->id }}">{{ $category->name }}</option>
                 @endforeach
             </select>
         </div>
