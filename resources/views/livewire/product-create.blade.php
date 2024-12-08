@@ -68,7 +68,7 @@
 
                 @csrf
 
-                <h2 class="fw-bold text-center mb-5">Aggiungi il tuo prodotto</h2>
+                <h2 class="fw-bold text-center mb-5 title-insert-product">Aggiungi il tuo prodotto</h2>
 
                 <span class="input-span mb-3">
                     <label for="title" class="label">Titolo</label>
@@ -77,11 +77,11 @@
 
                 <span class="input-span mb-3">
                     <label for="category" class="label">Categoria</label>
-                    <select id="category" wire:model="category" class="form-select mb-3">
+                    <select id="category" wire:model="category" class="form-select mb-3 custom-select">
                         <option value="" disabled selected>Seleziona la categoria</option>
 
                         @foreach ($categories as $category)
-                            <option value="{{ $category->id }}">{{ $category->name }}</option>
+                            <option class="custom-option" value="{{ $category->id }}">{{ $category->name }}</option>
                         @endforeach
 
                     </select>
@@ -109,7 +109,7 @@
         
                 @endif
 
-                <button type="submit" class="btn btn-dark">Aggiungi</button>
+                <button type="submit" class="submit">Aggiungi</button>
 
             </form>
 

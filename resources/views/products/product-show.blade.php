@@ -1,14 +1,11 @@
 <x-layout>
-
-  <div class="container ">
+  <div class="container">
     <div class="row">
       <div class="col-12 mt-5 ">
         <h2 class="text-center mt-5"> {{$product->title}} - Dettagli </h2>
       </div>
     </div>
   </div>
-
-
   <div class="container">
     <div class="row justify-content-between align-items-center my-5 bg-body-secondary p-5 rounded-3 shadow">
       <div class="col-4 p-0">
@@ -39,7 +36,6 @@
           </button>
         </div>
       </div>
-
       <div class="col-5 text-center ">
         <p>Descrizione: {{$product->description}}</p>
         <div class="d-flex justify-content-around">
@@ -47,11 +43,8 @@
           <a href="{{route('filterByCategory', $product->category)}}" class="text-black-50">
             <p class="small">{{ $product->category->name ?? 'Sconosciuta' }}</p>
           </a>
-          
         </div>
       </div>
     </div>
   </div>
-
-
 </x-layout>

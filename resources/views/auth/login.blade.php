@@ -33,7 +33,7 @@
 
                     <input class="submit" type="submit" value="Log in" >
 
-                    <span class="span">Non hai un account? <a href="{{route('register')}}">Registrati</a></span>
+                    <span class="span">Non hai un account? <a href="{{route('register')}}" class="text-info"> Registrati</a></span>
                 </form>
 
             </div>
