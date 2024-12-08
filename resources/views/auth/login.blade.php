@@ -9,30 +9,35 @@
     </div>
 
     <div class="container">
-        <div class="row vh-100 justify-content-center align-items-center">
-            <div class="col-6 shadow p-5 rounded-3">
+        <div class="row mb-5 justify-content-center align-items-center">
+            <div class="col-12 col-md-5 p-5">
 
-                <form action="{{route('login')}}" method="POST">
-                    @csrf
+                <form class="form shadow" action="{{route('login')}}" method="POST">
 
-                    <div class="mb-3">
-                      <label for="email" class="form-label">Inserisci la tua mail</label>
-                      <input type="email" class="form-control" id="email" name="email">
-                    </div>
+                  @csrf
 
-                    <div class="mb-3">
-                      <label for="password" class="form-label">Password</label>
-                      <input type="password" class="form-control" id="password" name="password">
-                    </div>
+                    <span class="input-span mb-3">
+                        <label for="email" class="label">Inserisci la tua email</label>
+                        <input type="email" name="email" id="email">
+                      </span>
+
+                    <span class="input-span mb-3">
+                        <label for="password" class="label">Password</label>
+                        <input type="password" name="password" id="password">
+                    </span>
 
                     <div class="mb-3 form-check">
                       <input type="checkbox" class="form-check-input" id="remember" name="remember">
                       <label class="form-check-label" for="remember">Ricordami</label>
                     </div>
-                    <button type="submit" class="btn btn-primary">Invia</button>
-                  </form>
+
+                    <input class="submit" type="submit" value="Log in" >
+
+                    <span class="span">Non hai un account? <a href="{{route('register')}}">Registrati</a></span>
+                </form>
+
             </div>
         </div>
     </div>
-    
+
 </x-layout>

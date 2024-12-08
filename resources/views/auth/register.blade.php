@@ -8,7 +8,7 @@
         </div>
     </div>
 
-    <div class="container">
+    {{-- <div class="container">
         <div class="row vh-100 justify-content-center align-items-center">
             <div class="col-6 shadow p-5 rounded-3">
 
@@ -37,6 +37,44 @@
 
                     <button type="submit" class="btn btn-primary">Invia</button>
                   </form>
+            </div>
+        </div>
+    </div> --}}
+
+
+    <div class="container">
+        <div class="row mb-5 justify-content-center align-items-center">
+            <div class="col-12 col-md-5 p-5">
+
+                <form class="form shadow" action="{{route('register')}}" method="POST">
+
+                  @csrf
+
+                  <span class="input-span mb-3">
+                    <label for="UserName" class="label">Inserisci il tuo username</label>
+                    <input type="text" name="name" id="UserName">
+                  </span>
+
+                    <span class="input-span mb-3">
+                        <label for="email" class="label">Inserisci la tua email</label>
+                        <input type="email" name="email" id="email">
+                      </span>
+
+                    <span class="input-span mb-3">
+                        <label for="password" class="label">Password</label>
+                        <input type="password" name="password" id="password">
+                    </span>
+
+                    <span class="input-span mb-3">
+                        <label for="password_confirmation" class="label">Conferma Password</label>
+                        <input type="password" name="password_confirmation" id="password_confirmation">
+                    </span>
+
+
+                    <button type="submit" class="btn btn-primary">Invia</button>
+
+                </form>
+
             </div>
         </div>
     </div>

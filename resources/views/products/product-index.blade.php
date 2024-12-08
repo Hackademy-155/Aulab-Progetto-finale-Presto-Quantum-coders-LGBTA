@@ -6,21 +6,10 @@
             @foreach ($products as $product)
             <div class="col-4">
                 {{-- card --}}
-                <div class="card mb-3">
-                    <div class="row g-0">
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">{{ $product->title }}</h5>
-                                <a href="{{route('filterByCategory', $product->category)}}" class="text-black">
-                                    <p>Categoria: {{ $product->category->name ?? 'Sconosciuta' }}</p>
-                                </a>
-                                <p class="card-text">{{ $product->description }}</p>
-                                <p class="card-text">Prezzo: {{ $product->price }}€</p>
-                                <a href="{{ route('product.show', compact('product')) }}" class="btn btn-primary">Info</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                
+                <x-card
+                :product='$product'
+                />
             </div>
             @endforeach
             
