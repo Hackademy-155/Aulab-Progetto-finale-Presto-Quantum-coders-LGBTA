@@ -1,5 +1,5 @@
 <a href="{{ route('product.show', compact('product')) }}">
-    <div class="card p-3 ">
+    <div class="card p-3 scale-up-center ">
         <div class="card-content flex-column">
             <h4 class="text-nowrap titleCard pulsate-fwd">{{ $product->title }}</h4>
             <a href="{{ route('filterByCategory', $product->category) }}" class="text-black">

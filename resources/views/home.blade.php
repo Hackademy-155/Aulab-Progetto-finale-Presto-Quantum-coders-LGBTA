@@ -7,7 +7,7 @@
                 </div>
                 <div class="col-12 col-md-6 mt-md-5  text-center">
                     <h1 class="mt-5 fs-title text-center fw-bolder title-home ms-md-2">Presto shop</h1>
-
+                    
                     <button class="neu-button mt-4">
                         <a class="d-none" href="{{ route('product.create') }}"></a>
                         <a href="{{ route('product.create') }}">Inserisci il tuo prodotto</a>
@@ -22,12 +22,12 @@
             <div class="row p-md-5 justify-content-evenly align-items-center">
                 <h4 class="fw-bold display-5 text-center my-5 title-home px-4 px-md-0">Ultimi prodotti aggiunti</h4>
                 @foreach ($products as $product)
-                    <div class="col-10 col-md-4 g-5 d-flex justify-content-center align-items-center">
-                        <x-card :product='$product' />
-                    </div>
+                <div class="col-10 col-md-4 g-5 d-flex justify-content-center align-items-center">
+                    <x-card :product='$product' />
+                </div>
                 @endforeach
             </div>
         </section>
-
+        
     </main>
 </x-layout>

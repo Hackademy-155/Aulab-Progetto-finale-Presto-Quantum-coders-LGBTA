@@ -1,119 +1,73 @@
-<footer class=" text-center footer ">
+<footer class="footer">
   <div class="container p-4">
-    <!-- Sezione: Social media -->
-    <section class="mb-5 mt-5">
-      <!-- Facebook -->
-      <a class="btn btn-primary btn-floating m-1 rounded-pill facebook" href="#!" role="button"><i class="bi bi-facebook"></i></a>
-      
-      <!-- Twitter -->
-      <a class="btn btn-primary btn-floating m-1 rounded-pill x" href="#!" role="button"><i class="bi bi-twitter-x"></i></a>
-      
-      <!-- Google -->
-      <a class="btn btn-primary btn-floating m-1 rounded-pill google" href="#!" role="button"><i class="bi bi-google"></i></a>
-      
-      <!-- Instagram -->
-      <a class="btn btn-primary btn-floating m-1 rounded-pill ig" href="#!" role="button"><i class="bi bi-instagram"></i></a>
-      
-      <!-- Linkedin -->
-      <a class="btn btn-primary btn-floating m-1 rounded-pill linkedin" href="#!" role="button"><i class="bi bi-linkedin"></i></a>
-      
-      <!-- Github -->
-      <a class="btn btn-primary btn-floating m-1 rounded-pill github" href="#!" role="button"><i class="bi bi-github"></i></a>
+    <!-- Social Media Section -->
+    <section class="social-media mb-5 mt-5 text-center">
+      <a class="btn m-1 rounded-circle facebook" href="#!" role="button">
+        <i class="bi bi-facebook text-white"></i>
+      </a>
+      <a class="btn m-1 rounded-circle x" href="#!" role="button">
+        <i class="bi bi-x text-white"></i>
+      </a>
+      <a class="btn m-1 rounded-circle google" href="#!" role="button">
+        <i class="bi bi-google text-white"></i>
+      </a>
+      <a class="btn m-1 rounded-circle ig" href="#!" role="button">
+        <i class="bi bi-instagram text-white"></i>
+      </a>
+      <a class="btn m-1 rounded-circle linkedin" href="#!" role="button">
+        <i class="bi bi-linkedin text-white"></i>
+      </a>
+      <a class="btn m-1 rounded-circle github" href="#!" role="button">
+        <i class="bi bi-github text-white"></i>
+      </a>
     </section>
-    <!-- Sezione: Social media -->
-    <!-- Section: Links -->
-    <section class="">
-      <!--Grid row-->
-      <div class="row">
-        <!--Grid column-->
-        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-          <h5 class="text-uppercase">Links</h5>
-          <ul class="list-unstyled mb-0">
-            <li>
-              <a href="#!" class="text-dark">Link 1</a>
-            </li>
-            <li>
-              <a href="#!" class="text-dark">Link 2</a>
-            </li>
-            <li>
-              <a href="#!" class="text-dark">Link 3</a>
-            </li>
-            <li>
-              <a href="#!" class="text-dark">Link 4</a>
-            </li>
-          </ul>
-        </div>
-        <!--Grid column-->
-        <!--Grid column-->
-        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-          <h5 class="text-uppercase">Links</h5>
-          <ul class="list-unstyled mb-0">
-            <li>
-              <a href="#!" class="text-dark">Link 1</a>
-            </li>
-            <li>
-              <a href="#!" class="text-dark">Link 2</a>
-            </li>
-            <li>
-              <a href="#!" class="text-dark">Link 3</a>
-            </li>
-            <li>
-              <a href="#!" class="text-dark">Link 4</a>
-            </li>
-          </ul>
-        </div>
-        <!--Grid column-->
-        <!--Grid column-->
-        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-          <h5 class="text-uppercase">Links</h5>
-          <ul class="list-unstyled mb-0">
-            <li>
-              <a href="#!" class="text-dark">Link 1</a>
-            </li>
-            <li>
-              <a href="#!" class="text-dark">Link 2</a>
-            </li>
-            <li>
-              <a href="#!" class="text-dark">Link 3</a>
-            </li>
-            <li>
-              <a href="#!" class="text-dark">Link 4</a>
-            </li>
-          </ul>
-        </div>
-        <!--Grid column-->
-        <!--Grid column-->
-        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-          <h5 class="text-uppercase">Links</h5>
-          <ul class="list-unstyled mb-0">
-            <li>
-              <a href="#!" class="text-dark">Link 1</a>
-            </li>
-            <li>
-              <a href="#!" class="text-dark">Link 2</a>
-            </li>
-            <li>
-              <a href="#!" class="text-dark">Link 3</a>
-            </li>
-            <li>
-              <a href="#!" class="text-dark">Link 4</a>
-            </li>
-          </ul>
-        </div>
-        <!--Grid column-->
-      </div>
-      <!--Grid row-->
-    </section>
-    <!-- Section: Links -->
     
+    <!-- Links Section -->
+    <section class="links">
+      <div class="row text-center">
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h5 class="text-uppercase">Company</h5>
+          <ul class="list-unstyled">
+            <li><a href="#!" class="footer-link">About Us</a></li>
+            <li><a href="#!" class="footer-link">Careers</a></li>
+            <li><a href="#!" class="footer-link">Contact</a></li>
+            <li><a href="#!" class="footer-link">Blog</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h5 class="text-uppercase">Support</h5>
+          <ul class="list-unstyled">
+            <li><a href="#!" class="footer-link">Help Center</a></li>
+            <li><a href="#!" class="footer-link">FAQs</a></li>
+            <li><a href="#!" class="footer-link">Terms of Service</a></li>
+            <li><a href="#!" class="footer-link">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h5 class="text-uppercase">Services</h5>
+          <ul class="list-unstyled">
+            <li><a href="#!" class="footer-link">Web Development</a></li>
+            <li><a href="#!" class="footer-link">Marketing</a></li>
+            <li><a href="#!" class="footer-link">Consulting</a></li>
+            <li><a href="#!" class="footer-link">Support</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h5 class="text-uppercase">Social</h5>
+          <ul class="list-unstyled">
+            <li><a href="#!" class="footer-link">Facebook</a></li>
+            <li><a href="#!" class="footer-link">Twitter</a></li>
+            <li><a href="#!" class="footer-link">LinkedIn</a></li>
+            <li><a href="#!" class="footer-link">Instagram</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
   </div>
-  <!-- Grid container -->
   
   <!-- Copyright -->
-  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
     © 2024 Copyright:
-    <a class="text-dark">Quantum-coders</a>
+    <a class="footer-brand" href="#!">Quantum-coders</a>
   </div>
-  <!-- Copyright -->
 </footer>
-<!-- Footer -->
