@@ -191,11 +191,13 @@ a {
 /* dashboard */
 .cardDash {
     width: min-content;
-    background-color: rgba(36, 40, 50, 1);
-    background-image: linear-gradient(90deg,
+    
+    /* background-image: linear-gradient(90deg,
     var(--secondary-color1) 0%,
     var(--main-color1) 0%,
-    var(--main-color2) 100%);
+    var(--main-color2) 100%); */
+    backdrop-filter: blur(10px);
+    background-color: rgba(36, 40, 50, 0.7) var(--main-color2);
 }
 .cardDash .separatorDash {
     border-top: 1.5px solid #42434a;
