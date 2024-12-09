@@ -204,7 +204,7 @@ a {
     list-style-type: none;
     padding: 0px 10px;
 }
-.cardDash .listDash .elementDash {
+.cardDash .listDash > a,.elementDash {
     color: #7e8590;
     gap: 10px;
     transition: all 0.3s ease-out;

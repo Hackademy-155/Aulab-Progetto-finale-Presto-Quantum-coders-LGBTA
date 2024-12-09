@@ -6,6 +6,7 @@
       </div>
     </div>
   </div>
+  
   <div class="container">
     <div class="row justify-content-between align-items-center my-5 bg-body-secondary p-5 rounded-3 shadow">
       <div class="col-4 p-0">

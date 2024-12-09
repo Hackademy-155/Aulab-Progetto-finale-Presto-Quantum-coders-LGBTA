@@ -19,16 +19,17 @@
                 <a class="nav-link active" href="{{ route('product.create') }}">Aggiungi prodotto</a>
             </li>
             @endauth
-            <li class="nav-item dropdown">
+            <li class="nav-item  dropdown ">
                 <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown"
                 aria-expanded="false">
                 Categorie
             </a>
-            <ul class="dropdown-menu">
+            <ul class="dropdown-menu  cardDash">
                 @foreach ($categories as $category)
-                <li>
-                    <a class="dropdown-item"
-                    href="{{ route('filterByCategory', $category) }}">{{ $category->name }}</a>
+                <li class="listDash dropdown-item text-center">
+                    <button class="elementDash btn">
+                        <a class="btn" href="{{ route('filterByCategory', $category) }}">{{ $category->name }}</a>
+                    </button>
                 </li>
                 @endforeach
             </ul>
@@ -43,8 +44,12 @@
             Accedi/Registrati
         </a>
         <ul class="dropdown-menu cardDash">
-            <li><a class="dropdown-item listDash" href="{{ route('login') }}">Accedi</a></li>
-            <li><a class="dropdown-item listDash" href="{{ route('register') }}">Registrati</a></li>
+            <li class="listDash dropdown-item text-center p-0"> 
+                <button class="elementDash btn"><a href="{{ route('login') }}">Accedi</a></button>
+            </li>
+            <li class="listDash dropdown-item text-center p-0">
+                <button class="btn elementDash"><a  href="{{ route('register') }}">Registrati</a></button>
+            </li>
         </ul>
     </li>
 </ul>
