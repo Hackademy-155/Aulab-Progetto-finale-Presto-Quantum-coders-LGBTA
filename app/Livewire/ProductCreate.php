@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Auth;
 
 class ProductCreate extends Component
 {
-    #[Validate('required|min:3|max:25')]
+    #[Validate('required|min:3|max:15')]
     public $title;
     #[Validate('required|numeric')]
     public $price;

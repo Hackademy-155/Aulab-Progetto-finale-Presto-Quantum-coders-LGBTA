@@ -20,7 +20,7 @@
 
 body,
 html {
-    background-color: #9CAFB7;
+    background-color: var(--main-color2);
     margin: 0px;
     transition: 2s;
     transition-property: all;
@@ -116,12 +116,11 @@ a {
 }
 /* card e annunci */
 .card {
-    
     width: 100%;
     background-color: var(--main-color2);
     background-image: linear-gradient(45deg, var(--secondary-color1) 26%, var(--acc) 100%);
     border-radius: 8px;
-    color: white;
+    color: var(--secondary-color2);
     overflow: hidden;
     position: relative;
     transform-style: preserve-3d;
@@ -138,7 +137,8 @@ a {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    color: white;
+    color: var(--secondary-color2);
+    font-weight: bolder;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -339,6 +339,58 @@ a.nav-link.dropdown-toggle:hover {
 .fs-title {
     font-size: 5.5rem;
 }
+
+
+.titleCard{
+    font-weight: bolder;
+    color: var(--secondary-color2);
+    background-image: linear-gradient(45deg, var(--secondary-color2) 26%, var(--acc) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+
+.pulsate-fwd:hover {
+	-webkit-animation: pulsate-fwd 1s ease-in-out infinite both;
+	        animation: pulsate-fwd 1s ease-in-out infinite both;
+}
+
+
+
+@-webkit-keyframes pulsate-fwd {
+    0% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+    50% {
+      -webkit-transform: scale(1.1);
+              transform: scale(1.1);
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+  @keyframes pulsate-fwd {
+    0% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+    50% {
+      -webkit-transform: scale(1.1);
+              transform: scale(1.1);
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+  
+  
+/* Media queries */
+
 @media screen and (max-width: 604px) {
     .title-home {
         font-size: 2rem;
@@ -369,5 +421,9 @@ a.nav-link.dropdown-toggle:hover {
     
     .fs-title {
         font-size: 4rem;
+    }
+
+    .navBar{
+        background-color: var(--main-color2);
     }
 }
