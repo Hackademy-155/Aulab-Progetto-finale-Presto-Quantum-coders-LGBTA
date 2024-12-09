@@ -54,17 +54,10 @@
 
 
 
-<div class="container">
-    <div class="row mb-5 justify-content-center align-items-center">
-        <div class="col-12 p-5 my-5">
-
-            @if (session('success'))
-                <div class="alert alert-success">
-                    {{ session('success') }}
-                </div>
-            @endif
-
-            <form wire:submit="create" class="form shadow">
+<div class="container-fluid">
+    <div class="row mb-5 justify-content-center align-items-center ">
+        <div class=" col-10 col-md-12 d-flex justify-content-center p-0 p-md-5 my-0 my-md-5">
+            <form wire:submit="create" class="form shadow ">
 
                 @csrf
 
@@ -99,14 +92,21 @@
 
                 @if ($errors->any())
 
-                <div class="alert alert-danger">
-                    <ul>
-                        @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                        @endforeach
-                    </ul>
-                </div>
-        
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+
+                @endif
+
+
+                @if (session('success'))
+                    <div class="alert alert-success">
+                        {{ session('success') }}
+                    </div>
                 @endif
 
                 <button type="submit" class="submit">Aggiungi</button>
