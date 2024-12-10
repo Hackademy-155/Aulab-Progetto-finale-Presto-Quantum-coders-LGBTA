@@ -2,26 +2,26 @@
   <div class="container p-4">
     <!-- Social Media Section -->
     <section class="social-media mb-5 mt-5 text-center">
-      <a class="btn m-1 rounded-circle facebook" href="#!" role="button">
+      <a target="blank" class="btn m-1 rounded-circle facebook" href="https://www.facebook.com/" role="button">
         <i class="bi bi-facebook text-white"></i>
       </a>
-      <a class="btn m-1 rounded-circle x" href="#!" role="button">
+      <a target="blank" class="btn m-1 rounded-circle x" href="https://x.com/__x" role="button">
         <i class="bi bi-x text-white"></i>
       </a>
-      <a class="btn m-1 rounded-circle google" href="#!" role="button">
+      <a target="blank" class="btn m-1 rounded-circle google" href="https://www.google.com/" role="button">
         <i class="bi bi-google text-white"></i>
       </a>
-      <a class="btn m-1 rounded-circle ig" href="#!" role="button">
+      <a target="blank" class="btn m-1 rounded-circle ig" href="https://www.instagram.com/" role="button">
         <i class="bi bi-instagram text-white"></i>
       </a>
-      <a class="btn m-1 rounded-circle linkedin" href="#!" role="button">
+      <a target="blank" class="btn m-1 rounded-circle linkedin" href="https://it.linkedin.com/" role="button">
         <i class="bi bi-linkedin text-white"></i>
       </a>
-      <a class="btn m-1 rounded-circle github" href="#!" role="button">
+      <a target="blank" class="btn m-1 rounded-circle github" href="https://github.com/Hackademy-155/Aulab-Progetto-finale-Presto-Quantum-coders-LGBTA" role="button">
         <i class="bi bi-github text-white"></i>
       </a>
     </section>
-    
+
     <!-- Links Section -->
     <section class="links">
       <div class="row text-center">
@@ -64,7 +64,7 @@
       </div>
     </section>
   </div>
-  
+
   <!-- Copyright -->
   <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
     © 2024 Copyright:

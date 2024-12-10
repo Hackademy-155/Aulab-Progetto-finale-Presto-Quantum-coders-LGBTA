@@ -5,9 +5,9 @@
         <h2 class="text-center display-4 fw-bold">{{$product->title}} - Dettagli</h2>
       </div>
     </div>
-    
+
     <div class="row justify-content-between align-items-center my-5 bg-body-secondary p-5 rounded-3 shadow">
-      
+
       <div class="col-12 col-md-5">
         <div id="productCarousel" class="carousel slide shadow rounded overflow-hidden" data-bs-ride="carousel">
           <div class="carousel-inner">
@@ -29,9 +29,9 @@
           </button>
         </div>
       </div>
-      
+
       <div class="col-12 col-md-6 text-center">
-        <p class="description"><strong>Descrizione:</strong> {{$product->description}}</p>
+        <p class="description mt-5 mt-md-0"><strong>Descrizione:</strong> {{$product->description}}</p>
         <div class="d-flex justify-content-around mt-4">
           <p class="small fw-bold">Prezzo: {{$product->price}}$</p>
           <a href="{{route('filterByCategory', $product->category)}}" class="text-decoration-none">
@@ -42,10 +42,6 @@
       </div>
     </div>
   </div>
-  
-  
+
+
 </x-layout>
-
-
-
-
