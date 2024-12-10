@@ -14,7 +14,7 @@
         </div>
     </div>
     <div class="d-flex justify-content-center flex-column align-items-center">
-        <p class="text-white fw-bold">Scorri le Pagine dei prodotti</p>
+        <p class="text-dark fw-bold">Scorri le Pagine dei prodotti</p>
         <div>
             {{ $products->links() }}
         </div>

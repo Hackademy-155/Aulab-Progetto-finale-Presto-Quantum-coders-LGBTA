@@ -18,7 +18,7 @@ class ProductCreate extends Component
     #[Validate('required')]
     public $category = '';
     public $product;
-
+    public $is_accepted;
 
     public function create()
     {
@@ -37,6 +37,12 @@ class ProductCreate extends Component
         return session()->flash('success', 'Prodotto aggiunto con successo');
     }
 
+
+    public function setAccepted($value){
+        $this->is_accepted = $value;
+        $this->save();
+        return true;
+    }
 
     public function render()
     {
