@@ -21,4 +21,9 @@ class Product extends Model
     public static function toBeRevisedCount(){
         return Product::where('is_accepted', null)->count();
     }
+    public function setAccepted($value){
+        $this->is_accepted = $value;
+        $this->save();
+        return true;
+    }
 }
