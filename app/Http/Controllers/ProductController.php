@@ -24,8 +24,8 @@ class ProductController extends Controller implements HasMiddleware
     
     public function index()
     {
-        $products = Product::orderBy('created_at', 'desc')->paginate(6);
-        return view('products.product-index', compact('products'));
+        $products = Product::where('is_accepted', true)->orderBy('created_at', 'desc')->paginate(10);
+        return view ('products.index', compact('products'));
     }
     
     
@@ -35,6 +35,7 @@ class ProductController extends Controller implements HasMiddleware
     }
     
     public function filterByCategory(Category $category){
-        return view('products.byCategory', ['products' => $category->products, 'category' => $category]);
+        $products = $category->products()->where('is_accepted', true);
+        return view('products.byCategory', compact('products','category'));
     }
 }

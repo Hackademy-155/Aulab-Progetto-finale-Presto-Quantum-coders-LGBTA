@@ -61,6 +61,11 @@
             <li><a href="#!" class="footer-link">Instagram</a></li>
           </ul>
         </div>
+        <div class="col-md-5 offset-md-1 mb-3 text-center">
+          <h5>Vuoi lavorare per noi?</h5>
+          <p>Clicca il bottone qui sotto per candidarti</p>
+          <a href="{{route('become.revisor')}}" class="btn btn-outline-success">Diventa Revisore</a>
+        </div>
       </div>
     </section>
   </div>

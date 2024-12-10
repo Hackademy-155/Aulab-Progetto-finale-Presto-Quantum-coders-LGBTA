@@ -15,7 +15,9 @@ Route::get('Product/show/{product}', [ProductController::class, 'show'])->name('
 Route::get('Category/{category}', [ProductController::class, 'filterbyCategory'])->name('filterByCategory');
 
 //REVISOR
-Route::get('/revisor/index', [RevisorController::class, 'index'])->name('revisor.index');
+Route::get('/revisor/index', [RevisorController::class, 'index'])->middleware('isRevisor')->name('revisor.index');
 
 Route::patch('/accept/{product}', [RevisorController::class, 'accept'])->name('accept.product');
 Route::patch('/reject/{product}', [RevisorController::class, 'reject'])->name('reject.product');
+Route::get('/revisor/request', [Revisorcontroller::class, 'becomeRevisor'])->middleware('auth')->name('become.revisor');
+Route::get('/make/revisor/{user}', [RevisorController::class, 'makeRevisor'])->name('make.revisor');
