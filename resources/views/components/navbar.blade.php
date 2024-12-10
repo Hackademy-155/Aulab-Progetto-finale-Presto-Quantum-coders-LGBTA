@@ -23,12 +23,12 @@
                 aria-expanded="false">
                 <i class="bi bi-tags"></i>Categorie
             </a>
-            <ul class="dropdown-menu cardDash">
+            <ul class="dropdown-menu dropdown-custom">
 
                 @foreach ($categories as $category)
-                <li class="listDash dropdown-item text-center">
-                    <button class="elementDash btn">
-                        <a class="btn"
+                <li class="text-center">
+                    <button class="btn w-100">
+                        <a class="btn dropdown-btn w-100"
                         href="{{ route('filterByCategory', $category) }}">{{ $category->name }}</a>
                     </button>
                 </li>
@@ -39,17 +39,17 @@
         </li>
     </ul>
     <ul class="navbar-nav">
-        <li class="nav-item dropdown cardDash px-3">
-            <a class="nav-link dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown"
+        <li class="nav-item dropdown  px-3">
+            <a class="nav-link dropdown-toggle d-flex align-items-center justify-content-center gap-2" href="#" role="button" data-bs-toggle="dropdown"
             aria-expanded="false">
             Accedi/Registrati
         </a>
-        <ul class="dropdown-menu cardDash">
-            <li class="listDash dropdown-item text-center p-0">
-                <button class="elementDash btn"><a href="{{ route('login') }}">Accedi</a></button>
+        <ul class="dropdown-menu dropdown-custom">
+            <li class=" text-center p-0">
+                <button class=" btn"><a class="btn dropdown-btn" href="{{ route('login') }}">Accedi</a></button>
             </li>
-            <li class="listDash dropdown-item text-center p-0">
-                <button class="btn elementDash"><a href="{{ route('register') }}">Registrati</a></button>
+            <li class=" text-center p-0">
+                <button class="btn "><a class="btn dropdown-btn" href="{{ route('register') }}">Registrati</a></button>
             </li>
         </ul>
     </li>
@@ -88,12 +88,12 @@
                 aria-expanded="false">
                 <i class="bi bi-tags"></i>Categorie
             </a>
-            <ul class="dropdown-menu cardDash">
+            <ul class="dropdown-menu dropdown-custom">
 
                 @foreach ($categories as $category)
-                <li class="listDash dropdown-item text-center">
-                    <button class="elementDash btn">
-                        <a class="btn"
+                <li class="text-center">
+                    <button class="btn w-100">
+                        <a class="btn dropdown-btn w-100"
                         href="{{ route('filterByCategory', $category) }}">{{ $category->name }}</a>
                     </button>
                 </li>
@@ -109,16 +109,16 @@
             aria-expanded="false">
             Benvenuto {{ Auth::user()->name }} <i class="bi bi-person"></i>
         </a>
-        <ul class="dropdown-menu cardDash">
-            <li class="listDash dropdown-item text-center p-0">
-                <button class="elementDash btn d-flex align-items-center justify-content-center gap-2" href="#"><i class="bi bi-person-lines-fill"></i>Dati</button>
+        <ul class="dropdown-menu dropdown-custom">
+            <li class=" d-flex  justify-content-center p-0 mb-2">
+                <button class="btn d-flex align-items-center justify-content-center gap-2 dropdown-btn" href="#"><i class="bi bi-person-lines-fill"></i>Dati</button>
             </li>
-            <li class="listDash dropdown-item text-center p-0">
+            <li class=" text-center p-0 d-flex  justify-content-center">
                 <form action="{{ route('logout') }}" method="POST">
                     @csrf
                     <button
                     type="submit"
-                    class="elementDash text-decoration-none btn d-flex align-items-center justify-content-center gap-2">
+                    class="text-decoration-none btn d-flex align-items-center justify-content-center gap-2 dropdown-btn">
                     <i class="bi bi-box-arrow-in-left fs-4"></i>
                     Logout
                 </button>
