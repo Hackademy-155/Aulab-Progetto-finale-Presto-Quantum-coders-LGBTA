@@ -13,7 +13,7 @@
 </div> --}}
 
 <div class="product-card">
-
+    
     <div class="main-images">
     </div>
     <div class="shoe-details">
