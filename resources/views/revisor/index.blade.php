@@ -34,15 +34,21 @@
                     <h5 class="fst-italic text-muted">{{$product_to_check->category->name}}</h5>
                     <p class="h6">{{$product_to_check->description}}</p>
                 </div>
-
+                @if (session()->has('message'))
+                <div class="alert alert-success">
+                    {{ session('message') }}
+                </div>
+                @endif
                 <div class="d-flex pb-4 justify-content-around">
-                    <form action="" method="POST">
+                    <form action="{{route('accept.product', ['product' => $product_to_check])}}" method="POST">
                         @csrf
+                        @method('PATCH')
                         <button class="btn btn-outline-success px-3">Accetta</button>
                     </form>
 
-                    <form action="" method="POST">
+                    <form action="{{route('reject.product', ['product' => $product_to_check])}}" method="POST">
                         @csrf
+                        @method('PATCH')
                         <button class="btn btn-outline-danger px-3">Rifiuta</button>
                     </form>
                 </div>

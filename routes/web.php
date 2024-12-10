@@ -16,3 +16,6 @@ Route::get('Category/{category}', [ProductController::class, 'filterbyCategory']
 
 //REVISOR
 Route::get('/revisor/index', [RevisorController::class, 'index'])->name('revisor.index');
+
+Route::patch('/accept/{product}', [RevisorController::class, 'accept'])->name('accept.product');
+Route::patch('/reject/{product}', [RevisorController::class, 'reject'])->name('reject.product');

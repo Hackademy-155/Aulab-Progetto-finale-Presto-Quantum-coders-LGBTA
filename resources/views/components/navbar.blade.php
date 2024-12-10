@@ -120,6 +120,12 @@
                                 <button class="btn d-flex align-items-center justify-content-center gap-2 dropdown-btn"
                                     href="#"><i class="bi bi-person-lines-fill"></i>Dati</button>
                             </li>
+                            @if (Auth::user()->is_revisor)
+                            <li class="text-center p-0 d-flex  justify-content-center">
+                               <a href="{{route('revisor.index')}}" class=" btn dropdown-btn"><button class="btn gap-2 dropdown-btn">Revisiona <span class="badge rounded-pill bg-danger"> {{App\Models\Product::toBeRevisedCount()}} </span></button></a>
+                            </li>
+                            @endif
+                            
                             <li class=" text-center p-0 d-flex  justify-content-center">
                                 <form action="{{ route('logout') }}" method="POST">
                                     @csrf
@@ -130,6 +136,7 @@
                                     </button>
 
                                 </form>
+
                             </li>
                         </ul>
                     </li>

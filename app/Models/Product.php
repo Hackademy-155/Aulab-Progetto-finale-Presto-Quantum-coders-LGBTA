@@ -18,4 +18,7 @@ class Product extends Model
     public function category(){
         return $this->belongsTo(Category::class);
     }
+    public static function toBeRevisedCount(){
+        return Product::where('is_accepted', null)->count();
+    }
 }

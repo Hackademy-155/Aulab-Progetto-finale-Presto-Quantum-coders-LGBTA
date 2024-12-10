@@ -11,6 +11,13 @@ class RevisorController extends Controller{
         $product_to_check = Product::where('is_accepted', null)->first();
         return view('revisor.index', compact('product_to_check'));
     }
-
+public function accept(Product $product){
+    $product->setAccepted(true);
+    return redirect()->back()->with('message', "Hai accettato l'annuncio $product->title");
+}
+public function reject(Product $product){
+    $product->setAccepted(false);
+    return redirect()->back()->with('message', "Hai rifiutato l'annuncio $product->title");
+}
 }
 
