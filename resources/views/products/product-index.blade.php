@@ -1,11 +1,11 @@
 <x-layout>
-    <div class="container min-vh-100 mb-5">
+    <div class="container min-vh-100 mb-5 ">
         <div class="pt-5">
             <h1 class="fs-title text-center fw-bold my-5 title-insert-product py-5 my-5 ">I nostri prodotti</h1>
         </div>
-        <div class="row justify-content-md-between justify-content-center align-items-center g-5">
+        <div class=" row justify-content-md-between justify-content-center align-items-center g-5">
             @foreach ($products as $product)
-            <div class="col-10 col-md-4">
+            <div class="col-10 d-flex justify-content-center col-md-4">
                 <x-card
                 :product='$product'
                 />

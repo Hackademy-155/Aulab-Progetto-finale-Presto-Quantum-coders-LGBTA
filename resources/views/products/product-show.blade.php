@@ -38,7 +38,7 @@
             <p class="small">{{ $product->category->name ?? 'Sconosciuta' }}</p>
           </a>
         </div>
-        <button class="btn btn-primary btn-buy mt-3">Acquista Ora</button>
+        
       </div>
     </div>
   </div>

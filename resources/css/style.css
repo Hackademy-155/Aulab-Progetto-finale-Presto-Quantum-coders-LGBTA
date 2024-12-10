@@ -63,9 +63,7 @@ a {
     color: var(--main-color1);
 }
 
-.dropdown-item{
 
-}
 
 /* a.nav-link.active:hover {
     color: var(--secondary-color1);
@@ -96,17 +94,9 @@ a.nav-link.dropdown-toggle:hover {
     transform: scale(1.1);
 }
 
-.btn-buy {
-    background-color: var(--secondary-color2);
-    border: none;
-    color: #fff;
-    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
-}
 
-.btn-buy:hover {
-    background-color: var(--acc);
-    transform: translateY(-2px);
-}
+
+
 
 .description {
     font-size: 1.1rem;
@@ -157,9 +147,12 @@ html {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-.footer {
-    /* background: linear-gradient(to top, var(--secondary-color1), var(--main-color2)); */
-    background-color: var(--main-color1);
+
+
+footer {
+    margin-top: 60px;
+    background: linear-gradient(to bottom, var(--secondary-color1), var(--main-color2));
+    /* background-color: var(--secondary-color1); */
 }
 .neu-button {
     background-color: var(--acc);
@@ -182,7 +175,7 @@ html {
 } */
 
 .endformcolor{
-    color: var(--main-color1);
+    color: var(--secondary-color1);
 }
 
 
@@ -284,8 +277,191 @@ html {
 }
 
 
+
 /* card e annunci */
-.card {
+
+
+.product-card {
+    position: relative;
+    max-width: 355px;
+    width: 100%;
+    border-radius: 25px;
+    padding: 20px 30px 30px 30px;
+    background: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    z-index: 3;
+    overflow: hidden;
+    
+  }
+  .product-card .logo-cart{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .product-card .logo-cart img{
+    height: 60px;
+    width: 60px;
+    object-fit: cover;
+  }
+  .product-card .logo-cart i{
+    font-size: 27px;
+    color: #707070;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  .product-card .logo-cart i:hover{
+    color: #333;
+  }
+  .product-card .main-images{
+    position: relative;
+    height: 210px;
+  }
+  .product-card .main-images img{
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+    transform: rotate(18deg);
+    left: 12px;
+    top: -40px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  .product-card .main-images img.active{
+    opacity: 1;
+  }
+  .product-card .shoe-details .shoe_name{
+    font-size: 24px;
+    font-weight: bolder;
+    color: var(--secondary-color1);
+  }
+  .color{
+    transition: .5s;
+    color: var(--secondary-color1);
+    
+  }
+  .color:hover{
+    color:var(--acc);
+    scale: 1.2;
+  }
+  .product-card .shoe-details p{
+    font-size: 12px;
+    font-weight: 400;
+    color: #333;
+    text-align: justify;
+  }
+  .product-card .shoe-details .stars i{
+    margin: 0 -1px;
+    color: #333;
+  }
+  .product-card .color-price .color-option{
+    display: flex;
+    align-items: center;
+  }
+  .color-price{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+  }
+  .color-price .color-option .color{
+    font-size: 18px;
+    font-weight: 500;
+    /* color: #333; */
+    margin-right: 8px;
+  }
+  .color-option  .circles{
+    display: flex;
+  }
+  .color-option  .circles .circle{
+    height: 18px;
+    width: 18px;
+    background: #0071C7;
+    border-radius: 50%;
+    margin: 0 4px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+  }
+  .color-option  .circles .circle.blue.active{
+    box-shadow: 0 0 0 2px #fff,
+                 0 0 0 4px #0071C7;
+  }
+  .color-option  .circles .circle.pink{
+    background: #FA1795;
+  }
+  .color-option  .circles .circle.pink.active{
+    box-shadow: 0 0 0 2px #fff,
+                 0 0 0 4px #FA1795;
+  }
+  .color-option  .circles .circle.yellow{
+    background: #F5DA00;
+  }
+  .color-option  .circles .circle.yellow.active{
+    box-shadow: 0 0 0 2px #fff,
+                 0 0 0 4px #F5DA00;
+  }
+  .color-price .price{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .color-price .price .price_num{
+    font-size: 25px;
+    font-weight: 600;
+    color: #707070;
+  }
+  .color-price .price .price_letter{
+    font-size: 10px;
+    font-weight: 600;
+    margin-top: -4px;
+    color: #707070;
+  }
+  .product-card .button{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    border-radius: 25px;
+    margin-top: 30px;
+    overflow: hidden;
+  }
+  .product-card .button .button-layer{
+    position: absolute;
+    height: 100%;
+    width: 300%;
+    left: -100%;
+    background-image: linear-gradient(135deg, var(--acc), var(--secondary-color1), var(--acc), var(--secondary-color1) );
+    transition: all 0.4s ease;
+    border-radius: 25PX;
+  }
+  .product-card .button:hover .button-layer{
+    left: 0;
+  }
+  .product-card .button button{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background: none;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #fff;
+  }
+
+
+
+
+
+
+
+
+
+
+
+/* .card {
     width: 100%;
     background-color: var(--main-color2);
     background-image: linear-gradient(45deg, var(--secondary-color1) 20%, var(--main-color1) 100%);
@@ -299,8 +475,8 @@ html {
     cursor: pointer;
     -webkit-box-shadow: 4px 10px 16px 1px rgba(0,0,0,0.78);
     box-shadow: 4px 10px 16px 1px rgba(0,0,0,0.78);
-}
-.scale-up-center {
+} */
+/* .scale-up-center {
 
     transition: 0.8s ease-in-out;
 }
@@ -371,7 +547,7 @@ html {
 }
 .card:hover:after {
     transform: translateX(100%);
-}
+} */
 /* dashboard */
 .cardDash {
     width: min-content;
@@ -448,8 +624,9 @@ html {
 .label {
     align-self: flex-start;
     color: var(--secondary-color1);
-    font-weight: 600;
-    text-shadow: 2px 2px 2px black;
+    font-weight: 900;
+    font-size: larger;
+    
 }
 .form .submit {
     padding: 1rem;
@@ -467,8 +644,9 @@ html {
 }
 .form .submit:hover {
     background-color: var(--secondary-color1);
-    color: var(--secondary-color2);
+    color: var(--main-color1);
 }
+
 .span {
     text-decoration: none;
     color: var(--bg-dark);

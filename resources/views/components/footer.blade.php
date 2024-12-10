@@ -1,4 +1,4 @@
-<footer class="footer">
+<footer>
   <div class="container p-4">
     <!-- Social Media Section -->
     <section class="social-media mb-5 mt-5 text-center">
