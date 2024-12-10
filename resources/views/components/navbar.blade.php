@@ -14,20 +14,20 @@
             <a class="nav-link active d-flex align-items-center justify-content-center gap-2" aria-current="page" href="{{ route('product.index') }}"><i class="bi bi-list-columns"></i>I nostri
                 prodotti</a>
             </li>
-            
+
             @auth
             <li class="nav-item g-5 px-3" aria-current="page">
                 <a class="nav-link active d-flex align-items-center justify-content-center gap-2" href="{{ route('product.create') }}"><i class="bi bi-plus-circle"></i>Aggiungi prodotto</a>
             </li>
             @endauth
-            
+
             <li class="nav-item  dropdown px-3">
                 <a class="nav-link dropdown-toggle active d-flex align-items-center justify-content-center gap-2" href="#" role="button" data-bs-toggle="dropdown"
                 aria-expanded="false">
                 <i class="bi bi-tags"></i>Categorie
             </a>
             <ul class="dropdown-menu cardDash">
-                
+
                 @foreach ($categories as $category)
                 <li class="listDash dropdown-item text-center">
                     <button class="elementDash btn">
@@ -36,16 +36,16 @@
                     </button>
                 </li>
                 @endforeach
-                
+
             </ul>
-            
+
         </li>
     </ul>
-    
+
     @guest
     <ul class="navbar-nav">
         <li class="nav-item dropdown active cardDash px-3">
-            <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+            <a class="nav-link active dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown"
             aria-expanded="false">
             Accedi/Registrati
         </a>
@@ -75,13 +75,13 @@
         <li class="listDash dropdown-item text-center p-0">
             <form action="{{ route('logout') }}" method="POST">
                 @csrf
-                <button 
-                type="submit" 
+                <button
+                type="submit"
                 class="elementDash text-decoration-none btn d-flex align-items-center justify-content-center gap-2">
                 <i class="bi bi-box-arrow-in-left fs-4"></i>
                 Logout
             </button>
-            
+
         </form>
     </li>
 </ul>
