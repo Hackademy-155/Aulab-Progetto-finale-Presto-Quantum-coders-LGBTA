@@ -11,11 +11,27 @@
 * {
     font-family: var(--font);
 }
-
+/* Selettori per tag  */
 body{
     background-color: var(--main-color1);
 }
+a {
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 18px;
+}
 
+body,
+html {
+    background-color: var(--main-color2);
+    margin: 0px;
+    transition: 1.7s;
+    transition-property: all;
+    transition-timing-function: ease-in-out;
+    animation-name: opapage;
+    animation-duration: 1s;
+    animation-iteration-count: initial;
+}
 
 
 /* navbar */
@@ -34,12 +50,6 @@ a.nav-link:hover{
     color: var(--acc);
     scale: 1.1;
     text-shadow: 2px 2px 2px rgba(245, 245, 245, 0.212);
-}
-
-a {
-    text-decoration: none;
-    cursor: pointer;
-    font-size: 18px;
 }
 
 .text-nav-color{
@@ -79,17 +89,7 @@ a {
     color: var(--bg-dark);
 }
 
-body,
-html {
-    background-color: var(--main-color2);
-    margin: 0px;
-    transition: 1.7s;
-    transition-property: all;
-    transition-timing-function: ease-in-out;
-    animation-name: opapage;
-    animation-duration: 1s;
-    animation-iteration-count: initial;
-}
+
 @keyframes opapage {
     from {
         opacity: 0;
@@ -100,6 +100,7 @@ html {
     }
 }
 
+/* Sezione header  */
 .img-header {
     
     position: relative;
@@ -111,6 +112,8 @@ html {
     letter-spacing: 0.5rem;
     color: var(--secondary-color1);
 }
+
+/* Sezione Inserisci Prodotto aka Create  */
 .title-insert-product{
     color: var(--secondary-color1);
     background-image: linear-gradient(45deg, var(--secondary-color1) 26%, var(--acc) 100%);
@@ -120,42 +123,10 @@ html {
     -webkit-text-fill-color: transparent;
 }
 
+/* Sezione footer  */
 footer {
     margin-top: 60px;
     background: linear-gradient(to bottom, var(--secondary-color1), var(--main-color2));
-}
-.neu-button {
-    background-color: var(--acc);
-    border-radius: 50px;
-    /* box-shadow: inset 4px 4px 10px var(--secondary-color1), inset -4px -4px 10px var(--acc); */
-    padding: 15px 40px;
-    transition: all 0.2s ease-in-out;
-    border: 2px solid var(--acc);
-    text-decoration: none;
-}
-
-.neu-button>a{
-    font-weight: bolder;
-    color: var(--main-color1);
-}
-
-/* .neu-button:hover {
-box-shadow: inset 2px 2px 5px var(--main-color1), inset -2px -2px 5px var(--secondary-color1), 2px 2px 5px var(--secondary-color1), -2px -2px 5px var(--secondary-color1);
-} */
-
-.endformcolor{
-    color: var(--secondary-color1);
-}
-
-.neu-button:focus {
-    outline: none;
-    box-shadow: inset 2px 2px 5px #bcbcbc, inset -2px -2px 5px #ffffff, 2px 2px 5px #bcbcbc, -2px -2px 5px #ffffff;
-}
-.btnphone {
-    display: none;
-    font-size: 3rem;
-    color: var(--main-color1);
-    text-shadow: 5px 8px 20px black;
 }
 /* icone footer colore background */
 .facebook,
@@ -241,6 +212,40 @@ box-shadow: inset 2px 2px 5px var(--main-color1), inset -2px -2px 5px var(--seco
 .footer-brand:hover {
     color: var(--acc);
 }
+.neu-button {
+    background-color: var(--acc);
+    border-radius: 50px;
+    /* box-shadow: inset 4px 4px 10px var(--secondary-color1), inset -4px -4px 10px var(--acc); */
+    padding: 15px 40px;
+    transition: all 0.2s ease-in-out;
+    border: 2px solid var(--acc);
+    text-decoration: none;
+}
+
+.neu-button>a{
+    font-weight: bolder;
+    color: var(--main-color1);
+}
+
+/* .neu-button:hover {
+box-shadow: inset 2px 2px 5px var(--main-color1), inset -2px -2px 5px var(--secondary-color1), 2px 2px 5px var(--secondary-color1), -2px -2px 5px var(--secondary-color1);
+} */
+
+.endformcolor{
+    color: var(--secondary-color1);
+}
+
+.neu-button:focus {
+    outline: none;
+    box-shadow: inset 2px 2px 5px #bcbcbc, inset -2px -2px 5px #ffffff, 2px 2px 5px #bcbcbc, -2px -2px 5px #ffffff;
+}
+.btnphone {
+    display: none;
+    font-size: 3rem;
+    color: var(--main-color1);
+    text-shadow: 5px 8px 20px black;
+}
+
 /* card e annunci */
 .product-card {
     position: relative;
@@ -518,7 +523,7 @@ box-shadow: inset 2px 2px 5px var(--main-color1), inset -2px -2px 5px var(--seco
 .custom-select {
     background-color: var(--clr-alpha);
     border: 1px solid var(--bg-dark);
-    color: var(--main-color1);
+    color: var(--secondary-color1);
     font-weight: 900;
     letter-spacing: 1px;
 }
