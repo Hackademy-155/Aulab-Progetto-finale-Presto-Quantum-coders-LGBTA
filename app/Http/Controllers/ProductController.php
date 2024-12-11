@@ -35,7 +35,9 @@ class ProductController extends Controller implements HasMiddleware
     }
 
     public function filterByCategory(Category $category){
-        $products = $category->products()->where('is_accepted', true);
-        return view('products.byCategory', compact('products','category'));
+        $products = $category->products()->where('is_accepted', 1)->get();
+        
+        return view('products.byCategory', compact('products', 'category'));
     }
+    
 }
