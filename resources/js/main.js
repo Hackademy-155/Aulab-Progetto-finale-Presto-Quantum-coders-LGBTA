@@ -32,8 +32,8 @@ hamburgerMenu.addEventListener('click', ()=>{
     if(yes==true){
         hamburgerMenu.classList.remove('navbar-toggler');
         hamburgerMenu.innerHTML= '';
-        hamburgerMenu.innerHTML = '<span class=""><i class="bi bi-three-dots-vertical text-light fs-2"></i></span>';
-        hamburgerMenu.classList.add('border-light', 'bg-transparent', 'ps-3', 'pb-3', 'text-center');
+        hamburgerMenu.innerHTML = '<span class=""><i class="bi bi-book text-light fs-3"></i></span>';
+        hamburgerMenu.classList.add('border-light', 'bg-transparent', 'text-center');
         yes= false;
     }else{
         // hamburgerMenu.classList.add('navbar-toggler');

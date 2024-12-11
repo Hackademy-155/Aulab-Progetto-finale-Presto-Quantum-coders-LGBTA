@@ -5,9 +5,23 @@ namespace App\Models;
 use App\Models\Category;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Laravel\Scout\Searchable;
 
 class Product extends Model
 {
+
+    use Searchable;
+
+    public function toSearchableArray()
+    {
+        return[
+            'id'=>$this->id,
+            'title'=>$this->title,
+            'description'=>$this->description,
+            'category'=>$this->category,
+        ];
+    }
+
     use HasFactory;
     protected $fillable = ['title', 'price', 'description', 'category_id', 'user_id'];
 

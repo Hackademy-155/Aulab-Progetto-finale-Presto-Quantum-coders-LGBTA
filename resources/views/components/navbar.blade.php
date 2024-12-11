@@ -1,11 +1,11 @@
 @guest
-    <nav class="navbar  navbar-expand-lg p-3 fixed-top navBar">
+    <nav class="navbar navbar-expand-lg p-3 fixed-top navBar">
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" id="hamburger-menu">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse d-md-flex justify-content-md-evenly  align-items-md-center"
+            <div class="collapse navbar-collapse d-md-flex justify-content-md-center  align-items-md-center"
                 id="navbarSupportedContent">
                 <ul class="navbar-nav">
                     <li class="nav-item g-5 px-3">
@@ -39,7 +39,7 @@
                     </li>
                 </ul>
                 <ul class="navbar-nav">
-                    <li class="nav-item dropdown  px-3">
+                    <li class="nav-item dropdown px-3">
                         <a class="nav-link dropdown-toggle d-flex align-items-center justify-content-center gap-2"
                             href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Accedi/Registrati
@@ -50,7 +50,7 @@
                                         href="{{ route('login') }}">Accedi</a></button>
                             </li>
                             <li class=" text-center p-0">
-                                <button class="btn "><a class="btn dropdown-btn"
+                                <button class="btn"><a class="btn dropdown-btn"
                                         href="{{ route('register') }}">Registrati</a></button>
                             </li>
                         </ul>
@@ -62,7 +62,7 @@
 @endguest
 
 @auth
-    <nav class="navbar navbar-expand-lg p-3 fixed-top navBar">
+    <nav class="navbar navbar-expand-lg py-3 fixed-top navBar">
         <div class="container-fluid">
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -106,8 +106,14 @@
                             @endforeach
 
                         </ul>
-
+                        
                     </li>
+
+                    <li class="nav-item">
+                        <a class="btn nav-link" data-bs-toggle="offcanvas" href="#offcanvasTop" role="button"
+                            aria-controls="offcanvasTop">Ricerca <i class="bi bi-search ms-1"></i></a>
+                    </li>
+
                 </ul>
                 <ul class="navbar-nav">
                     <li class="nav-item dropdown px-3">
@@ -150,4 +156,22 @@
             </div>
         </div>
     </nav>
+@endauth
+
+
+
+@auth
+    <div class="offcanvas offcanvas-top OffCanvas-custom" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title text-light" id="offcanvasTopLabel">Ricerca del prodotto</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <form class="d-flex ms-auto" role="search" action="{{ route('products.search') }}" method="GET">
+                <input class="form-control me-2" name="query" type="search" placeholder="Carca il tuo prodotto..."
+                    aria-label="Search">
+                <button class="button-offcanvas text-light btn" type="submit" id="basic-addon2">Cerca</button>
+            </form>
+        </div>
+    </div>
 @endauth

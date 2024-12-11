@@ -1,14 +1,14 @@
 <x-layout>
-    <div class="container">
-        <div class="row">
+    <div class="container-fluid">
+        <div class="row justify-content-center">
             <div class="col-12 text-center mt-5">
                 <h1 class="display-3 mt-5 text-center">Registrati</h1>
             </div>
         </div>
     </div>
-    <div class="container">
+    <div class="container-fluid">
         <div class="row mb-5 mb-md-0 justify-content-center align-items-center">
-            <div class="col-12 col-md-8 p-5 p-md-4">
+            <div class="col-12 d-flex justify-content-center p-5 p-md-4">
                 
                 <form class="form shadow" action="{{route('register')}}" method="POST">
                     

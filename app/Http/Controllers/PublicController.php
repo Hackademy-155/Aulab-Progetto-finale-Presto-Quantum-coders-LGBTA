@@ -15,4 +15,10 @@ class PublicController extends Controller
     public function lavoraConNoi(){
         return view('lavoraConNoi');
     }
+
+    public function searchProduct(Request $request){
+        $query=$request->input('query');
+        $products=Product::search($query)->where('is_accepted', true)->paginate(10);
+        return view('products.search',['products'=>$products, 'query'=>$query]);
+    }
 }
