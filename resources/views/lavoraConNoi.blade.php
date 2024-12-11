@@ -1,9 +1,9 @@
 <x-layout>
     <header class="container-fluid">
         <div class="row vh-100 justify-content-center align-items-center gap-5">
-            <div class="col-5 bg-main p-5 rounded-5 shadow">
+            <div class="col-10 col-md-6 d-flex justify-content-center p-0 p-md-5 my-0 my-md-5 flex-column">
                 <div class="mb-5">
-                    <h1 class="display-4 title-insert-product text-center">Lavora con noi</h1>
+                    <h1 class="display-4 title-insert-product text-center mt-5">Lavora con noi</h1>
                 </div>
                 <form action="{{route('become.revisor')}}" method="GET">
                     @csrf
@@ -19,7 +19,9 @@
                         <label for="name" class="form-label">Motivazione</label>
                         <textarea class="form-control" name="motivazione" id="motivazione" rows="5" name="motivazione"></textarea>
                     </div>
-                    <button type="submit" class="submit-work-with-us">Submit</button>
+                    <div class="d-flex justify-content-center align-items-center">
+                        <button type="submit" class="submit-work-with-us m-3">Invia</button>
+                    </div>
                 </form>
             </div>
         </div>

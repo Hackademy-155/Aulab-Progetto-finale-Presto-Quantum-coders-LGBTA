@@ -2,7 +2,7 @@
     <main class="min-vh-100 pt-5 mt-5">
         <div class="container py-5">
             <div class="row justify-content-center mb-4">
-                <h2 class="text-center fs-title title-home ">{{ $category->name }}</h2>
+                <h2 class="text-center  title-home display-1 fw-bold">{{ $category->name }}</h2>
             </div>
             <div class="row justify-content-center">
                 @forelse ($products as $product)
@@ -12,11 +12,11 @@
                     />
                 </div> 
                 @empty
-                <div class="col-12 vh-100 text-center ">
-                    <h3>Nessun prodotto presente in questa categoria</h3>
+                <div class="col-12 text-center ">
                     <div>
-                        <img src="/media/png-emptyBox.png" alt="" class="img-fluid">
+                        <img src="/media/png-emptyBox.png" alt="" class="img-fluid" height="350px" width="350px">
                     </div>
+                    <h3>Nessun prodotto presente in questa categoria</h3>
                 </div>
                 @endforelse 
                 
