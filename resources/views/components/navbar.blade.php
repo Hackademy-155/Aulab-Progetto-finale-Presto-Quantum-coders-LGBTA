@@ -89,7 +89,7 @@
         </li>
         
         
-        <li class="nav-item  dropdown px-3">
+        <li class="nav-item dropdown px-3">
             <a class="nav-link dropdown-toggle d-flex align-items-center justify-content-center gap-2 "
             href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             <i class="bi bi-tags"></i>Categorie

@@ -4,7 +4,7 @@
             <form wire:submit="create" class="form shadow">
                 @csrf
 
-                <h2 class="fw-bold text-center mb-5 title-insert-product">Aggiungi il tuo prodotto</h2>
+                <h2 class="fw-bold text-center mb-5 title-insert-product display-4">Aggiungi il tuo prodotto</h2>
 
                 <span class="input-span mb-3">
                     <label for="title" class="label">Titolo</label>

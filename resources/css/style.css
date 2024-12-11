@@ -54,12 +54,12 @@ html {
 }
 
 a.nav-link{
-    color: var(--main-color1);
+    color: var(--main-color1) !important;
     transition: ease all .2s;
 }
 
 a.nav-link:hover{
-    color: var(--acc);
+    color: var(--acc) !important;
     scale: 1.1;
     transition: all ease .2;
     text-shadow: 2px 2px 2px rgba(245, 245, 245, 0.212);
@@ -68,7 +68,7 @@ a.nav-link:hover{
 .text-nav-color{
     color: var(--main-color1);
 }
-
+    
 .dropdown-custom{
     background-color: var(--main-color1);
     border: 2px solid ;
@@ -573,7 +573,7 @@ box-shadow: inset 2px 2px 5px var(--main-color1), inset -2px -2px 5px var(--seco
     background-color: #f1f1f1;
 }
 .pagination .page-item.active .page-link {
-    background-color: var(--acc);
+    background-color: var(--secondary-color1);
     border-color: var(--secondary-color1);
     color: white;
 }
@@ -584,7 +584,7 @@ box-shadow: inset 2px 2px 5px var(--main-color1), inset -2px -2px 5px var(--seco
 }
 .pagination .page-link {
     color: var(--main-color2);
-    background-color: white;
+    background-color: var(--bg-dark);
     border: 1px solid var(--main-color2);
 }
 
@@ -728,4 +728,22 @@ box-shadow: inset 2px 2px 5px var(--main-color1), inset -2px -2px 5px var(--seco
     .fs-title {
         font-size: 4rem;
     }
+
+    .custom-vertical{
+     
+        height: 25vh !important; 
+        max-height: 30vh !important;
+       
+        
+        
+    }
+    .offcanvas-body {
+        padding: 0 !important; /* Remove padding inside the offcanvas body */
+        margin: 0 !important; /* Ensure no extra margins */
+        height: 20% !important; /* Ensure it takes full height of the offcanvas */
+      }
+      .offcanvas-top {
+        margin-top: 0 !important; /* Remove top margin if any */
+      }
+    
 }
