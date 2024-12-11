@@ -7,7 +7,7 @@
     <title>Presto-Shop</title>
 </head>
 <body>
-    
+
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -55,17 +55,18 @@
         <div class="header">
             <h1>Richiesta per essere supervisore</h1>
         </div>
-        
+
         <div class="content">
             <p>L'utente {{$user->name}} ha mandato la richiesta per essere supervisore.</p>
             <p>Qui di seguito i suoi dati</p>
             <ul>
                 <li>Nome: {{$user->name}}</li>
                 <li>Email: {{$user->email}}</li>
+                <li>Causale: {{$motivazione}}</li>
             </ul>
             <a href="{{route('make.revisor', compact('user')) }}" class="btn">Clicca per accettare</a>
         </div>
-        
+
         <div class="footer">
             <p>© 2024 Presto Shop</p>
         </div>

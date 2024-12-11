@@ -33,6 +33,18 @@ html {
     animation-iteration-count: initial;
 }
 
+.vh-50{
+    min-height: 50vh;
+}
+
+.my-150{
+    margin: 150px 0;
+}
+
+.bg-main{
+    background-color: var(--main-color1);
+}
+
 
 /* navbar */
 
@@ -94,7 +106,7 @@ a.nav-link:hover{
     from {
         opacity: 0;
     }
-    
+
     to {
         opacity: 1;
     }
@@ -102,7 +114,7 @@ a.nav-link:hover{
 
 /* Sezione header  */
 .img-header {
-    
+
     position: relative;
     left: 15%;
     width: 1200px;
@@ -121,6 +133,31 @@ a.nav-link:hover{
     font-weight: bolder;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+/* lavora con noi */
+
+.title-custom{
+    backdrop-filter: blur(20px);
+}
+
+.submit-work-with-us{
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3rem;
+    background-color: var(--main-color1);
+    color: var(--secondary-color2);
+    border: 2px solid var(--secondary-color1);
+    cursor: pointer;
+    transition: all 300ms;
+    font-weight: 600;
+}
+
+.submit-work-with-us:hover{
+    background-color: var(--secondary-color1);
+    color: var(--main-color1);
 }
 
 /* Sezione footer  */
@@ -257,7 +294,7 @@ box-shadow: inset 2px 2px 5px var(--main-color1), inset -2px -2px 5px var(--seco
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
     z-index: 3;
     overflow: hidden;
-    
+
 }
 .product-card .logo-cart{
     display: flex;
@@ -305,7 +342,7 @@ box-shadow: inset 2px 2px 5px var(--main-color1), inset -2px -2px 5px var(--seco
 .color{
     transition: .5s;
     color: var(--secondary-color1);
-    
+
 }
 .color:hover{
     color:var(--acc);
@@ -508,7 +545,7 @@ box-shadow: inset 2px 2px 5px var(--main-color1), inset -2px -2px 5px var(--seco
     cursor: pointer;
     transition: all 300ms;
     font-weight: 600;
-    
+
 }
 .form .submit:hover {
     background-color: var(--secondary-color1);
@@ -529,7 +566,7 @@ box-shadow: inset 2px 2px 5px var(--main-color1), inset -2px -2px 5px var(--seco
 }
 .custom-option {
     color: black;
-    
+
 }
 .custom-option:hover {
     background-color: #f1f1f1;
@@ -560,7 +597,7 @@ box-shadow: inset 2px 2px 5px var(--main-color1), inset -2px -2px 5px var(--seco
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    
+
 }
 
 .pulsate-fwd:hover {
@@ -604,11 +641,11 @@ box-shadow: inset 2px 2px 5px var(--main-color1), inset -2px -2px 5px var(--seco
     .title-home {
         font-size: 2rem;
     }
-    
+
     .neu-button {
         display: none;
     }
-    
+
     .btnphone {
         display: block;
         width: 100%;
@@ -620,14 +657,14 @@ box-shadow: inset 2px 2px 5px var(--main-color1), inset -2px -2px 5px var(--seco
         justify-content: center;
         width: 300px;
     }
-    
+
     .img-header {
         width: 650px;
         position: relative;
         left: 0%;
-        
+
     }
-    
+
     .fs-title {
         font-size: 4rem;
     }

@@ -6,6 +6,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\RevisorController;
 
 Route::get('/', [PublicController::class, 'home'])->name('home');
+Route::get('/LavoraConNoi', [PublicController::class, 'lavoraConNoi'])->name('lavoraConNoi');
 
 // CRUD
 Route::get('/Product/Create', [ProductController::class, 'createPage'])->name('product.create');

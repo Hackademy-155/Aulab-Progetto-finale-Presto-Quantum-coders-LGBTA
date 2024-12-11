@@ -14,7 +14,7 @@ use Livewire\Livewire;
 class RevisorController extends Controller
 {
 
-    
+
 
     public function index()
     {
@@ -24,21 +24,22 @@ class RevisorController extends Controller
     public function accept(Product $product)
     {
         $product->setAccepted(true);
-        
+
         return redirect()->back()->with('message', "Hai accettato l'annuncio $product->title");
 
     }
     public function reject(Product $product)
     {
         $product->setAccepted(false);
-        
+
         return redirect()->back()->with('message', "Hai rifiutato l'annuncio $product->title");
     }
 
-    public function becomeRevisor()
+    public function becomeRevisor(Request $request)
     {
-        Mail::to('admin@presto.it')->send(new BecomeRevisor(Auth::user()));
-        return redirect()->route('home')->with('message', 'Complimenti, Hai richiesto di diventare revisore');
+        $motivazione = $request->motivazione;
+        Mail::to('admin@presto.it')->send(new BecomeRevisor(Auth::user(), $motivazione));
+        return redirect(route('home'))->with('message', 'Complimenti, Hai richiesto di diventare revisore');
     }
 
     public function makeRevisor(User $user)

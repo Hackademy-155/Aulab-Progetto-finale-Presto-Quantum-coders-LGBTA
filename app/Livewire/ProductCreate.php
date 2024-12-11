@@ -20,6 +20,21 @@ class ProductCreate extends Component
     public $product;
     public $is_accepted;
 
+    public function messages(){
+        return [
+            'title'=> 'Il campo titolo è obbligatorio',
+            'title.min'=> 'Caratteri minimi :min ',
+            'title.max' => 'Caratteri massimi :max',
+            'price'=> 'Il campo prezzo è obbligatorio',
+            'price.numeric'=> 'Il campo prezzo deve contenere caratteri numerici',
+            'description'=> 'Il campo descrizione è obbligatorio',
+            'description.min'=> 'Caratteri minimi :min',
+            'description.max' => 'Caratteri massimi :max',
+            'category'=> 'Il campo categoria è obbligatorio',
+
+        ];
+    }
+
     public function create()
     {
         $this->validate();

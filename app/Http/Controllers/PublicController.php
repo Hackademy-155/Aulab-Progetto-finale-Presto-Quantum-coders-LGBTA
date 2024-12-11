@@ -12,4 +12,7 @@ class PublicController extends Controller
         return view ('home', compact('products'));
     }
 
+    public function lavoraConNoi(){
+        return view('lavoraConNoi');
+    }
 }

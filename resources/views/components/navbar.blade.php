@@ -141,7 +141,6 @@
                                         <i class="bi bi-box-arrow-in-left fs-4"></i>
                                         Logout
                                     </button>
-
                                 </form>
 
                             </li>

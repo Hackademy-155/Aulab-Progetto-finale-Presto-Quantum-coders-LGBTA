@@ -15,9 +15,11 @@ class BecomeRevisor extends Mailable
     use Queueable, SerializesModels;
 
     public $user;
-    public function __construct(User $user)
+    public $motivazione;
+    public function __construct(User $user, $motivazione)
     {
         $this->user = $user;
+        $this->motivazione = $motivazione;
     }
 
     /**

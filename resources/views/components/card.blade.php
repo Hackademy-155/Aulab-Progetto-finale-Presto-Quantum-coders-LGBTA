@@ -4,7 +4,7 @@
         <a href="{{ route('filterByCategory', $product->category) }}" class="text-black">
             <h5 class="text-truncate card-content">{{ $product->category->name ?? 'Sconosciuta' }}</h5>
         </a>
-        
+
         <p class="display-5 fw-bold">{{ $product->price }}€</p>
     </div>
     <div class="d-flex justify-content-center">
@@ -13,7 +13,7 @@
 </div> --}}
 
 <div class="product-card">
-    
+
     <div class="main-images">
     </div>
     <div class="shoe-details">
@@ -23,7 +23,7 @@
     <div class="color-price">
         <div class="color-option">
             <a class="color" href="{{ route('filterByCategory', $product->category) }}">{{$product->category->name}}</a>
-            
+
         </div>
         <div class="price">
             <span class="price_num">{{ $product->price }} €</span>

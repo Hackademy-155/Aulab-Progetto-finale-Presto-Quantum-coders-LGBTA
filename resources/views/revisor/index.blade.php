@@ -1,21 +1,21 @@
 <x-layout>
 
     <div class="container">
-        <div class="row p-5">
-            <div class="col-3">
-                <h3>Area Revisione</h3>
+        <div class="row p-5 vh-50 justify-content-center align-items-center">
+            <div class="col-10">
+                <h3 class="display-1 text-center">Area Revisione</h3>
             </div>
         </div>
     </div>
 
     @if ($product_to_check)
-        
+
         <div class="row justify-content-center pt-5">
             <div class="col-8">
                 <div class="row justify-content-center">
 
                     @for ($i = 0; $i < 6; $i++)
-                        
+
                     <div class="col-6 col-md-4 text-center">
                         <img class="img-fluid rounded shadow" src="https://picsum.photos/600" alt="foto">
                     </div>
@@ -56,14 +56,14 @@
         </div>
 
     @else
-        
+
         <div class="row justify-content-center align-items-center text-center">
             <div class="col-12">
                 <h2 class="fst-italic display-4">Nessun prodotto da revisionare</h2>
                 <a class="mt-5 btn btn-outline-success" href="{{route('home')}}">Torna alla home!</a>
             </div>
         </div>
-        
+
     @endif
 
 </x-layout>
