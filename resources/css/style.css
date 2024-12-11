@@ -55,12 +55,13 @@ html {
 
 a.nav-link{
     color: var(--main-color1);
-    transition: .2s;
+    transition: ease all .2s;
 }
 
 a.nav-link:hover{
     color: var(--acc);
     scale: 1.1;
+    transition: all ease .2;
     text-shadow: 2px 2px 2px rgba(245, 245, 245, 0.212);
 }
 
@@ -105,7 +106,7 @@ a.nav-link:hover{
     from {
         opacity: 0;
     }
-
+    
     to {
         opacity: 1;
     }
@@ -113,7 +114,7 @@ a.nav-link:hover{
 
 /* Sezione header  */
 .img-header {
-
+    
     position: relative;
     left: 15%;
     width: 1200px;
@@ -294,7 +295,7 @@ box-shadow: inset 2px 2px 5px var(--main-color1), inset -2px -2px 5px var(--seco
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
     z-index: 3;
     overflow: hidden;
-
+    
 }
 .product-card .logo-cart{
     display: flex;
@@ -342,7 +343,7 @@ box-shadow: inset 2px 2px 5px var(--main-color1), inset -2px -2px 5px var(--seco
 .color{
     transition: .5s;
     color: var(--secondary-color1);
-
+    
 }
 .color:hover{
     color:var(--acc);
@@ -545,7 +546,7 @@ box-shadow: inset 2px 2px 5px var(--main-color1), inset -2px -2px 5px var(--seco
     cursor: pointer;
     transition: all 300ms;
     font-weight: 600;
-
+    
 }
 .form .submit:hover {
     background-color: var(--secondary-color1);
@@ -566,7 +567,7 @@ box-shadow: inset 2px 2px 5px var(--main-color1), inset -2px -2px 5px var(--seco
 }
 .custom-option {
     color: black;
-
+    
 }
 .custom-option:hover {
     background-color: #f1f1f1;
@@ -595,7 +596,7 @@ box-shadow: inset 2px 2px 5px var(--main-color1), inset -2px -2px 5px var(--seco
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-
+    
 }
 
 .pulsate-fwd:hover {
@@ -639,6 +640,22 @@ box-shadow: inset 2px 2px 5px var(--main-color1), inset -2px -2px 5px var(--seco
     background:linear-gradient(290deg, var(--main-color2) ,var(--secondary-color1));
     font-weight: bolder;
 }
+.custom-vertical{
+     
+    height: 15vh !important; 
+    max-height: 30vh !important;
+   
+    
+    
+}
+.offcanvas-body {
+    padding: 0 !important; /* Remove padding inside the offcanvas body */
+    margin: 0 !important; /* Ensure no extra margins */
+    height: 10% !important; /* Ensure it takes full height of the offcanvas */
+  }
+  .offcanvas-top {
+    margin-top: 0 !important; /* Remove top margin if any */
+  }
 
 .button-offcanvas {
     background-color: var(--secondary-color1);
@@ -684,11 +701,11 @@ box-shadow: inset 2px 2px 5px var(--main-color1), inset -2px -2px 5px var(--seco
     .title-home {
         font-size: 2rem;
     }
-
+    
     div>.neu-button {
         display: none;
     }
-
+    
     .btnphone {
         display: block;
         width: 100%;
@@ -700,14 +717,14 @@ box-shadow: inset 2px 2px 5px var(--main-color1), inset -2px -2px 5px var(--seco
         justify-content: center;
         width: 300px;
     }
-
+    
     .img-header {
         width: 650px;
         position: relative;
         left: 0%;
-
+        
     }
-
+    
     .fs-title {
         font-size: 4rem;
     }
