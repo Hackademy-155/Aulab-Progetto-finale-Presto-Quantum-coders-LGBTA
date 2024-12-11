@@ -21,14 +21,14 @@
         <i class="bi bi-github text-white"></i>
       </a>
     </section>
-    
+
     <!-- Links Section -->
     <section class="links">
-      <div class="row text-center">
+      <div class="row justify-content-center text-center">
         <div class="col-lg-3 col-md-6 mb-4">
           <h5 class="text-uppercase">Company</h5>
           <ul class="list-unstyled">
-            <li><a href="{{route('become.revisor')}}" class="footer-link">Work with us</a></li>
+            <li><a href="{{route('lavoraConNoi')}}" class="footer-link">Work with us</a></li>
             <li><a href="#!" class="footer-link">About Us</a></li>
             <li><a href="#!" class="footer-link">Careers</a></li>
             <li><a href="#!" class="footer-link">Contact</a></li>
@@ -52,7 +52,7 @@
             <li><a href="#!" class="footer-link">Support</a></li>
           </ul>
         </div>
-        <div class="col-lg-3 col-md-6 mb-4">
+        {{-- <div class="col-lg-3 col-md-6 mb-4">
           <h5 class="text-uppercase">Social</h5>
           <ul class="list-unstyled">
             <li><a href="#!" class="footer-link">Facebook</a></li>
@@ -60,11 +60,11 @@
             <li><a href="#!" class="footer-link">LinkedIn</a></li>
             <li><a href="#!" class="footer-link">Instagram</a></li>
           </ul>
-        </div>
+        </div> --}}
       </div>
     </section>
   </div>
-  
+
   <!-- Copyright -->
   <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
     © 2024 Copyright:

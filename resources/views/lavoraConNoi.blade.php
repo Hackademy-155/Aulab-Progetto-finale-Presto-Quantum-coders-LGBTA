@@ -24,12 +24,4 @@
             </div>
         </div>
     </header>
-
-    <main>
-        <section class="container">
-            <div class="row vh-50 my-5 justify-content-center align-items-center">
-
-            </div>
-        </section>
-    </main>
 </x-layout>

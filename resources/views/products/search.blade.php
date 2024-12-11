@@ -1,9 +1,9 @@
 <x-layout>
 
     <div class="container-fluid">
-        <div class="row">
+        <div class="row vh-50 justify-content-center align-items-center">
             <div class="col-12">
-                <h2 class="text-center my-5">Risultati della tua ricerca <span class="fst-italic">{{$query}}</span></h2>
+                <h2 class="text-center my-5 display-1">Risultati della tua ricerca <span class="fst-italic">"{{$query}}"</span></h2>
             </div>
         </div>
 
@@ -16,7 +16,7 @@
                 </div>
 
             @empty
-                
+
                 <div class="col-12">
                     <h4 class="text-center">Nessun articolo trovato</h4>
                 </div>

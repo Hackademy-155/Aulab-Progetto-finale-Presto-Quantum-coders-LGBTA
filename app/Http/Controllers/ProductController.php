@@ -24,7 +24,7 @@ class ProductController extends Controller implements HasMiddleware
 
     public function index()
     {
-        $products = Product::where('is_accepted', true)->orderBy('created_at', 'desc')->paginate(10);
+        $products = Product::where('is_accepted', true)->orderBy('created_at', 'desc')->paginate(9);
         return view ('products.product-index', compact('products'));
     }
 

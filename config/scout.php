@@ -202,7 +202,7 @@ return [
 
     'tntsearch'=>[
         'storage'=>storage_path(),
-        'fuzzines'=>env('TNTSEARCH_FUZZINESS', false),
+        'fuzzines'=>env('TNTSEARCH_FUZZINESS', true),
         'fuzzy'=>[
             'prefix_lenght'=>2,
             'max_expansions'=>50,

@@ -106,7 +106,7 @@
                             @endforeach
 
                         </ul>
-                        
+
                     </li>
 
                     <li class="nav-item">
@@ -156,11 +156,8 @@
             </div>
         </div>
     </nav>
-@endauth
 
-
-
-@auth
+    {{-- offcanvas --}}
     <div class="offcanvas offcanvas-top OffCanvas-custom" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
         <div class="offcanvas-header">
             <h5 class="offcanvas-title text-light" id="offcanvasTopLabel">Ricerca del prodotto</h5>
