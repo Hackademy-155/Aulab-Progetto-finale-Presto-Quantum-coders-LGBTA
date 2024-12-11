@@ -23,44 +23,35 @@
     </section>
 
     <!-- Links Section -->
-    <section class="links">
+    <section class="links"> 
       <div class="row justify-content-center text-center">
         <div class="col-lg-3 col-md-6 mb-4">
-          <h5 class="text-uppercase">Company</h5>
+          <h5 class="text-uppercase">Links</h5>
           <ul class="list-unstyled">
             <li><a href="{{route('lavoraConNoi')}}" class="footer-link">Work with us</a></li>
-            <li><a href="#!" class="footer-link">About Us</a></li>
-            <li><a href="#!" class="footer-link">Careers</a></li>
-            <li><a href="#!" class="footer-link">Contact</a></li>
+            <li><a href="#!" class="footer-link">Links</a></li>
+            <li><a href="#!" class="footer-link">Links</a></li>
+            <li><a href="#!" class="footer-link">Links</a></li>
           </ul>
         </div>
         <div class="col-lg-3 col-md-6 mb-4">
-          <h5 class="text-uppercase">Support</h5>
+          <h5 class="text-uppercase">Links</h5>
           <ul class="list-unstyled">
-            <li><a href="#!" class="footer-link">Help Center</a></li>
-            <li><a href="#!" class="footer-link">FAQs</a></li>
-            <li><a href="#!" class="footer-link">Terms of Service</a></li>
-            <li><a href="#!" class="footer-link">Privacy Policy</a></li>
+            <li><a href="#!" class="footer-link">Links</a></li>
+            <li><a href="#!" class="footer-link">Links</a></li>
+            <li><a href="https://policies.google.com/terms?hl=en-US" class="footer-link">Terms of Service</a></li>
+            <li><a href="https://policies.google.com/privacy?hl=en-US" class="footer-link">Privacy Policy</a></li>
           </ul>
         </div>
         <div class="col-lg-3 col-md-6 mb-4">
-          <h5 class="text-uppercase">Services</h5>
+          <h5 class="text-uppercase">Links</h5>
           <ul class="list-unstyled">
-            <li><a href="#!" class="footer-link">Web Development</a></li>
-            <li><a href="#!" class="footer-link">Marketing</a></li>
-            <li><a href="#!" class="footer-link">Consulting</a></li>
-            <li><a href="#!" class="footer-link">Support</a></li>
+            <li><a href="#!" class="footer-link">Links</a></li>
+            <li><a href="#!" class="footer-link">Links</a></li>
+            <li><a href="#!" class="footer-link">Links</a></li>
+            <li><a href="#!" class="footer-link">Links</a></li>
           </ul>
         </div>
-        {{-- <div class="col-lg-3 col-md-6 mb-4">
-          <h5 class="text-uppercase">Social</h5>
-          <ul class="list-unstyled">
-            <li><a href="#!" class="footer-link">Facebook</a></li>
-            <li><a href="#!" class="footer-link">Twitter</a></li>
-            <li><a href="#!" class="footer-link">LinkedIn</a></li>
-            <li><a href="#!" class="footer-link">Instagram</a></li>
-          </ul>
-        </div> --}}
       </div>
     </section>
   </div>

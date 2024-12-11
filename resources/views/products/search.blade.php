@@ -3,15 +3,15 @@
     <div class="container-fluid">
         <div class="row vh-50 justify-content-center align-items-center">
             <div class="col-12">
-                <h2 class="text-center my-5 display-1">Risultati della tua ricerca <span class="fst-italic">"{{$query}}"</span></h2>
+                <h2 class="text-center mt-5 display-1">Risultati della tua ricerca <span class="fst-italic">"{{$query}}"</span></h2>
             </div>
         </div>
 
-        <div class="row justify-content-center align-items-center p-5">
+        <div class="row align-items-center p-5">
 
             @forelse ($products as $product)
 
-                <div class="col-12 col-md-3">
+                <div class="col-12 col-md-4 my-3 d-flex justify-content-center">
                     <x-card :product=$product/>
                 </div>
 

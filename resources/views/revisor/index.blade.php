@@ -12,7 +12,7 @@
         <div class="row justify-content-center pt-5 g-0">
             <div class="col-8">
                 <div class="row justify-content-center g-0">
-                    @for ($i = 0; $i < 6; $i++)
+                    @for ($i = 0; $i < 1; $i++)
                         <div class="col-6 col-md-4 text-center">
                             <img class="img-fluid rounded shadow" src="https://picsum.photos/600" alt="foto">
                         </div>

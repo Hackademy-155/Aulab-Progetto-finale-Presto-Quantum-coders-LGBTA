@@ -329,32 +329,41 @@ box-shadow: inset 2px 2px 5px var(--main-color1), inset -2px -2px 5px var(--seco
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
     z-index: 3;
     overflow: hidden;
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
 }
-.product-card .logo-cart{
+
+.product-card .logo-cart {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.product-card .logo-cart img{
+
+.product-card .logo-cart img {
     height: 60px;
     width: 60px;
     object-fit: cover;
 }
-.product-card .logo-cart i{
+
+.product-card .logo-cart i {
     font-size: 27px;
     color: #707070;
     cursor: pointer;
     transition: color 0.3s ease;
 }
-.product-card .logo-cart i:hover{
+
+.product-card .logo-cart i:hover {
     color: #333;
 }
-.product-card .main-images{
+
+.product-card .main-images {
     position: relative;
     height: 210px;
 }
-.product-card .main-images img{
+
+.product-card .main-images img {
     position: absolute;
     height: 300px;
     width: 300px;
@@ -366,13 +375,58 @@ box-shadow: inset 2px 2px 5px var(--main-color1), inset -2px -2px 5px var(--seco
     opacity: 0;
     transition: opacity 0.5s ease;
 }
-.product-card .main-images img.active{
+
+.product-card .main-images img.active {
     opacity: 1;
 }
-.product-card .shoe-details .shoe_name{
+
+.product-card .shoe-details .shoe_name {
     font-size: 24px;
     font-weight: bolder;
     color: var(--secondary-color1);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.product-card .shoe-details {
+    margin-top: 15px;
+}
+
+.product-card .color-price {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.product-card .color-option a {
+    color: #000;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.product-card .price {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.product-card .button {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.product-card .button button {
+    background-color: #333;
+    border-radius: 25px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.product-card .button button a {
+    color: #fff;
+    text-decoration: none;
 }
 .color{
     transition: .5s;
@@ -780,4 +834,26 @@ box-shadow: inset 2px 2px 5px var(--main-color1), inset -2px -2px 5px var(--seco
         margin-top: 0 !important; /* Remove top margin if any */
       }
     
-}
+      .product-card {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .product-card .shoe-details .shoe_name {
+        font-size: 20px;
+        white-space: normal;  /* Allow text to wrap */
+    }
+
+    .product-card .color-price {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-card .price {
+        font-size: 18px;
+    }
+
+    .product-card .button button {
+        padding: 8px 15px;
+    }
+}   

@@ -17,14 +17,20 @@ class PublicController extends Controller
     public function lavoraConNoi(){
         return view('lavoraConNoi');
     }
-
-    public function searchProduct(Request $request){
-        $query=$request->input('query');
+    public function searchProduct(Request $request)
+    {
+        $query = $request->input('query');
+    
         $products = Product::where('is_accepted', 1)
-                   ->orderBy('created_at', 'desc')
-                   ->paginate(6);
-
-
-        return view('products.search',['products'=>$products, 'query'=>$query]);
+            ->where(function($queryBuilder) use ($query) {
+                $queryBuilder->where('title', 'like', '%' . $query . '%')
+                             ->orWhereHas('category', function($categoryQuery) use ($query) {
+                                 $categoryQuery->where('name', 'like', '%' . $query . '%');
+                             });
+            })
+            ->orderBy('created_at', 'desc')
+            ->paginate(6);
+    
+        return view('products.search', ['products' => $products, 'query' => $query]);
     }
 }
