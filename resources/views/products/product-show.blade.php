@@ -8,7 +8,7 @@
             
             <h2 class="text-center display-4 fw-bold">
               <a class="display-5 text-decoration-none color-second me-5" href="{{ route('product.index') }}"><i class="bi bi-arrow-left-circle-fill"></i></a>
-              {{ $product->title }} - Dettagli</h2>
+              {{ $product->title }} - {{__('ui.Dettagli')}}</h2>
           </div>
         </div>
         
@@ -42,11 +42,11 @@
             </div>
 
             <div class="col-12 col-md-6 text-center">
-                <p class="description mt-5 mt-md-0"><strong>Descrizione:</strong> {{ $product->description }}</p>
+                <p class="description mt-5 mt-md-0"><strong>{{ __('ui.Descrizione')}}</strong> {{ $product->description }}</p>
                 <div class="d-flex justify-content-around mt-4">
-                    <p class="small fw-bold">Prezzo: {{ $product->price }}$</p>
+                    <p class="small fw-bold">{{ __('ui.Prezzo')}}: {{ $product->price }}$</p>
                     <a href="{{ route('filterByCategory', $product->category) }}" class="text-decoration-none">
-                        <p class="small">{{ $product->category->name ?? 'Sconosciuta' }}</p>
+                        <p class="small">{{ __('ui.' . $product->category->name)  ?? 'ui.' . 'Sconosciuta' }}</p>
                     </a>
 
                 </div>

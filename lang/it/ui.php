@@ -2,6 +2,7 @@
 
 return
 [
+    // navbar
     'Home' => 'Home',
     'I nostri prodotti' => 'I nostri prodotti',
     'Aggiungi prodotto' => 'Aggiungi i prodotti',
@@ -35,4 +36,44 @@ return
     'Leggi di più' => 'Leggi di più',
     'Termini di servizio' => 'Termini di servizio',
     'Politica sulla privacy' => 'Politica sulla privacy',
+    // fine navbar
+    // Lavora con noi
+    'Indirizzo e-mail' => 'Indirizzo e-mail',
+    'Nome' => 'Nome',
+    'Cognome' => 'Cognome',
+    'Invia' => 'Invia',
+// Fine lavora con noi
+    'Risultati della tua ricerca' => 'Risultati della tua ricerca',
+    'Nessun articolo trovato' => 'Nessun articolo trovato',
+    'Dettagli' => 'Dettagli',
+    'Descrizione' => 'Descrizione',
+    'Prezzo' => 'Prezzo',
+    'Sconosciuta' => 'Sconosciuta',
+    'Scorri le Pagine dei prodotti' => 'Scorri le Pagine dei prodotti',
+    'Nessun prodotto presente in questa categoria' => 'Nessun prodotto presente in questa categoria',
+    'Modifica il prodotto' => 'Modifica il prodotto',
+    'Titolo' => 'Titolo',
+    'Aggiungi' => 'Aggiungi',
+    'Seleziona la categoria' => 'Seleziona la categoria',
+    'Categoria' => 'Categoria',
+    'Aggiungi il tuo prodotto' => 'Aggiungi il tuo prodotto',
+    'Registrati' => 'Registrati',
+    'Inserisci il tuo username' => 'Inserisci il tuo nome utente',
+    'Inserisci la tua email' => 'Inserisci la tua email',
+    'Password' => 'Password',
+    'Conferma Password' => 'Conferma Password',
+    'Sei già registrato?' => 'Sei già registrato?',
+    'Accedi' => 'Accedi',
+    'Inserisci la tua email' => 'Inserisci la tua email',
+    'Ricordami' => 'Ricordami',
+    'Non hai un account?' => 'Non hai un account?',
+    'Registrati' => 'Registrati',
+    'Area Revisione' => 'Area Revisione',
+    'Autore' => 'Autore',
+    'Accetta' => 'Accetta',
+    'Rifiuta' => 'Rifiuta',
+    'Nessun prodotto da revisionare' => 'Nessun prodotto da revisionare',
+    'Torna alla home!' => 'Torna alla home!',
+
+    
 ];

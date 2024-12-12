@@ -3,7 +3,7 @@
     <div class="container-fluid">
         <div class="row vh-50 justify-content-center align-items-center">
             <div class="col-12">
-                <h2 class="text-center mt-5 display-1">Risultati della tua ricerca <span class="fst-italic">"{{$query}}"</span></h2>
+                <h2 class="text-center mt-5 display-1">{{__('ui.Risultati della tua ricerca')}}<span class="fst-italic">"{{$query}}"</span></h2>
             </div>
         </div>
 
@@ -18,7 +18,7 @@
             @empty
 
                 <div class="col-12">
-                    <h4 class="text-center">Nessun articolo trovato</h4>
+                    <h4 class="text-center">{{__('ui.Nessun articolo trovato')}}</h4>
                 </div>
 
             @endforelse

@@ -114,7 +114,7 @@
             <li class="text-center">
                 <button class="btn w-100">
                     <a class="btn dropdown-btn w-100"
-                    href="{{ route('filterByCategory', $category) }}">{{ $category->name }}</a>
+                    href="{{ route('filterByCategory', $category) }}">{{ __('ui.' . $category->name)  }}</a>
                 </button>
             </li>
             @endforeach

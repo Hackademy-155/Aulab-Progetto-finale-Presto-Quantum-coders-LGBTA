@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-12 text-center mt-5">
-                <h1 class="display-2 fw-bold mt-5 text-center">Registrati</h1>
+                <h1 class="display-2 fw-bold mt-5 text-center">{{__('ui.Registrati')}}</h1>
             </div>
         </div>
     </div>
@@ -15,28 +15,28 @@
                     @csrf
                     
                     <span class="input-span mb-3">
-                        <label for="UserName" class="label">Inserisci il tuo username</label>
+                        <label for="UserName" class="label">{{__('ui.Inserisci il tuo username')}}</label>
                         <input type="text" name="name" id="UserName">
                     </span>
                     
                     <span class="input-span mb-3">
-                        <label for="email" class="label">Inserisci la tua email</label>
+                        <label for="email" class="label">{{__('ui.Inserisci la tua email')}}</label>
                         <input type="email" name="email" id="email">
                     </span>
                     
                     <span class="input-span mb-3">
-                        <label for="password" class="label">Password</label>
+                        <label for="password" class="label">{{__('ui.Password')}}</label>
                         <input type="password" name="password" id="password">
                     </span>
                     
                     <span class="input-span mb-3">
-                        <label for="password_confirmation" class="label">Conferma Password</label>
+                        <label for="password_confirmation" class="label">{{__('ui.Conferma Password')}}</label>
                         <input type="password" name="password_confirmation" id="password_confirmation">
                     </span>
                     
                     
-                    <button type="submit" class="submit">Invia</button>
-                    <span class="span">Sei già registrato? <a href="{{route('login')}}" class="endformcolor"> Login</a></span>
+                    <button type="submit" class="submit">{{__('ui.Invia')}}</button>
+                    <span class="span">{{__('ui.Sei già registrato? ')}}<a href="{{route('login')}}" class="endformcolor"> Login</a></span>
                 </form>
                 
             </div>
