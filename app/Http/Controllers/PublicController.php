@@ -20,7 +20,7 @@ class PublicController extends Controller
     public function searchProduct(Request $request)
     {
         $query = $request->input('query');
-    
+
         $products = Product::where('is_accepted', 1)
             ->where(function($queryBuilder) use ($query) {
                 $queryBuilder->where('title', 'like', '%' . $query . '%')
@@ -30,7 +30,12 @@ class PublicController extends Controller
             })
             ->orderBy('created_at', 'desc')
             ->paginate(6);
-    
+
         return view('products.search', ['products' => $products, 'query' => $query]);
+    }
+
+    public function setLanguage($lang){
+        session()->put('locale', $lang);
+        return redirect()->back();
     }
 }

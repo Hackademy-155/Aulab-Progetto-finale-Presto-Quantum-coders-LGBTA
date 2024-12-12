@@ -23,12 +23,12 @@
     </section>
 
     <!-- Links Section -->
-    <section class="links"> 
+    <section class="links">
       <div class="row justify-content-center text-center">
         <div class="col-lg-3 col-md-6 mb-4">
           <h5 class="text-uppercase">Links</h5>
           <ul class="list-unstyled">
-            <li><a href="{{route('lavoraConNoi')}}" class="footer-link">Work with us</a></li>
+            <li><a href="{{route('lavoraConNoi')}}" class="footer-link">{{__('ui.Lavora con noi')}}</a></li>
             <li><a href="#!" class="footer-link">Links</a></li>
             <li><a href="#!" class="footer-link">Links</a></li>
             <li><a href="#!" class="footer-link">Links</a></li>
@@ -39,8 +39,8 @@
           <ul class="list-unstyled">
             <li><a href="#!" class="footer-link">Links</a></li>
             <li><a href="#!" class="footer-link">Links</a></li>
-            <li><a href="https://policies.google.com/terms?hl=en-US" class="footer-link">Terms of Service</a></li>
-            <li><a href="https://policies.google.com/privacy?hl=en-US" class="footer-link">Privacy Policy</a></li>
+            <li><a href="https://policies.google.com/terms?hl=en-US" class="footer-link">{{__('ui.Termini di servizio')}}</a></li>
+            <li><a href="https://policies.google.com/privacy?hl=en-US" class="footer-link">{{__('ui.Politica sulla privacy')}}</a></li>
           </ul>
         </div>
         <div class="col-lg-3 col-md-6 mb-4">

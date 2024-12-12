@@ -24,3 +24,6 @@ Route::get('/make/revisor/{user}', [RevisorController::class, 'makeRevisor'])->n
 
 //SEARCH
 Route::get('/search/product', [PublicController::class, 'searchProduct'])->name('products.search');
+
+// Cambio Lingue
+Route::post('/{lang}', [PublicController::class, 'setLanguage'])->name('setLanguage');

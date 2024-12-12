@@ -9,7 +9,7 @@
     </div>
     <div class="color-price">
         <div class="color-option">
-            <a class="color" href="{{ route('filterByCategory', $product->category) }}">{{$product->category->name}}</a>
+            <a class="color" href="{{ route('filterByCategory', $product->category) }}"> {{ __('ui.' . $product->category->name) }} </a>
 
         </div>
         <div class="price">
