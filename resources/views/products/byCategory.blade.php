@@ -18,7 +18,7 @@
                         <div>
                             <img src="/media/png-emptyBox.png" alt="" class="img-fluid" height="350px" width="350px">
                         </div>
-                        <h3>Nessun prodotto presente in questa categoria</h3>
+                        <h3> {{__('ui.Nessun prodotto presente in questa categoria')}} </h3>
                     </div>
                 @endforelse 
                 
