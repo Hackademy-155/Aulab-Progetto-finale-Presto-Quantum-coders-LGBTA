@@ -40,15 +40,34 @@
         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             {{__('ui.Seleziona la lingua')}}
         </a>
-        <ul class="dropdown-menu">
-            <li>
+        <ul class="dropdown-menu dropdown-custom ">
+            <li class="d-flex gap-2  align-items-center">
                 <x-_locale lang="it" />
+                IT
             </li>
-            <li>
+            <li class="d-flex gap-2  align-items-center">
                 <x-_locale lang="en" />
+                EN
             </li>
-            <li>
+            <li class="d-flex gap-2  align-items-center">
                 <x-_locale lang="fr" />
+                FR
+            </li>
+            <li class="d-flex gap-2  align-items-center">
+                <x-_locale lang="de" />
+                DE
+            </li>
+            <li class="d-flex gap-2  align-items-center">
+                <x-_locale lang="es" />
+                ES
+            </li>
+            <li class="d-flex gap-2  align-items-center">
+                <x-_locale lang="ja" />
+                JP
+            </li>
+            <li class="d-flex gap-2  align-items-center">
+                <x-_locale lang="kl" />
+                Klingon
             </li>
         </ul>
     </li>
@@ -144,6 +163,22 @@
             <li class="d-flex gap-2  align-items-center">
                 <x-_locale lang="fr" />
                 FR
+            </li>
+            <li class="d-flex gap-2  align-items-center">
+                <x-_locale lang="de" />
+                DE
+            </li>
+            <li class="d-flex gap-2  align-items-center">
+                <x-_locale lang="es" />
+                ES
+            </li>
+            <li class="d-flex gap-2  align-items-center">
+                <x-_locale lang="ja" />
+                JP
+            </li>
+            <li class="d-flex gap-2  align-items-center">
+                <x-_locale lang="kl" />
+                Klingon
             </li>
         </ul>
     </li>
