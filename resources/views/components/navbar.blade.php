@@ -59,9 +59,31 @@
                     <x-_locale lang="fr" />
                     FR
                 </div>
-            </li>
+    </li>
+    <li class="d-flex gap-2  align-items-center">
+        <div class="btn dropdown-btn">
+        <x-_locale lang="de" />
+        DE
         </div>
-        </ul>
+    </li>
+    <li class="d-flex gap-2  align-items-center">
+        <div class="btn dropdown-btn">
+        <x-_locale lang="es" />
+        ES
+        </div>
+    </li>
+    
+    <li class="d-flex gap-2  align-items-center">
+        <div class="btn dropdown-btn">
+        <x-_locale lang="ja" />
+        JP
+        </div>
+    </li>
+    <li class="d-flex gap-2  align-items-center">
+        <div class="btn dropdown-btn">
+        <x-_locale lang="kl" />
+        Klingon
+        </div>
     </li>
 </ul>
 <ul class="navbar-nav">
@@ -162,9 +184,33 @@
                     <x-_locale lang="fr" />
                     FR
                 </div>
-            </li>
+    </li>
+    <li class="d-flex gap-2  align-items-center">
+        <div class="btn dropdown-btn">
+        <x-_locale lang="de" />
+        DE
         </div>
-        </ul>
+    </li>
+    <li class="d-flex gap-2  align-items-center">
+        <div class="btn dropdown-btn">
+        <x-_locale lang="es" />
+        ES
+        </div>
+    </li>
+    
+    <li class="d-flex gap-2  align-items-center">
+        <div class="btn dropdown-btn">
+        <x-_locale lang="ja" />
+        JP
+        </div>
+    </li>
+    <li class="d-flex gap-2  align-items-center">
+        <div class="btn dropdown-btn">
+        <x-_locale lang="kl" />
+        Klingon
+        </div>
+    </li>
+</ul>
     </li>
     <li>
 
