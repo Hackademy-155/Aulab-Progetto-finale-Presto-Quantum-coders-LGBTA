@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout loading="lazy">
     <header>
 
 
@@ -21,7 +21,7 @@
                 @endif
                 <div class="col-12 col-md-6  ">
 
-                    <img class=" img-header img-fluid " src="/media/header.png" alt="img-header">
+                    <img class=" img-header img-fluid " src="/media/header.png" alt="img-header" loading="lazy">
 
                 </div>
                 <div class="col-12 col-md-6 mt-md-5  text-center d-flex flex-column align-items-center justify-content-end gap-4">
@@ -54,7 +54,7 @@
         <section class="container">
             <div class="row justify-content-center my-150 gap-5 align-items-center shadow py-5 rounded-4">
                 <div class="col-10 col-md-5">
-                    <img class="img-fluid rounded-5" src="/media/lavoraConNoi.jpg" alt="Immagine lavora con noi">
+                    <img class="img-fluid rounded-5" src="/media/lavoraConNoi.jpg" alt="Immagine lavora con noi" loading="lazy">
                 </div>
                 <div class="col-10 col-md-5 text-center text-md-start">
                     <h4 class="display-5 title-home fw-bolder">{{__('ui.Lavora con noi')}}</h4>

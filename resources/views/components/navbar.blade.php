@@ -143,19 +143,27 @@
         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             {{__('ui.Seleziona la lingua')}}
         </a>
-        <ul class="dropdown-menu">
-            <li class="d-flex gap-2  align-items-center">
-                <x-_locale lang="it" />
-                IT
+        <ul class="dropdown-menu dropdown-custom  ">
+            <div class="d-flex justify-content-center align-items-center flex-column">
+            <li class="d-flex gap-2 nav-item">
+                <div class="btn dropdown-btn">
+                    <x-_locale lang="it" />
+                    IT
+                </div>
             </li>
-            <li class="d-flex gap-2  align-items-center">
-                <x-_locale lang="en" />
-                EN
+            <li class="d-flex gap-2 nav-item">
+                <div class="btn dropdown-btn">
+                    <x-_locale lang="en" />
+                    EN
+                </div>
             </li>
-            <li class="d-flex gap-2  align-items-center">
-                <x-_locale lang="fr" />
-                FR
+            <li class="d-flex gap-2 nav-item">
+                <div class="btn dropdown-btn">
+                    <x-_locale lang="fr" />
+                    FR
+                </div>
             </li>
+        </div>
         </ul>
     </li>
     <li>
@@ -174,7 +182,7 @@
     <ul class="dropdown-menu dropdown-custom">
         @if (Auth::user()->is_revisor)
         <li class="text-center p-0 d-flex justify-content-center">
-            <a href="{{ route('revisor.index') }}" class="btn dropdown-btn">
+            <a href="{{ route('revisor.index') }}" class="btn ">
                 <button class="btn gap-2 dropdown-btn"> <i class="bi bi-journal-arrow-up"></i>
                     {{__('ui.Revisiona')}}
                     <span class="badge rounded-pill bg-danger">

@@ -18,6 +18,6 @@
     </div>
     <div class="button">
         <div class="button-layer"></div>
-        <button><a href="{{ route('product.show', compact('product')) }}" class="text-white">Info</a></button>
+        <button><a class="w-100 h-100" href="{{ route('product.show', compact('product')) }}" class="text-white">Info</a></button>
     </div>
 </div>
