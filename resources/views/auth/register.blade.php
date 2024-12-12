@@ -36,7 +36,7 @@
                     
                     
                     <button type="submit" class="submit">{{__('ui.Invia')}}</button>
-                    <span class="span">{{__('ui.Sei già registrato? ')}}<a href="{{route('login')}}" class="endformcolor"> Login</a></span>
+                    <span class="span">{{__('ui.Sei già registrato?')}}<a href="{{route('login')}}" class="endformcolor"> Login</a></span>
                 </form>
                 
             </div>

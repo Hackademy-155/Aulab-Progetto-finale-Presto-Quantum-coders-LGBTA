@@ -28,7 +28,7 @@
             <li class="text-center">
                 <button class="btn w-100">
                     <a class="btn dropdown-btn w-100"
-                    href="{{ route('filterByCategory', $category) }}">{{ $category->name }}</a>
+                    href="{{ route('filterByCategory', $category) }}">{{ __('ui.' . $category->name)  }}</a>
                 </button>
             </li>
             @endforeach
@@ -40,16 +40,27 @@
         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             {{__('ui.Seleziona la lingua')}}
         </a>
-        <ul class="dropdown-menu">
-            <li>
-                <x-_locale lang="it" />
+        <ul class="dropdown-menu dropdown-custom  ">
+            <div class="d-flex justify-content-center align-items-center flex-column">
+            <li class="d-flex gap-2 nav-item">
+                <div class="btn dropdown-btn">
+                    <x-_locale lang="it" />
+                    IT
+                </div>
             </li>
-            <li>
-                <x-_locale lang="en" />
+            <li class="d-flex gap-2 nav-item">
+                <div class="btn dropdown-btn">
+                    <x-_locale lang="en" />
+                    EN
+                </div>
             </li>
-            <li>
-                <x-_locale lang="fr" />
+            <li class="d-flex gap-2 nav-item">
+                <div class="btn dropdown-btn">
+                    <x-_locale lang="fr" />
+                    FR
+                </div>
             </li>
+        </div>
         </ul>
     </li>
 </ul>
