@@ -12,12 +12,13 @@ class ProductController extends Controller implements HasMiddleware
 {
     static public function middleware()
     {
-        return[
+        return [
             new Middleware('auth'),
         ];
     }
 
-    public function createPage(){
+    public function createPage()
+    {
         return view('products.product-create');
     }
 
@@ -25,19 +26,20 @@ class ProductController extends Controller implements HasMiddleware
     public function index()
     {
         $products = Product::where('is_accepted', true)->orderBy('created_at', 'desc')->paginate(9);
-        return view ('products.product-index', compact('products'));
+        return view('products.product-index', compact('products'));
     }
 
 
 
-    public function show(Product $product, Category $category){
+    public function show(Product $product, Category $category)
+    {
         return view('products.product-show', compact('product', 'category'));
     }
 
-    public function filterByCategory(Category $category){
+    public function filterByCategory(Category $category)
+    {
         $products = $category->products()->where('is_accepted', 1)->get();
-        
+
         return view('products.byCategory', compact('products', 'category'));
     }
-    
 }

@@ -16,10 +16,10 @@ class Product extends Model
 
     public function toSearchableArray()
     {
-        return[
-            'id'=>$this->id,
-            'title'=>$this->title,
-            'description'=>$this->description,
+        return [
+            'id' => $this->id,
+            'title' => $this->title,
+            'description' => $this->description,
             'category' => $this->category->name,  // O un altro campo che vuoi indicizzare dalla categoria
 
         ];
@@ -28,24 +28,28 @@ class Product extends Model
     use HasFactory;
     protected $fillable = ['title', 'price', 'description', 'category_id', 'user_id'];
 
-    public function user(){
+    public function user()
+    {
         return $this->belongsTo(User::class);
     }
 
-    public function category(){
+    public function category()
+    {
         return $this->belongsTo(Category::class);
     }
-    public static function toBeRevisedCount(){
+    public static function toBeRevisedCount()
+    {
         return Product::where('is_accepted', null)->count();
     }
-    public function setAccepted($value){
+    public function setAccepted($value)
+    {
         $this->is_accepted = $value;
         $this->save();
         return true;
     }
 
-    public function images(): HasMany{
+    public function images(): HasMany
+    {
         return $this->hasMany(Image::class);
     }
-    
 }

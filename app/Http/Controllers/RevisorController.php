@@ -26,7 +26,6 @@ class RevisorController extends Controller
         $product->setAccepted(true);
 
         return redirect()->back()->with('message', "Hai accettato l'annuncio $product->title");
-
     }
     public function reject(Product $product)
     {

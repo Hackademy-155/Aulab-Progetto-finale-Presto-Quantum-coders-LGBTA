@@ -11,8 +11,8 @@ use Illuminate\Support\Facades\Auth;
 class ProductCreate extends Component
 {
     use WithFileUploads;
-    
-    
+
+
     #[Validate('required|min:3|max:15')]
     public $title;
     #[Validate('required|numeric')]
@@ -27,17 +27,18 @@ class ProductCreate extends Component
     public $images = [];
     public $temporary_images;
 
-    public function messages(){
+    public function messages()
+    {
         return [
-            'title'=> 'Il campo titolo è obbligatorio',
-            'title.min'=> 'Caratteri minimi :min ',
+            'title' => 'Il campo titolo è obbligatorio',
+            'title.min' => 'Caratteri minimi :min ',
             'title.max' => 'Caratteri massimi :max',
-            'price'=> 'Il campo prezzo è obbligatorio',
-            'price.numeric'=> 'Il campo prezzo deve contenere caratteri numerici',
-            'description'=> 'Il campo descrizione è obbligatorio',
-            'description.min'=> 'Caratteri minimi :min',
+            'price' => 'Il campo prezzo è obbligatorio',
+            'price.numeric' => 'Il campo prezzo deve contenere caratteri numerici',
+            'description' => 'Il campo descrizione è obbligatorio',
+            'description.min' => 'Caratteri minimi :min',
             'description.max' => 'Caratteri massimi :max',
-            'category'=> 'Il campo categoria è obbligatorio',
+            'category' => 'Il campo categoria è obbligatorio',
 
         ];
     }
@@ -55,9 +56,9 @@ class ProductCreate extends Component
         ]);
 
 
-        if(count($this->images)>0){
-            foreach($this->images as $image){
-                $this->product->images()->create(['path'=> $image->store('images', 'public')]);
+        if (count($this->images) > 0) {
+            foreach ($this->images as $image) {
+                $this->product->images()->create(['path' => $image->store('images', 'public')]);
             }
         }
 
@@ -68,18 +69,20 @@ class ProductCreate extends Component
     }
 
 
-    public function setAccepted($value){
+    public function setAccepted($value)
+    {
         $this->is_accepted = $value;
         $this->save();
         return true;
     }
 
-    public function updatedTemporaryImages(){
-        if($this->validate([
+    public function updatedTemporaryImages()
+    {
+        if ($this->validate([
             'temporary_images.*' => 'image|max:1024',
             'temporary_images' => 'max:6'
-        ])){
-            foreach($this->temporary_images as $image){
+        ])) {
+            foreach ($this->temporary_images as $image) {
                 $this->images[] = $image;
             }
         }
@@ -87,17 +90,18 @@ class ProductCreate extends Component
 
     public function removeImage($key)
     {
-        if(in_array($key, array_keys($this->images))){
+        if (in_array($key, array_keys($this->images))) {
             unset($this->images[$key]);
         }
     }
 
-    protected function cleanForm(){
+    protected function cleanForm()
+    {
         $this->title = '';
         $this->description = '';
-        $this->category= '';
+        $this->category = '';
         $this->price = '';
-        $this->images= [];
+        $this->images = [];
     }
 
     public function render()

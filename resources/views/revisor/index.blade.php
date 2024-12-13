@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <div class="row vh-50 justify-content-center align-items-center">
             <div class="col-10">
-                <h2 class="display-1 text-center">{{__('ui.Area Revisione')}}</h2>
+                <h2 class="display-1 text-center">{{ __('ui.Area Revisione') }}</h2>
             </div>
         </div>
     </div>
@@ -22,11 +22,11 @@
 
             <div class="col-md-4 ps-md-4 d-flex flex-column justify-content-between">
                 <div>
-                    <h2>{{$product_to_check->title}}</h2>
-                    <h3>{{__('ui.Autore')}}: {{$product_to_check->user->name}}</h3>
-                    <h4>{{$product_to_check->price}} €</h4>
-                    <h5 class="fst-italic text-muted">{{ __('ui.' . $product_to_check->category->name)  }}</h5>
-                    <p class="h6">{{$product_to_check->description}}</p>
+                    <h2>{{ $product_to_check->title }}</h2>
+                    <h3>{{ __('ui.Autore') }}: {{ $product_to_check->user->name }}</h3>
+                    <h4>{{ $product_to_check->price }} €</h4>
+                    <h5 class="fst-italic text-muted">{{ __('ui.' . $product_to_check->category->name) }}</h5>
+                    <p class="h6">{{ $product_to_check->description }}</p>
                 </div>
                 @if (session()->has('message'))
                     <div class="alert alert-success">
@@ -38,13 +38,13 @@
                     <form action="{{ route('reject.product', ['product' => $product_to_check]) }}" method="POST">
                         @csrf
                         @method('PATCH')
-                        <button class="btn btn-outline-success px-3">{{__('ui.Accetta')}}</button>
+                        <button class="btn btn-outline-danger px-3">{{ __('ui.Rifiuta') }}</button>
                     </form>
 
                     <form action="{{ route('accept.product', ['product' => $product_to_check]) }}" method="POST">
                         @csrf
                         @method('PATCH')
-                        <button class="btn btn-outline-danger px-3">{{__('ui.Rifiuta')}}</button>
+                        <button class="btn btn-outline-success px-3">{{ __('ui.Accetta') }}</button>
                     </form>
                 </div>
             </div>
@@ -56,8 +56,8 @@
                     <img src="/media/png-emptyBox.png" alt="" class="img-fluid"
                         style="max-width: 350px; height: auto;">
                 </div>
-                <h4 class="fst-italic display-4">{{__('ui.Nessun prodotto da revisionare')}}</h4>
-                <a class="mt-5 btn btn-outline-custom" href="{{route('home')}}">{{__('ui.Torna alla home!')}}</a>
+                <h4 class="fst-italic display-4">{{ __('ui.Nessun prodotto da revisionare') }}</h4>
+                <a class="mt-5 btn btn-outline-custom" href="{{ route('home') }}">{{ __('ui.Torna alla home!') }}</a>
             </div>
         </div>
 

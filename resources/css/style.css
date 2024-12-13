@@ -468,8 +468,9 @@ footer {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 120px;
+    height: 150px;
     width: 120px;
+    
 }
 
 .form {
@@ -515,7 +516,7 @@ footer {
     font-weight: 900;
     font-size: larger;
 }
-.form .submit {
+.form .submit1 {
     padding: 1rem;
     display: flex;
     align-items: center;
@@ -529,7 +530,7 @@ footer {
     font-weight: 600;
 
 }
-.form .submit:hover {
+.form .submit1:hover {
     background-color: var(--secondary-color1);
     color: var(--main-color1);
 }
