@@ -1,44 +1,40 @@
 <x-layout>
     <div class="container my-5">
-
-
-
         <div class="row">
-          <div class="col-12 mt-5">
-            
-            <h2 class="text-center display-4 fw-bold">
-              <a class="display-5 text-decoration-none color-second me-5" href="{{ route('product.index') }}"><i class="bi bi-arrow-left-circle-fill"></i></a>
-              {{ $product->title }} - {{__('ui.Dettagli')}}</h2>
-          </div>
+            <div class="col-12 mt-5">
+
+                <h2 class="text-center display-4 fw-bold">
+                    <a class="display-5 text-decoration-none color-second me-5" href="{{ route('product.index') }}"><i class="bi bi-arrow-left-circle-fill"></i></a>{{ $product->title }} - {{__('ui.Dettagli')}}
+                </h2>
+            </div>
         </div>
-        
+
         <div class="row justify-content-between align-items-center my-5 bg-body-secondary p-5 rounded-3 shadow">
-          
-          <div class="col-12 col-md-5">
-            <div id="productCarousel" class="carousel slide shadow rounded overflow-hidden" data-bs-ride="carousel">
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img src="https://picsum.photos/600" class="d-block w-100 zoom-on-hover"
-                                alt="Product Image">
+
+            <div class="col-12 col-md-5">
+                @if ($product->images->count()>0)
+                <div id="productCarousel" class="carousel slide shadow rounded overflow-hidden" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        @foreach ($product->images as $key=> $image)
+                        <div class="carousel-item @if($loop->first) active @endif">
+                            <img src="{{Storage::url($image->path)}}" class="d-block w-100 zoom-on-hover"
+                            alt="Immagine {{$key +1}} dell'articolo {{$product->title}}">
                         </div>
-                        <div class="carousel-item">
-                            <img src="https://picsum.photos/600" class="d-block w-100 zoom-on-hover"
-                                alt="Product Image">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="https://picsum.photos/600" class="d-block w-100 zoom-on-hover"
-                                alt="Product Image">
-                        </div>
+                        @endforeach
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel"
-                        data-bs-slide="prev">
+                    @if ($product->images->count()>1)
+
+                    <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#productCarousel"
-                        data-bs-slide="next">
+                    <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     </button>
+                    @endif
                 </div>
+                @else
+                <img src="https://picsum.photos/300" alt="Nessuna foto inserita dall'utente">
+                @endif
             </div>
 
             <div class="col-12 col-md-6 text-center">

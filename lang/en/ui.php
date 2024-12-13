@@ -51,7 +51,7 @@ return
 'Titolo' => 'Title',
 'Aggiungi' => 'Add',
 'Seleziona la categoria' => 'Select Category',
-'CATEGORIA'=>  "Category",
+'Categoria'=>  "Category",
 'Aggiungi il tuo prodotto'=>  "Add your product",
 "Registrati"=>  "Register",
 "Inserisci il tuo username"=>  "Enter your username",

@@ -62,9 +62,9 @@ class ProductCreate extends Component
             }
         }
 
-        $this->reset();
+        // $this->reset();
 
-        return session()->flash('success', 'Prodotto aggiunto con successo');
+        session()->flash('success', 'Prodotto aggiunto con successo');
         $this->cleanForm();
     }
 
@@ -102,6 +102,7 @@ class ProductCreate extends Component
         $this->category = '';
         $this->price = '';
         $this->images = [];
+        $this->temporary_images = '';
     }
 
     public function render()

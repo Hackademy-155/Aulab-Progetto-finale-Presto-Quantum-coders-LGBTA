@@ -327,19 +327,9 @@ footer {
 
 .product-card .main-images img {
     position: absolute;
-    height: 300px;
-    width: 300px;
+    height: 100%;
+    width: 100%;
     object-fit: cover;
-    transform: rotate(18deg);
-    left: 12px;
-    top: -40px;
-    z-index: -1;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-}
-
-.product-card .main-images img.active {
-    opacity: 1;
 }
 
 .product-card .shoe-details .shoe_name {
@@ -470,7 +460,7 @@ footer {
     background-size: cover;
     height: 150px;
     width: 120px;
-    
+
 }
 
 .form {
@@ -568,6 +558,10 @@ footer {
     color: var(--main-color2);
     background-color: var(--bg-dark);
     border: 1px solid var(--main-color2);
+}
+
+.endformcolor{
+    color: var(--secondary-color1);
 }
 
 /* Offcanvas */
