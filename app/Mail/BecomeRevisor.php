@@ -3,17 +3,44 @@
 namespace App\Mail;
 
 use App\Models\User;
+use Illuminate\Http\Request;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Routing\Controllers\Middleware;
+use Illuminate\Routing\Controllers\HasMiddleware;
 
-class BecomeRevisor extends Mailable
+class BecomeRevisor extends Mailable implements HasMiddleware
+
 {
     use Queueable, SerializesModels;
+    public function becomeRevisor(Request $request)
+    {
+        if (!Auth::check()) {
+            return redirect(route('login'))->with('error', 'Devi essere autenticato per inviare una richiesta.');
+        }
+    
+        $user = Auth::user();
+        $motivazione = $request->motivazione;
+    
+        Mail::to('admin@presto.it')->send(new BecomeRevisor($user, $motivazione));
+    
+        return redirect(route('home'))->with('message', 'Complimenti, Hai richiesto di diventare revisore');
+    }
+    
 
+
+    static public function middleware()
+    {
+        return [
+            new Middleware('auth'),
+        ];
+    }
     public $user;
     public $motivazione;
     public function __construct(User $user, $motivazione)

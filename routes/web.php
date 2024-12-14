@@ -19,7 +19,12 @@ Route::get('/Category/{category}', [ProductController::class, 'filterbyCategory'
 Route::get('/revisor/index', [RevisorController::class, 'index'])->middleware('isRevisor')->name('revisor.index');
 Route::patch('/accept/{product}', [RevisorController::class, 'accept'])->name('accept.product');
 Route::patch('/reject/{product}', [RevisorController::class, 'reject'])->name('reject.product');
-Route::get('/revisor/request', [Revisorcontroller::class, 'becomeRevisor'])->middleware('auth')->name('become.revisor');
+Route::middleware(['web', 'auth'])->group(function () {
+    Route::post('/revisor/request', [RevisorController::class, 'becomeRevisor'])->name('become.revisor');
+});
+
+
+
 Route::get('/make/revisor/{user}', [RevisorController::class, 'makeRevisor'])->name('make.revisor');
 
 //SEARCH
