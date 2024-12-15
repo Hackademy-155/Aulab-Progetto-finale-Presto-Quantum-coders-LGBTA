@@ -107,28 +107,7 @@
             });
         });
 
-        // script utile per la visualizzazione in anteprima delle immagini 
-        document.getElementById('fileInput').addEventListener('change', function(event) {
-    const preview = document.getElementById('preview');
-    preview.innerHTML = ''; // Pulisce l'anteprima precedente
-    const files = event.target.files;
-
-    Array.from(files).forEach(file => {
-        if (file.type.startsWith('image/')) {
-            const reader = new FileReader();
-            reader.onload = function(e) {
-                const img = document.createElement('img');
-                img.src = e.target.result;
-                img.alt = file.name;
-                img.className = 'img-thumbnail m-2';
-                img.style.maxWidth = '100px';
-                img.style.maxHeight = '100px';
-                preview.appendChild(img);
-            };
-            reader.readAsDataURL(file);
-        }
-    });
-});
+        
 
 // script utile per mostrare all' utente il numero di file selezionati  
 document.getElementById('fileInput').addEventListener('change', function(event) {
