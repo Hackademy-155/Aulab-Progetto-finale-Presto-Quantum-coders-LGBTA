@@ -75,10 +75,10 @@
                     <div class="row">
                         <col class="12">
                         <p>Photo Preview</p>
-                        <div class="row border-4 border-success rounded py-4 shadow">
+                        <div class="row border-4 border-success rounded py-4 justify-content-center align-items-center">
                             @foreach ($images as $key => $image)
                                 <div class="col-12 col-md-6 d-flex flex-column align-items-center my-3">
-                                    <div class="img-preview mx-auto shadow rounded"
+                                    <div class="img-preview mx-auto   rounded-3 "
                                         style="background-image: url({{ $image->temporaryUrl() }});">
                                         <button type="button" class="btn btn-danger mt-1"
                                             wire:click="removeImage({{ $key }})">
