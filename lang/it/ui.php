@@ -74,6 +74,6 @@ return
     'Rifiuta' => 'Rifiuta',
     'Nessun prodotto da revisionare' => 'Nessun prodotto da revisionare',
     'Torna alla home!' => 'Torna alla home!',
-
+    'Motivazione' => 'Motivazione',
     
 ];

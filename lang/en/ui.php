@@ -69,5 +69,6 @@ return
 "Accetta"=>  "Accept",
 "Rifiuta"=>  "Reject",
 "Nessun prodotto da revisionare"=>  "No products to review",
-"Torna alla home!"=>  "Return to Home!"
+"Torna alla home!"=>  "Return to Home!",
+'Motivazione' => 'Reason',
 ];
