@@ -49,18 +49,27 @@
                         {{ session('success') }}
                     </div>
                 @endif
-                <div class="mb-3">
-                    <input type="file" id="fileInput" wire:model.live="temporary_images" multiple
-                        class="form-control shadow @error('temporary_images.*') is-invalid @enderror"
-                        placeholder="Img/">
-
+                <div class="mb-3 text-center">
+                    <label for="fileInput" class="label my-4">Inserisci le immagini</label>
+                    <div class="custom-file-upload">
+                        <label for="fileInput" class="btn file-input shadow py-2 px-4">
+                            <span id="fileCount"><strong>Scegli immagini</strong></span>
+                        </label>
+                        <input type="file" id="fileInput" wire:model.live="temporary_images" multiple
+                            class="d-none @error('temporary_images.*') is-invalid @enderror" accept="image/*">
+                    </div>
+                    <div id="preview" class="mt-3 d-flex flex-wrap justify-content-center"></div>
+                
                     @error('temporary_images.*')
-                        <p class="fst-italic text-danger">{{ $message }} </p>
+                        <p class="fst-italic text-danger">{{ $message }}</p>
                     @enderror
                     @error('temporary_images')
-                        <p class="fst-italic text-danger">{{ $message }} </p>
+                        <p class="fst-italic text-danger">{{ $message }}</p>
                     @enderror
                 </div>
+                
+                
+                
 
                 @if (!empty($images))
                     <div class="row">
@@ -68,7 +77,7 @@
                         <p>Photo Preview</p>
                         <div class="row border-4 border-success rounded py-4 shadow">
                             @foreach ($images as $key => $image)
-                                <div class="col-6 d-flex flex-column align-items-center my-3">
+                                <div class="col-12 col-md-6 d-flex flex-column align-items-center my-3">
                                     <div class="img-preview mx-auto shadow rounded"
                                         style="background-image: url({{ $image->temporaryUrl() }});">
                                         <button type="button" class="btn btn-danger mt-1"
@@ -97,6 +106,38 @@
                 }
             });
         });
+
+        // script utile per la visualizzazione in anteprima delle immagini 
+        document.getElementById('fileInput').addEventListener('change', function(event) {
+    const preview = document.getElementById('preview');
+    preview.innerHTML = ''; // Pulisce l'anteprima precedente
+    const files = event.target.files;
+
+    Array.from(files).forEach(file => {
+        if (file.type.startsWith('image/')) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const img = document.createElement('img');
+                img.src = e.target.result;
+                img.alt = file.name;
+                img.className = 'img-thumbnail m-2';
+                img.style.maxWidth = '100px';
+                img.style.maxHeight = '100px';
+                preview.appendChild(img);
+            };
+            reader.readAsDataURL(file);
+        }
+    });
+});
+
+// script utile per mostrare all' utente il numero di file selezionati  
+document.getElementById('fileInput').addEventListener('change', function(event) {
+    const fileCount = document.getElementById('fileCount');
+    const files = event.target.files.length;
+    fileCount.textContent = files > 0 ? `${files} file selezionati` : 'Scegli immagini';
+});
+
+
     </script>
 
 
