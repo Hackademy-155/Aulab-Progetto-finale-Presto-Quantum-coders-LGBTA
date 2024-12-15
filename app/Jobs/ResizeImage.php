@@ -6,6 +6,7 @@ use Spatie\Image\Image;
 use Spatie\Image\Enums\CropPosition;
 use Illuminate\Foundation\Queue\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
+use Spatie\Image\Enums\Fit;
 
 class ResizeImage implements ShouldQueue
 {
@@ -18,10 +19,10 @@ class ResizeImage implements ShouldQueue
      */
     public function __construct($filePath, $w, $h)
     {
-       $this->path= dirname($filePath);
-       $this->fileName = basename($filePath);
-       $this->w = $w;
-       $this->h = $h;
+        $this->path = dirname($filePath);
+        $this->fileName = basename($filePath);
+        $this->w = $w;
+        $this->h = $h;
     }
 
     /**
@@ -35,7 +36,9 @@ class ResizeImage implements ShouldQueue
         $destPath = storage_path() . '/app/public/' . $this->path . "/crop_{$w}x{$h}_" . $this->fileName;
 
         Image::load($srcPath)
-            ->crop($w, $h, CropPosition::Center)
+            ->width(450)
+            ->height(450)
+            ->fit(Fit::Max)
             ->save($destPath);
     }
 }

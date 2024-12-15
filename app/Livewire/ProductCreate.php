@@ -2,22 +2,24 @@
 
 namespace App\Livewire;
 
+use App\Jobs\ResizeImage;
 use App\Models\Product;
 use Livewire\Component;
 use Livewire\WithFileUploads;
 use Livewire\Attributes\Validate;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\File;
 
 class ProductCreate extends Component
 {
     use WithFileUploads;
 
 
-    #[Validate('required|min:3|max:15')]
+    #[Validate('required|min:3|max:35')]
     public $title;
     #[Validate('required|numeric')]
     public $price;
-    #[Validate('required|min:10|max:150')]
+    #[Validate('required|min:10|max:200')]
     public $description;
     #[Validate('required')]
     public $category = '';
@@ -58,12 +60,13 @@ class ProductCreate extends Component
 
         if (count($this->images) > 0) {
             foreach ($this->images as $image) {
-                $this->product->images()->create(['path' => $image->store('images', 'public')]);
+                $newFileName = "products/{$this->product->id}";
+                $newImage = $this->product->images()->create(['path' => $image->store($newFileName, 'public')]);
+
+                dispatch(new ResizeImage($newImage->path, 800, 600,));
             }
+            File::deleteDirectory(storage_path('/app/livewire-tmp'));
         }
-
-        // $this->reset();
-
         session()->flash('success', 'Prodotto aggiunto con successo');
         $this->cleanForm();
     }
@@ -109,4 +112,5 @@ class ProductCreate extends Component
     {
         return view('livewire.product-create');
     }
+    
 }

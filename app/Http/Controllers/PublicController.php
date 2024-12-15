@@ -9,6 +9,22 @@ use Laravel\Scout\Searchable;
 class PublicController extends Controller
 {
     use Searchable;
+    
+    
+        public function changeLocale($locale)
+        {
+            // Verifica che la lingua sia supportata
+            $availableLocales = ['it', 'en', 'fr', 'de', 'es'];
+            if (in_array($locale, $availableLocales)) {
+                session(['locale' => $locale]); // Salva la lingua nella sessione
+                app()->setLocale($locale); // Imposta la lingua attiva
+            }
+    
+            // Reindirizza alla pagina precedente
+            return redirect()->back();
+        }
+    
+
     public function home(){
         $products= Product::where('is_accepted', true)->orderBy('created_at', 'desc')->take(6)->get();
         return view ('home', compact('products'));

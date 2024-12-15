@@ -7,7 +7,7 @@ use App\Http\Controllers\RevisorController;
 
 Route::get('/', [PublicController::class, 'home'])->name('home');
 Route::get('/LavoraConNoi', [PublicController::class, 'lavoraConNoi'])->name('lavoraConNoi');
-
+Route::get('/change-locale/{locale}', [PublicController::class, 'changeLocale'])->name('locale');
 // CRUD
 Route::get('/Product/Create', [ProductController::class, 'createPage'])->name('product.create');
 Route::get('/Product/index', [ProductController::class, 'index'])->name('product.index');
