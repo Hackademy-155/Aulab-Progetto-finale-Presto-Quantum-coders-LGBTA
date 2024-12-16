@@ -45,7 +45,7 @@
     @endif
 </div>
 
-<div class="col-12 col-lg-4 d-flex flex-column justify-content-between mt-4 mt-lg-0">
+<div class="col-10 col-lg-4 d-flex flex-column justify-content-between mt-4 mt-lg-0">
     <div>
         <h2 class="h4 fw-bold">{{ $product_to_check->title }}</h2>
         <h5>{{ __('ui.Autore') }}: <span class="fw-bold">{{ $product_to_check->user->name }}</span></h5>
@@ -80,7 +80,7 @@
 @else
 <div class="row justify-content-center text-center py-5">
     <div class="col-12">
-        <img src="/media/png-emptyBox.png" alt="empty box" class="img-fluid" style="max-width: 300px;">
+        <img loading="lazy" src="/media/png-emptyBox.png" alt="empty box" class="img-fluid" style="max-width: 300px;">
         <h4 class="fst-italic display-6 my-4">{{ __('ui.Nessun prodotto da revisionare') }}</h4>
         <a class="btn-outline-custom" href="{{ route('home') }}">{{ __('ui.Torna alla home!') }}</a>
     </div>

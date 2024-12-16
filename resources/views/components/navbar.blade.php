@@ -1,9 +1,9 @@
 @guest
     <nav class="navbar navbar-expand-lg p-3 fixed-top navBar">
         <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" id="hamburger-menu">
-                <span class="navbar-toggler-icon"></span>
+                <span class=""><i class="bi bi-list text-light fs-1 border-0"></i></span>
             </button>
             <div class="collapse navbar-collapse d-md-flex justify-content-md-center  align-items-md-center"
                 id="navbarSupportedContent">
@@ -37,7 +37,7 @@
                         </ul>
 
                     </li>
-                    <li class="nav-item dropdown ms-auto">
+                    <li class="nav-item dropdown ms-md-auto text-center">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
                             {{ __('ui.Seleziona la lingua') }}
@@ -120,7 +120,7 @@
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation" id="hamburger-menu">
-                <span class=""><i class="bi bi-list text-light fs-1"></i></span>
+                <span class=""><i class="bi bi-list text-light fs-1 border-0"></i></span>
             </button>
             <div class="collapse navbar-collapse d-md-flex justify-content-md-evenly  align-items-md-center"
                 id="navbarSupportedContent">

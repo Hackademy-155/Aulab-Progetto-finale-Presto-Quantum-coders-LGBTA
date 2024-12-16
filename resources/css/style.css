@@ -60,6 +60,19 @@ html {
 
 }
 
+.navbar-toggler:focus-visible{
+    border: none !important;
+    outline: none !important;
+    box-shadow: none;
+}
+
+.navbar-toggler:focus{
+    border: none !important;
+    outline: none !important;
+    box-shadow: none;
+
+}
+
 
 
 
@@ -546,6 +559,18 @@ footer {
     border-radius: 0.5rem;
     padding: 1rem 0.75rem;
     width: 100%;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--clr-alpha);
+    outline: 2px solid var(--bg-dark);
+}
+
+.eye{
+    color: black;
+    border-radius: 0.5rem ;
+    padding: 1rem 0.75rem;
     border: none;
     display: flex;
     align-items: center;
