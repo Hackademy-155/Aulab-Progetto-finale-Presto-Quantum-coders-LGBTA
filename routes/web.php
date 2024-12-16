@@ -21,7 +21,7 @@ Route::patch('/accept/{product}', [RevisorController::class, 'accept'])->name('a
 Route::patch('/reject/{product}', [RevisorController::class, 'reject'])->name('reject.product');
 Route::patch('/cancel/{product}', [RevisorController::class, 'cancel'])->name('cancel.product');
 Route::middleware(['web', 'auth'])->group(function () {
-Route::post('/revisor/request', [RevisorController::class, 'becomeRevisor'])->name('become.revisor');
+    Route::post('/revisor/request', [RevisorController::class, 'becomeRevisor'])->name('become.revisor');
 });
 
 
@@ -32,4 +32,4 @@ Route::get('/make/revisor/{user}', [RevisorController::class, 'makeRevisor'])->n
 Route::get('/search/product', [PublicController::class, 'searchProduct'])->name('products.search');
 
 // Cambio Lingue
-Route::post('/{lang}', [PublicController::class, 'setLanguage'])->name('setLanguage');
+Route::post('/cambiolingua/{lang}', [PublicController::class, 'setLanguage'])->name('setLanguage');

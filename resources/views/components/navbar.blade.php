@@ -37,6 +37,7 @@
                         </ul>
 
                     </li>
+                    
                     <li class="nav-item dropdown ms-md-auto text-center">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
@@ -47,49 +48,53 @@
                                 <li class="d-flex gap-2 nav-item">
                                     <div class="btn dropdown-btn">
                                         <x-_locale lang="it" />
-                                        IT
+                                        
                                     </div>
                                 </li>
                                 <li class="d-flex gap-2 nav-item">
                                     <div class="btn dropdown-btn">
                                         <x-_locale lang="en" />
-                                        EN
+                                        
                                     </div>
                                 </li>
                                 <li class="d-flex gap-2 nav-item">
                                     <div class="btn dropdown-btn">
                                         <x-_locale lang="fr" />
-                                        FR
+                                        
                                     </div>
                                 </li>
                                 <li class="d-flex gap-2  align-items-center">
                                     <div class="btn dropdown-btn">
                                         <x-_locale lang="de" />
-                                        DE
+                                      
                                     </div>
                                 </li>
                                 <li class="d-flex gap-2  align-items-center">
                                     <div class="btn dropdown-btn">
                                         <x-_locale lang="es" />
-                                        ES
+                                       
                                     </div>
                                 </li>
 
                                 <li class="d-flex gap-2  align-items-center">
                                     <div class="btn dropdown-btn">
                                         <x-_locale lang="ja" />
-                                        JP
+                                      
                                     </div>
                                 </li>
                                 <li class="d-flex gap-2  align-items-center">
                                     <div class="btn dropdown-btn">
                                         <x-_locale lang="kl" />
-                                        Klingon
+                                        
                                     </div>
+
                                 </li>
                             </div>
+                            
                         </ul>
+
                     </li>
+                    
                     <ul class="navbar-nav">
                         <li class="nav-item dropdown px-3">
                             <a class="nav-link dropdown-toggle d-flex align-items-center justify-content-center gap-2"
@@ -98,13 +103,12 @@
                             </a>
                             <ul class="dropdown-menu dropdown-custom">
                                 <li class=" text-center p-0">
-                                    <button class=" btn"><a class="btn dropdown-btn"
-                                            href="{{ route('login') }}">{{ __('ui.Accedi') }}</a></button>
+                                    <a class="btn dropdown-btn"
+                                            href="{{ route('login') }}">{{ __('ui.Accedi') }}</a>
                                 </li>
                                 <li class=" text-center p-0">
-                                    <button class="btn"><a class="btn dropdown-btn"
+                                   <a class="btn dropdown-btn"
                                             href="{{ route('register') }}">{{ __('ui.Registrati') }}</a>
-                                    </button>
                                 </li>
                             </ul>
                         </li>
@@ -179,44 +183,44 @@
                                 <li class="d-flex gap-2 nav-item">
                                     <div class="btn dropdown-btn">
                                         <x-_locale lang="it" />
-                                        IT
+                                       
                                     </div>
                                 </li>
                                 <li class="d-flex gap-2 nav-item">
                                     <div class="btn dropdown-btn">
                                         <x-_locale lang="en" />
-                                        EN
+                                      
                                     </div>
                                 </li>
                                 <li class="d-flex gap-2 nav-item">
                                     <div class="btn dropdown-btn">
                                         <x-_locale lang="fr" />
-                                        FR
+                                        
                                     </div>
                                 </li>
                                 <li class="d-flex gap-2  align-items-center">
                                     <div class="btn dropdown-btn">
                                         <x-_locale lang="de" />
-                                        DE
+                                       
                                     </div>
                                 </li>
                                 <li class="d-flex gap-2  align-items-center">
                                     <div class="btn dropdown-btn">
                                         <x-_locale lang="es" />
-                                        ES
+                                       
                                     </div>
                                 </li>
 
                                 <li class="d-flex gap-2  align-items-center">
                                     <div class="btn dropdown-btn">
                                         <x-_locale lang="ja" />
-                                        JP
+                                        
                                     </div>
                                 </li>
                                 <li class="d-flex gap-2  align-items-center">
                                     <div class="btn dropdown-btn">
                                         <x-_locale lang="kl" />
-                                        Klingon
+                                        
                                     </div>
                                 </li>
                         </ul>

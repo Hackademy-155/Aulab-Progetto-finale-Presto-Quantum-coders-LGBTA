@@ -1,5 +1,4 @@
 <x-layout>
-<x-navbar/>
 <header class="mt-5">
     <div class="row">
         <div class="col-12 mt-5 d-flex align-items-center justify-content-center flex-column">
