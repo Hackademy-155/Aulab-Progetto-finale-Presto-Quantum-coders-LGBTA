@@ -44,9 +44,9 @@
                 <p class="description mt-5 mt-md-0"><strong>{{ __('ui.Descrizione') }}</strong>
                     {{ $product->description }}</p>
                 <div class="d-flex justify-content-around mt-4">
-                    <p class="small fw-bold">{{ __('ui.Prezzo') }}: {{ $product->price }}$</p>
+                    <p class="fs-5 fw-bold">{{ __('ui.Prezzo') }}: {{ $product->price }}$</p>
                     <a href="{{ route('filterByCategory', $product->category) }}" class="text-decoration-none">
-                        <p class="small">{{ __('ui.' . $product->category->name) ?? 'ui.' . 'Sconosciuta' }}</p>
+                        <p class="fs-5 color-category">{{ __('ui.' . $product->category->name) ?? 'ui.' . 'Sconosciuta' }}</p>
                     </a>
 
                 </div>

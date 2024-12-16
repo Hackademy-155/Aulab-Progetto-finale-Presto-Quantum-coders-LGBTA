@@ -169,7 +169,7 @@
                             aria-controls="offcanvasTop">{{ __('ui.Ricerca') }} <i class="bi bi-search ms-1"></i></a>
                     </li>
 
-                    <li class="nav-item dropdown ms-auto">
+                    <li class="nav-item dropdown ms-md-auto text-center  ">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
                             {{ __('ui.Seleziona la lingua') }}

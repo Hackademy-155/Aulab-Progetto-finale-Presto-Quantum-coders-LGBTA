@@ -21,7 +21,7 @@
     </div>
     <div class="button">
         <div class="button-layer"></div>
-        <button><a class="w-100 h-100" href="{{ route('product.show', compact('product')) }}"
-                class="text-white">Info</a></button>
+        <a class="w-100 h-100" href="{{ route('product.show', compact('product')) }}"
+                class="text-white"><button>Info</button></a>
     </div>
 </div>

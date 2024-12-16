@@ -58,6 +58,7 @@ html {
 
 /* navbar */
 
+
 .navBar {
     /* background: linear-gradient(180deg, var(--secondary-color1) 0%, rgba(66, 129, 164, 0) 100%); */
     background-color: var(--secondary-color1);
@@ -489,6 +490,11 @@ footer {
     font-weight: 600;
     letter-spacing: 1px;
     color: #fff;
+}
+
+.color-category{
+    text-decoration:underline ;
+    color: black;
 }
 
 /* form generale */
