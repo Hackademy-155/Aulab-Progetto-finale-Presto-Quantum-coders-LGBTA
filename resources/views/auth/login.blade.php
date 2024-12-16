@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <div class="row justify-content-center ">
             <div class="col-12 text-center mt-5">
-                <h1 class="display-2 fw-bold mt-5 text-center">{{__('ui.Accedi')}}</h1>
+                <h1 class="display-2 mt-5 text-center title-custom">{{__('ui.Accedi')}}</h1>
             </div>
         </div>
     </div>

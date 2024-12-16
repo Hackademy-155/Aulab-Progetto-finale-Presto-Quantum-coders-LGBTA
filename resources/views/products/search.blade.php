@@ -3,7 +3,7 @@
     <div class="container-fluid">
         <div class="row vh-50 justify-content-center align-items-center">
             <div class="col-12">
-                <h2 class="text-center mt-5 display-1">{{__('ui.Risultati della tua ricerca')}}<span class="fst-italic">"{{$query}}"</span></h2>
+                <h2 class="text-center mt-5 display-1 title-custom">{{__('ui.Risultati della tua ricerca')}}<span class="fst-italic">"{{$query}}"</span></h2>
             </div>
         </div>
 

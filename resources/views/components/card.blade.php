@@ -12,8 +12,8 @@
     <div class="color-price">
         <div class="color-option">
             <a class="color" href="{{ route('filterByCategory', $product->category) }}">
-                {{ __('ui.' . $product->category->name) }} </a>
-
+                <i class="bi bi-tags"></i> 
+                {{ __('ui.' . $product->category->name) }}</a>
         </div>
         <div class="price">
             <span class="price_num">{{ $product->price }} €</span>

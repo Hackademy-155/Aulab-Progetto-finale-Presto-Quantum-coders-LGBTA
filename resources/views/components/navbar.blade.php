@@ -1,5 +1,5 @@
 @guest
-    <nav class="navbar navbar-expand-lg p-3 fixed-top navBar">
+    <nav class="navbar navbar-expand-lg py-3 px-5 fixed-top navBar ">
         <div class="container-fluid">
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" id="hamburger-menu">
@@ -119,7 +119,7 @@
 @endguest
 
 @auth
-    <nav class="navbar navbar-expand-lg py-3 fixed-top navBar">
+    <nav class="navbar navbar-expand-lg py-3 px-5 fixed-top navBar">
         <div class="container-fluid">
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"

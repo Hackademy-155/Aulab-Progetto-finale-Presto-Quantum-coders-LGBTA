@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-12 mt-5">
 
-                <h2 class="text-center display-4 fw-bold">
+                <h2 class="text-center display-4 title-custom">
                     <a class="display-5 text-decoration-none color-second me-5" href="{{ route('product.index') }}"><i
                             class="bi bi-arrow-left-circle-fill"></i></a>{{ $product->title }} - {{ __('ui.Dettagli') }}
                 </h2>
@@ -46,7 +46,7 @@
                 <div class="d-flex justify-content-around mt-4">
                     <p class="fs-5 fw-bold">{{ __('ui.Prezzo') }}: {{ $product->price }}$</p>
                     <a href="{{ route('filterByCategory', $product->category) }}" class="text-decoration-none">
-                        <p class="fs-5 color-category">{{ __('ui.' . $product->category->name) ?? 'ui.' . 'Sconosciuta' }}</p>
+                        <p class="fs-5 color-category"><i class="bi bi-tags"></i>  {{ __('ui.' . $product->category->name) ?? 'ui.' . 'Sconosciuta' }}</p>
                     </a>
 
                 </div>

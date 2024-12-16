@@ -9,9 +9,14 @@
     --font: "Comfortaa", sans-serif;
 }
 
+
+
 * {
     font-family: var(--font);
 }
+
+
+
 
 /* Selettori per tag  */
 body {
@@ -29,12 +34,6 @@ body,
 html {
     background-color: var(--main-color2);
     margin: 0px;
-    transition: 1.7s;
-    transition-property: all;
-    transition-timing-function: ease-in-out;
-    animation-name: opapage;
-    animation-duration: 1s;
-    animation-iteration-count: initial;
 }
 
 .vh-50 {
@@ -60,6 +59,10 @@ html {
 
 }
 
+
+
+/* navbar */
+
 .navbar-toggler:focus-visible{
     border: none !important;
     outline: none !important;
@@ -72,12 +75,6 @@ html {
     box-shadow: none;
 
 }
-
-
-
-
-/* navbar */
-
 
 .navBar {
     /* background: linear-gradient(180deg, var(--secondary-color1) 0%, rgba(66, 129, 164, 0) 100%); */
@@ -143,6 +140,11 @@ a.nav-link:hover {
     }
 }
 
+
+
+
+
+
 /* Sezione header  */
 .img-header {
 
@@ -159,6 +161,9 @@ a.nav-link:hover {
 .fs-title {
     font-size: 9rem;
 }
+
+
+
 
 
 
@@ -183,13 +188,16 @@ a.nav-link:hover {
     color: var(--main-color1);
 }
 
-/* Sezione footer  */
+
+
+
+
+/* Sezione footer e icone footer colore background  */
 footer {
     margin-top: 60px;
     background: linear-gradient(to bottom, var(--secondary-color1), var(--main-color2));
 }
 
-/* icone footer colore background */
 .facebook,
 .x,
 .google,
@@ -213,6 +221,7 @@ footer {
 }
 
 .x:hover {
+    color: white;
     background: black;
     transform: scale(1.1);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
@@ -272,6 +281,19 @@ footer {
 .footer-brand:hover {
     color: var(--acc);
 }
+
+
+
+/*Sezione Titoli */
+
+.title-custom{
+    background: linear-gradient(270deg, var(--acc), var(--secondary-color1));
+    background-clip: text;
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+    font-weight: bolder; 
+}
+
 
 /* Sezione Bottoni  */
 
@@ -359,6 +381,8 @@ footer {
     background-color: var(--secondary-color1);
     color: var(--main-color1);
 }
+
+
 
 
 
@@ -524,6 +548,10 @@ footer {
     color: black;
 }
 
+
+
+
+
 /* form generale */
 
 .img-preview {
@@ -619,9 +647,6 @@ footer {
     color: var(--bg-dark);
 }
 
-
-
-
 .custom-select {
     background-color: var(--clr-alpha);
     border: 1px solid var(--bg-dark);
@@ -669,6 +694,7 @@ footer {
     width: 50px;
 }
 
+
 @media all and (max-width: 767px) {
     .carousel-container #carousel-thumbs img {
         border-width: 3px;
@@ -713,6 +739,11 @@ footer {
     color: var(--secondary-color1);
 }
 
+
+
+
+
+
 /* Offcanvas */
 .OffCanvas-custom {
     background: linear-gradient(290deg, var(--main-color2), var(--secondary-color1));
@@ -723,23 +754,16 @@ footer {
 
     height: 15vh !important;
     max-height: 30vh !important;
-
-
-
 }
 
 .offcanvas-body {
     padding: 0 !important;
-    /* Remove padding inside the offcanvas body */
     margin: 0 !important;
-    /* Ensure no extra margins */
     height: 10% !important;
-    /* Ensure it takes full height of the offcanvas */
 }
 
 .offcanvas-top {
     margin-top: 0 !important;
-    /* Remove top margin if any */
 }
 
 .button-offcanvas {
@@ -794,6 +818,10 @@ footer {
 }
 
 
+
+
+
+
 /* Media queries */
 
 @media screen and (max-width: 604px) {
@@ -840,16 +868,13 @@ footer {
 
     .offcanvas-body {
         padding: 0 !important;
-        /* Remove padding inside the offcanvas body */
         margin: 0 !important;
-        /* Ensure no extra margins */
         height: 20% !important;
-        /* Ensure it takes full height of the offcanvas */
+     
     }
 
     .offcanvas-top {
         margin-top: 0 !important;
-        /* Remove top margin if any */
     }
 
     .product-card {
@@ -860,7 +885,6 @@ footer {
     .product-card .shoe-details .shoe_name {
         font-size: 20px;
         white-space: normal;
-        /* Allow text to wrap */
     }
 
     .product-card .color-price {

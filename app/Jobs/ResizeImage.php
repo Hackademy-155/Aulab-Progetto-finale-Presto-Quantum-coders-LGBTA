@@ -39,6 +39,7 @@ class ResizeImage implements ShouldQueue
             ->width(450)
             ->height(450)
             ->fit(Fit::Max)
+            ->crop($w, $h, CropPosition::Center)
             ->save($destPath);
     }
 }

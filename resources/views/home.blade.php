@@ -41,7 +41,7 @@
     <main>
         <section class="container">
             <div class="row p-md-5 justify-content-evenly align-items-center">
-                <h4 class="fw-bold display-5 text-center my-5 title-home px-4 px-md-0">{{__('ui.Ultimi prodotti aggiunti')}}</h4>
+                <h4 class="fw-bold display-5 text-center my-5 title-home px-4 px-md-0 title-custom">{{__('ui.Ultimi prodotti aggiunti')}}</h4>
                 @foreach ($products as $product)
                 <div class="col-10 col-md-4 g-5 d-flex justify-content-center align-items-center">
                     <x-card :product='$product' />
@@ -57,7 +57,7 @@
                     <img class="img-fluid rounded-5" src="/media/lavoraConNoi.jpg" alt="Immagine lavora con noi" loading="lazy">
                 </div>
                 <div class="col-10 col-md-5 text-center text-md-start">
-                    <h4 class="display-5 title-home fw-bolder">{{__('ui.Lavora con noi')}}</h4>
+                    <h4 class="display-5 title-home fw-bolder title-custom">{{__('ui.Lavora con noi')}}</h4>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet eos laudantium expedita inventore, incidunt blanditiis vitae nostrum velit ipsam dolor.</p>
                     <button class="neu-button"><a class=" text-white" href="{{route('lavoraConNoi')}}">{{__('ui.Leggi di più')}}</a></button>
                     <a class="btnphone" href="{{route('lavoraConNoi')}}"><i class="bi bi-box-arrow-in-right"></i></a>

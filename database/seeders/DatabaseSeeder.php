@@ -22,9 +22,9 @@ class DatabaseSeeder extends Seeder
         'Motori',
         'Pesca',
         'Videogiochi',
-
-
     ];
+
+
     public function run(): void
     {
         foreach ($this->categories as $category) {

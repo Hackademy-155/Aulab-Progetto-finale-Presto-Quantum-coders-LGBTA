@@ -4,7 +4,7 @@
             <form wire:submit="create" class="form shadow">
                 @csrf
 
-                <h2 class="fw-bold text-center mb-5 title-insert-product display-4">
+                <h2 class="title-custom text-center mb-5 title-insert-product display-4">
                     {{ __('ui.Aggiungi il tuo prodotto') }}</h2>
 
                 <span class="input-span mb-3">
@@ -109,14 +109,12 @@
 
 
 
-// script utile per mostrare all' utente il numero di file selezionati
-document.getElementById('fileInput').addEventListener('change', function(event) {
-    const fileCount = document.getElementById('fileCount');
-    const files = event.target.files.length;
-    fileCount.textContent = files > 0 ? `${files} file selezionati` : 'Scegli immagini';
-});
-
-
+        // script utile per mostrare all' utente il numero di file selezionati
+        document.getElementById('fileInput').addEventListener('change', function(event) {
+            const fileCount = document.getElementById('fileCount');
+            const files = event.target.files.length;
+            fileCount.textContent = files > 0 ? `${files} file selezionati` : 'Scegli immagini';
+        });
     </script>
 
 
