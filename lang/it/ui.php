@@ -76,4 +76,11 @@ return
         'Torna alla home!' => 'Torna alla home!',
         'Motivazione' => 'Motivazione',
         'Not Found' => 'Non trovata',
+        'Link utili' => 'links',
+        'Ultimi articoli revisionati' => 'Ultimi articoli revisionati',
+        'Annulla' => 'Annulla',
+        'Inserisci le immagini' => 'Inserisci le immagini',
+        'Scegli immagini' => 'Scegli immagini',
+        'Photo Preview' => 'Anteprima foto',
+        'Il campo titolo è obbligatorio' => 'Il campo titolo è obbligatorio2323',
     ];

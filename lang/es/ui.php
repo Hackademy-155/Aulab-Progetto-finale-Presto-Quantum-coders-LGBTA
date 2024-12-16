@@ -72,4 +72,10 @@ return
       'Torna alla home!' => '¡Volver al inicio!',
       'Motivazione' => 'Razón',
       'Not Found' => 'No encontrado',
+      'Link utili' => 'Enlaces útiles',
+      'Ultimi articoli revisionati' => 'Últimos artículos revisados',
+      'Annulla' => 'Cancelar',
+      'Inserisci le immagini' => 'Insertar imágenes',
+      'Scegli immagini' => 'Elegir imágenes',
+      'Photo Preview' => 'Vista previa de la foto',
    ];

@@ -72,4 +72,10 @@ return
         'Torna alla home!' => "juH chegh!",
         'Motivazione' => "Quch",
         'Not Found' => "tu'lu'be'",
+        'Link utili' => 'Soch Sar',
+        'Ultimi articoli revisionati' => "Dor Qatlh HoD'",
+        'Annulla' => "boqHa'",
+        'Inserisci le immagini' => "ghItlhwI' vIje",
+        'Scegli immagini' => "ghItlhwI' vIchenmoH",
+        'Photo Preview' => "pIqaD Duj'",
     ];

@@ -72,5 +72,10 @@ return
       'Torna alla home!' => 'Zurück zur Startseite!',
       'Motivazione' => 'Grund',
       'Not Found' => 'Nicht gefunden',
-
+      'Link utili' => 'Nützliche Links',
+      'Ultimi articoli revisionati' => 'Zuletzt überarbeitete Artikel',
+      'Annulla' => 'Abbrechen',
+      'Inserisci le immagini' => 'Bilder einfügen',
+      'Scegli immagini' => 'Bilder auswählen',
+      'Photo Preview' => 'Foto-Vorschau',
    ];
