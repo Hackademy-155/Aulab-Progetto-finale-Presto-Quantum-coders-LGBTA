@@ -13,11 +13,12 @@
             @endforeach
         </div>
     </div>
-    <div class="d-flex justify-content-center flex-column align-items-center">
-        <p class="text-dark fw-bold"> {{__('ui.Scorri le Pagine dei prodotti')}} </p>
-        <div>
-            {{ $products->links() }}
+
+        <div class="d-flex justify-content-center flex-column align-items-center">
+            <p class="text-dark fw-bold"> {{__('ui.Scorri le Pagine dei prodotti')}} </p>
+            <div>
+                {{ $products->links() }}
+            </div>
         </div>
 
-    </div>
 </x-layout>
