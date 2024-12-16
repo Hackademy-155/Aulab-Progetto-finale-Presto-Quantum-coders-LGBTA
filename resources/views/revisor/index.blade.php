@@ -91,7 +91,7 @@
 
     <div class="container-fluid mt-5">
         <div class="row my-3">
-            <h4 class="text-center text-decoration-underline fs-3 fw-bold">Ultimi articoli revisionati</h4>
+            <h4 class="text-center text-decoration-underline fs-3 fw-bold"> {{__('ui.Ultimi articoli revisionati')}} </h4>
         </div>
 
         @foreach ($products as $product)
@@ -110,7 +110,7 @@
                         <form class="ms-auto" action="{{ route('cancel.product', $product) }}" method="POST">
                             @csrf
                             @method('PATCH')
-                            <button class="annulla-btn ms-auto" type="submit">Annulla</button>
+                            <button class="annulla-btn ms-auto" type="submit"> {{__('ui.Annulla')}} </button>
                         </form>
                     </div>
                 </div>

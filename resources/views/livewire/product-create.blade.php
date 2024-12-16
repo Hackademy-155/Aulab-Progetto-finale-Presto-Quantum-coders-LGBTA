@@ -50,10 +50,10 @@
                     </div>
                 @endif
                 <div class="mb-3 text-center">
-                    <label for="fileInput" class="label my-4">Inserisci le immagini</label>
+                    <label for="fileInput" class="label my-4">{{__('ui.Inserisci le immagini')}}</label>
                     <div class="custom-file-upload">
                         <label for="fileInput" class="btn file-input shadow py-2 px-4">
-                            <span id="fileCount"><strong>Scegli immagini</strong></span>
+                            <span id="fileCount"><strong>{{__('ui.Scegli immagini')}}</strong></span>
                         </label>
                         <input type="file" id="fileInput" wire:model.live="temporary_images" multiple
                             class="d-none @error('temporary_images.*') is-invalid @enderror" accept="image/*">
@@ -74,7 +74,7 @@
                 @if (!empty($images))
                     <div class="row">
                         <col class="12">
-                        <p class="text-center">Photo Preview</p>
+                        <p class="text-center">{{__('ui.Photo Preview')}}</p>
                         <div class="row border-4 border-success rounded py-4 justify-content-center align-items-center">
                             @foreach ($images as $key => $image)
                                 <div class="col-12 col-md-4 d-flex flex-column align-items-center my-3">

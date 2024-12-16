@@ -112,5 +112,4 @@ class ProductCreate extends Component
     {
         return view('livewire.product-create');
     }
-    
 }

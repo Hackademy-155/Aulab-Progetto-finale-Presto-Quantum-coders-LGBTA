@@ -36,7 +36,7 @@
       
       <!-- Links Section -->
       <div class="col-md-5 text-md-center">
-        <h5 class="text-uppercase">Link utili</h5>
+        <h5 class="text-uppercase"> {{__('ui.Link utili')}} </h5>
         <ul class="list-unstyled d-inline-block">
           <li><a href="{{route('lavoraConNoi')}}" class="footer-link">{{__('ui.Lavora con noi')}}</a></li>
           <li><a href="https://aulab.it/" class="footer-link">Partner</a></li>

@@ -72,4 +72,10 @@ return
         'Torna alla home!' => "Retour à la page d'accueil !",
         'Motivazione' => 'Motivation',
         'Not Found' => 'Non trouvé',
+        'Link utili' => 'Liens utiles',
+        'Ultimi articoli revisionati' => 'Derniers articles révisés',
+        'Annulla' => 'Annuler',
+        'Inserisci le immagini' => 'Insérer les images',
+        'Scegli immagini' => 'Choisir des images',
+        'Photo Preview' => 'Aperçu de la photo',
     ];

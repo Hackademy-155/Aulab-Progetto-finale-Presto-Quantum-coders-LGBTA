@@ -72,4 +72,10 @@ return
         'Torna alla home!' => 'ホームに戻る！',
         'Motivazione' => '理由',
         'Not Found' => '見つかりません',
+        'Link utili' => '役立つリンク',
+        'Ultimi articoli revisionati' => '最近改訂された記事',
+        'Annulla' => 'キャンセル',
+        'Inserisci le immagini' => '画像を挿入する',
+        'Scegli immagini' => '画像を選択する',
+        'Photo Preview' => '写真のプレビュー',
     ];
