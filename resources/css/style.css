@@ -53,10 +53,31 @@ html {
     color: var(--secondary-color1);
 }
 
+.tondo{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+
+}
+
+.navbar-toggler:focus-visible{
+    border: none !important;
+    outline: none !important;
+    box-shadow: none;
+}
+
+.navbar-toggler:focus{
+    border: none !important;
+    outline: none !important;
+    box-shadow: none;
+
+}
+
 
 
 
 /* navbar */
+
 
 .navBar {
     /* background: linear-gradient(180deg, var(--secondary-color1) 0%, rgba(66, 129, 164, 0) 100%); */
@@ -254,6 +275,12 @@ footer {
 
 /* Sezione Bottoni  */
 
+.annulla-btn{
+    padding: 5px 10px;
+    border: 2px solid var(--secondary-color1);
+    border-radius: 20px;
+}
+
 .neu-button {
     background-color: var(--acc);
     border-radius: 50px;
@@ -295,6 +322,7 @@ footer {
     font-size: 1rem;
     border-radius: 0.375rem;
     line-height: 1.5;
+    transition: .5s;
 }
 
 .btn-outline-custom:hover {
@@ -491,6 +519,11 @@ footer {
     color: #fff;
 }
 
+.color-category{
+    text-decoration:underline ;
+    color: black;
+}
+
 /* form generale */
 
 .img-preview {
@@ -526,6 +559,18 @@ footer {
     border-radius: 0.5rem;
     padding: 1rem 0.75rem;
     width: 100%;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--clr-alpha);
+    outline: 2px solid var(--bg-dark);
+}
+
+.eye{
+    color: black;
+    border-radius: 0.5rem ;
+    padding: 1rem 0.75rem;
     border: none;
     display: flex;
     align-items: center;

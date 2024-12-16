@@ -21,7 +21,10 @@
 
                     <span class="input-span mb-3">
                         <label for="password" class="label">{{__('ui.Password')}}</label>
-                        <input type="password" name="password" id="password">
+                        <div class="d-flex gap-2">
+                            <input type="password" name="password" id="password">
+                            <a id="eyeBtn" class="eye"><i class="bi bi-eye"></i></a>
+                        </div>
                     </span>
 
                     <div class="mb-3 form-check">
@@ -30,8 +33,17 @@
                     </div>
 
                     <input class="submit1" type="submit" value="Log in" >
+                    @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                    @endif
 
-                    <span class="span">{{__('ui.Non hai un account?')}} <a href="{{route('register')}}" class="endformcolor"> {{__('ui.Registrati')}}</a></span>
+                    <span class="span text-center">{{__('ui.Non hai un account?')}} <a href="{{route('register')}}" class="endformcolor"> {{__('ui.Registrati')}}</a></span>
                 </form>
 
             </div>

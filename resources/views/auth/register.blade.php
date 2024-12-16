@@ -26,12 +26,18 @@
 
                     <span class="input-span mb-3">
                         <label for="password" class="label">{{__('ui.Password')}}</label>
-                        <input type="password" name="password" id="password">
+                        <div class="d-flex gap-2">
+                            <input type="password" name="password" id="password">
+                            <a id="eyeBtn" class="eye"><i class="bi bi-eye"></i></a>
+                        </div>
                     </span>
 
                     <span class="input-span mb-3">
                         <label for="password_confirmation" class="label">{{__('ui.Conferma Password')}}</label>
-                        <input type="password" name="password_confirmation" id="password_confirmation">
+                        <div class="d-flex gap-2">
+                            <input type="password" name="password_confirmation" id="password_confirmation">
+                            <a id="eyeBtnConfirmation" class="eye"><i class="bi bi-eye"></i></a>
+                        </div>
                     </span>
 
 

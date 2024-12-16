@@ -59,7 +59,7 @@
                             class="d-none @error('temporary_images.*') is-invalid @enderror" accept="image/*">
                     </div>
                     <div id="preview" class="mt-3 d-flex flex-wrap justify-content-center"></div>
-                
+
                     @error('temporary_images.*')
                         <p class="fst-italic text-danger">{{ $message }}</p>
                     @enderror
@@ -67,17 +67,17 @@
                         <p class="fst-italic text-danger">{{ $message }}</p>
                     @enderror
                 </div>
-                
-                
-                
+
+
+
 
                 @if (!empty($images))
                     <div class="row">
                         <col class="12">
-                        <p>Photo Preview</p>
+                        <p class="text-center">Photo Preview</p>
                         <div class="row border-4 border-success rounded py-4 justify-content-center align-items-center">
                             @foreach ($images as $key => $image)
-                                <div class="col-12 col-md-6 d-flex flex-column align-items-center my-3">
+                                <div class="col-12 col-md-4 d-flex flex-column align-items-center my-3">
                                     <div class="img-preview mx-auto   rounded-3 "
                                         style="background-image: url({{ $image->temporaryUrl() }});">
                                         <button type="button" class="btn btn-danger mt-1"
@@ -107,9 +107,9 @@
             });
         });
 
-        
 
-// script utile per mostrare all' utente il numero di file selezionati  
+
+// script utile per mostrare all' utente il numero di file selezionati
 document.getElementById('fileInput').addEventListener('change', function(event) {
     const fileCount = document.getElementById('fileCount');
     const files = event.target.files.length;
