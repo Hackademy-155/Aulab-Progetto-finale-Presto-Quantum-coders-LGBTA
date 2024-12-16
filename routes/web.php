@@ -19,8 +19,9 @@ Route::get('/Category/{category}', [ProductController::class, 'filterbyCategory'
 Route::get('/revisor/index', [RevisorController::class, 'index'])->middleware('isRevisor')->name('revisor.index');
 Route::patch('/accept/{product}', [RevisorController::class, 'accept'])->name('accept.product');
 Route::patch('/reject/{product}', [RevisorController::class, 'reject'])->name('reject.product');
+Route::patch('/cancel/{product}', [RevisorController::class, 'cancel'])->name('cancel.product');
 Route::middleware(['web', 'auth'])->group(function () {
-    Route::post('/revisor/request', [RevisorController::class, 'becomeRevisor'])->name('become.revisor');
+Route::post('/revisor/request', [RevisorController::class, 'becomeRevisor'])->name('become.revisor');
 });
 
 

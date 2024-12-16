@@ -41,6 +41,7 @@ class Product extends Model
     {
         return Product::where('is_accepted', null)->count();
     }
+
     public function setAccepted($value)
     {
         $this->is_accepted = $value;
