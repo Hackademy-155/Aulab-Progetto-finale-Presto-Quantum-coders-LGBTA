@@ -43,7 +43,7 @@
                                 <span class="visually-hidden">Next</span>
                             </button>
                         </div>
-                        @foreach ($product_to_check->images as $key => $image)
+                        {{-- @foreach ($product_to_check->images as $key => $image)
                             <div class="col-md-5 ps-3">
                                 <div class="card-body">
                                     <h5>Labels</h5>
@@ -91,7 +91,42 @@
                                     </div>
                                 </div>
                             </div>
-                        @endforeach
+                        @endforeach --}}
+                            
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Immagine</th>
+                                    <th>Labels</th>
+                                    <th>Ratings</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach ($product_to_check->images as $key => $image)
+                                    <tr>
+                                        <td>Immagine n.{{ $key + 1 }}</td>
+                                        <td>
+                                            @if ($image->labels)
+                                                @foreach ($image->labels as $label)
+                                                    #{{ $label }},
+                                                @endforeach
+                                            @else
+                                                <span class="fst-italic">No labels</span>
+                                            @endif
+                                        </td>
+                                        <td>
+                                            <ul class="list-unstyled">
+                                                <li><strong>Adult:</strong> <span class="{{ $image->adult }}"></span></li>
+                                                <li><strong>Violence:</strong> <span class="{{ $image->violence }}"></span></li>
+                                                <li><strong>Spoof:</strong> <span class="{{ $image->spoof }}"></span></li>
+                                                <li><strong>Racy:</strong> <span class="{{ $image->racy }}"></span></li>
+                                                <li><strong>Medical:</strong> <span class="{{ $image->medical }}"></span></li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
                     @else
                         <div class="text-center">
                             <img class="img-fluid rounded shadow" src="https://picsum.photos/200"
