@@ -1,3 +1,3 @@
 <div>
-    <span wire:poll.50ms="updateCount">{{ $count }}</span>
+    <span wire:poll.5s="updateCount">{{ $count }}</span>
 </div>

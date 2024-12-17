@@ -5,27 +5,27 @@ document.addEventListener('livewire:load', function () {
     });
 });
 
-const insertButton = document.getElementById('Insert');
-const audioElement = document.getElementById('audioInsert');
-if(insertButton){
+// const insertButton = document.getElementById('Insert');
+// const audioElement = document.getElementById('audioInsert');
+// if(insertButton){
 
-    document.addEventListener('DOMContentLoaded', function () {
-        const setupClickEvent = () => {
+//     document.addEventListener('DOMContentLoaded', function () {
+//         const setupClickEvent = () => {
 
-            // if (insertButton) {
-                insertButton.addEventListener('click', function () {
-                    audioElement.play();
-                });
-            // }
-        };
+//             // if (insertButton) {
+//                 insertButton.addEventListener('click', function () {
+//                     audioElement.play();
+//                 });
+//             // }
+//         };
 
-        setupClickEvent();
+//         setupClickEvent();
 
-        Livewire.hook('message.processed', () => {
-            setupClickEvent();
-        });
-    });
-}
+//         Livewire.hook('message.processed', () => {
+//             setupClickEvent();
+//         });
+//     });
+// }
 
 
 let eyeBtn = document.querySelector('#eyeBtn');
