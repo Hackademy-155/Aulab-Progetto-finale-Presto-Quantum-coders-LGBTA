@@ -28,7 +28,7 @@ class GoogleVisionSafeSearch implements ShouldQueue
     {
         $i = Image::find($this->product_image_id);
 
-        if(!$i){
+        if (!$i) {
             return;
         }
 
@@ -64,6 +64,5 @@ class GoogleVisionSafeSearch implements ShouldQueue
         $i->violence = $likelihoodName[$violence];
 
         $i->save();
-
     }
 }
