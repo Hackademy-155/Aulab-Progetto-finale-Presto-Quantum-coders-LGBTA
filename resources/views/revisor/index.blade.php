@@ -11,10 +11,11 @@
 
     @if ($product_to_check)
         <div class="container-fluid mb-4 p-0 p-md-5">
-            <div class="row justify-content-around text-center p-0 p-md-5 g-4 shadow-none">
+            <div class="row justify-content-around align-items-center text-center p-0 py-md-5 g-4 ">
+
                 <div class="col-12 col-lg-4 p-5 p-md-1">
                     @if ($product_to_check->images->count())
-                        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                        <div id="carouselExampleIndicators" class="carousel" data-bs-ride="carousel">
                             <div class="carousel-indicators">
                                 @foreach ($product_to_check->images as $key => $image)
                                     <button type="button" data-bs-target="#carouselExampleIndicators"
@@ -43,7 +44,6 @@
                                 <span class="visually-hidden">Next</span>
                             </button>
                         </div>
-
                     @else
                         <div class="text-center">
                             <img class="img-fluid rounded shadow" src="https://picsum.photos/200"
@@ -52,7 +52,47 @@
                     @endif
                 </div>
 
-                <div class="col-12 col-lg-5 p-5 p-md-1">
+
+
+                <div class="col-10 col-lg-4 d-flex flex-column justify-content-center align-items-center mt-4 mt-lg-0">
+                    <div class="table-card p-5">
+                        <h2 class="table-title text-uppercase fw-bold">{{ $product_to_check->title }}</h2>
+                        <hr>
+                        <h5 class="table-subtitle">{{ __('ui.Autore') }}: <span
+                                class="fw-bold">{{ $product_to_check->user->name }}</span>
+                        </h5>
+                        <hr>
+                        <h4 class="table-price fw-bold">{{ number_format($product_to_check->price, 2) }} €</h4>
+                        <hr>
+                        <h6 class="table-category fst-italic">{{ __('ui.' . $product_to_check->category->name) }}</h6>
+                        <hr>
+                        <h5 class="table-description-title">{{ __('ui.Descrizione') }}</h5>
+                        <p class="table-description mt-3 text-center">{{ $product_to_check->description }}</p>
+                        <div class="d-flex gap-3 pt-4">
+                            <form action="{{ route('reject.product', ['product' => $product_to_check]) }}"
+                                method="POST" class="flex-fill">
+                                @csrf
+                                @method('PATCH')
+                                <button class="btn btn-danger w-100 py-2">{{ __('ui.Rifiuta') }}</button>
+                            </form>
+
+                            <form action="{{ route('accept.product', ['product' => $product_to_check]) }}"
+                                method="POST" class="flex-fill">
+                                @csrf
+                                @method('PATCH')
+                                <button class="btn btn-success w-100 py-2">{{ __('ui.Accetta') }}</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    @if (session()->has('message'))
+                        <div class="alert alert-success mt-3">
+                            {{ session('message') }}
+                        </div>
+                    @endif
+                </div>
+
+                <div class="col-12 col-lg-6 mt-4 mt-lg-0">
                     <table>
                         <thead>
                             <tr>
@@ -62,8 +102,8 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($product_to_check->images as $key => $image)   
-                            <tr>
+                            @foreach ($product_to_check->images as $key => $image)
+                                <tr>
                                     <td>Immagine n.{{ $key + 1 }}</td>
                                     <td>
                                         @if ($image->labels)
@@ -77,53 +117,18 @@
                                     <td>
                                         <ul class="list-unstyled">
                                             <li><strong>Adult:</strong> <span class="{{ $image->adult }}"></span></li>
-                                            <li><strong>Violence:</strong> <span class="{{ $image->violence }}"></span></li>
+                                            <li><strong>Violence:</strong> <span class="{{ $image->violence }}"></span>
+                                            </li>
                                             <li><strong>Spoof:</strong> <span class="{{ $image->spoof }}"></span></li>
                                             <li><strong>Racy:</strong> <span class="{{ $image->racy }}"></span></li>
-                                            <li><strong>Medical:</strong> <span class="{{ $image->medical }}"></span></li>
+                                            <li><strong>Medical:</strong> <span class="{{ $image->medical }}"></span>
+                                            </li>
                                         </ul>
                                     </td>
                                 </tr>
                             @endforeach
                         </tbody>
                     </table>
-                </div>
-
-                <div class="col-12 col-lg-8 d-flex flex-column justify-content-center align-items-center mt-4 mt-lg-0">
-                    <div class="table shadow">
-                        <h2 class="text-uppercase fw-bold">{{ $product_to_check->title }}</h2>
-                        <hr>
-                        <h5>{{ __('ui.Autore') }}: <span class="fw-bold">{{ $product_to_check->user->name }}</span>
-                        </h5>
-                        <hr>
-                        <h4 class="text-primary fw-bold">{{ number_format($product_to_check->price, 2) }} €</h4>
-                        <hr>
-                        <h6 class="text-muted fst-italic">{{ __('ui.' . $product_to_check->category->name) }}</h6>
-                        <hr>
-                        <h5>{{__('ui.Descrizione')}}</h4>
-                        <p class="mt-3">{{ $product_to_check->description }}</p>
-                        <div class="d-flex gap-3 pt-4">
-                            <form action="{{ route('reject.product', ['product' => $product_to_check]) }}" method="POST"
-                                class="flex-fill">
-                                @csrf
-                                @method('PATCH')
-                                <button class="btn btn-outline-danger w-100 py-2">{{ __('ui.Rifiuta') }}</button>
-                            </form>
-    
-                            <form action="{{ route('accept.product', ['product' => $product_to_check]) }}" method="POST"
-                                class="flex-fill">
-                                @csrf
-                                @method('PATCH')
-                                <button class="btn btn-outline-success w-100 py-2">{{ __('ui.Accetta') }}</button>
-                            </form>
-                        </div>
-                    </div>
-
-                    @if (session()->has('message'))
-                        <div class="alert alert-success mt-3">
-                            {{ session('message') }}
-                        </div>
-                    @endif
                 </div>
 
             </div>
@@ -141,16 +146,35 @@
 
     <hr class="w-75 mx-auto py-0 my-4">
 
+
     <div class="container-fluid mt-5">
         <div class="row my-3">
             <h4 class="text-center text-decoration-underline fs-3 fw-bold"> {{ __('ui.Ultimi articoli revisionati') }}
             </h4>
         </div>
 
+        <span class="d-flex justify-content-center align-items-center gap-5 mb-5">
+            <div class="d-md-flex justify-content-center">
+                <div class="bg-secondary tondo mx-auto"></div>
+                <p>In revisione</p>
+            </div>
+
+            <div class="d-md-flex justify-content-center">
+                <div class="bg-danger tondo mx-auto"></div>
+                <p>Rifiutato</p>
+            </div>
+
+            <div class="d-md-flex">
+                <div class="bg-success tondo mx-auto"></div>
+                <p>Accettato</p>
+            </div>
+
+        </span>
+
         @foreach ($products as $product)
             @if ($product != $product_to_check)
-                <div class="row justify-content-center my-3 align-items-center w-100">
-                    <div class="col-10 col-md-5 d-flex justify-content-center align-items-center">
+                <div class="row justify-content-center my-3 align-items-center w-100 mx-auto">
+                    <div class="col-11 col-md-5 d-flex justify-content-center align-items-center">
                         @if ($product->is_accepted == '')
                             <div class="bg-secondary tondo me-3"></div>
                         @elseif ($product->is_accepted == false)

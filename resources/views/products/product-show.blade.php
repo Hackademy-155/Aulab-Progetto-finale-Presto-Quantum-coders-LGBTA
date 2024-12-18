@@ -41,7 +41,7 @@
             </div>
 
             <div class="col-12 col-md-6 text-center">
-                <p class="description mt-5 mt-md-0"><strong>{{ __('ui.Descrizione') }}</strong>
+                <p class="description mt-5 mt-md-0"><strong>{{ __('ui.Descrizione') }}:</strong>
                     {{ $product->description }}</p>
                 <div class="d-flex justify-content-around mt-4">
                     <p class="fs-5 fw-bold">{{ __('ui.Prezzo') }}: {{ $product->price }}$</p>

@@ -272,18 +272,18 @@
 
     {{-- offcanvas --}}
 
-    <div class="offcanvas  offcanvas-top OffCanvas-custom p-0 m-0 custom-vertical rounded-4 " tabindex="-1"
+    <div class="offcanvas offcanvas-top OffCanvas-custom p-0 m-0 custom-vertical " tabindex="-1"
         id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
         <div class="d-flex justify-content-around align-items-center text-center ">
 
-            <button type="button" class="btn-close ms-auto mx-4 mt-4" data-bs-dismiss="offcanvas"
+            <button type="button" class="btn-close ms-auto mx-4 mt-4 mb-4 mb-md-1" data-bs-dismiss="offcanvas"
                 aria-label="Close"></button>
         </div>
         <div class="offcanvas-body  p-0 ">
             <div class="container">
-                <div class="row ">
-                    <div class="col-12 ">
-                        <form class="d-flex ms-auto " role="search" action="{{ route('products.search') }}"
+                <div class="row">
+                    <div class="col-12 mb-0">
+                        <form class="d-flex ms-auto" role="search" action="{{ route('products.search') }}"
                             method="GET">
                             <input class="form-control me-2" name="query" type="search"
                                 placeholder="{{ __('ui.Cerca il tuo prodotto...') }}" aria-label="Search">

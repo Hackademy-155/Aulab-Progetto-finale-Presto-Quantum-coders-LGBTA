@@ -2,7 +2,7 @@
     <main class="min-vh-100 pt-5 mt-5">
         <div class="container py-5">
             <div class="row justify-content-center mb-4">
-                <h2 class="text-center title-custom  display-1">{{ $category->name }}</h2>
+                <h2 class="text-center title-custom display-1">{{ __('ui.' . $category->name) }}</h2>
             </div>
             <div class="row justify-content-center">
                

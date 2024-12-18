@@ -801,19 +801,63 @@ ul.list-unstyled li strong {
 }
 
 
-.table{
-    margin-top: 120px;
-    padding: 50px 50px;
-    border-radius: 10%;
+
+.table-card {
+    background: linear-gradient(180deg, var(--main-color1), var(--secondary-color1)); 
+    border: 1px solid var(--secondary-color1); 
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.621);
+    margin-bottom: 50px;
 }
 
-.table h2{
-  font-weight: bolder;
-  text-decoration: underline;
-  background: linear-gradient(270deg, var(--acc), var(--secondary-color1));
-  background-clip: text;
-  -webkit-background-clip: text; 
-  -webkit-text-fill-color: transparent; 
+
+.table-title {
+    background: linear-gradient(130deg, var(--acc), var(--secondary-color1));
+    background-clip: text;
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+    font-weight: bolder;
+    cursor: context-menu; 
+}
+
+.table-subtitle{
+    color: var(--main-color1);
+    cursor: context-menu;
+}
+
+.table-card hr {
+    border-top: 2px solid var(--secondary-color1);
+    margin: 15px 0;
+    z-index: 1;
+}
+
+.table-price {
+    color: var(--main-color1);
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    cursor: context-menu;
+}
+
+.table-category {
+    color: var(--main-color1);
+    font-style: italic;
+    z-index: 1;
+    cursor: context-menu;
+}
+
+.table-description-title {
+    color: var(--main-color1);
+    font-weight: bolder;
+    cursor: context-menu;
+}
+
+.table-description {
+    color: var(--main-color1);
+    line-height: 1.6;
+    z-index: 1;
+    transition: color 0.3s ease, transform 0.3s ease;
+    cursor: context-menu;
 }
 
 
@@ -823,6 +867,9 @@ ul.list-unstyled li strong {
 .OffCanvas-custom {
     background: linear-gradient(290deg, var(--main-color2), var(--secondary-color1));
     font-weight: bolder;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
 .custom-vertical {
@@ -835,6 +882,8 @@ ul.list-unstyled li strong {
     padding: 0 !important;
     margin: 0 !important;
     height: 10% !important;
+    width: 100% !important;
+    align-items: center !important;
 }
 
 .offcanvas-top {
@@ -843,7 +892,6 @@ ul.list-unstyled li strong {
 
 .button-offcanvas {
     background-color: var(--secondary-color1);
-    border-radius: 15%;
     padding: 10px 20px;
     border: none;
     color: white;
@@ -973,5 +1021,9 @@ ul.list-unstyled li strong {
 
     .product-card .button button {
         padding: 8px 15px;
+    }
+
+    table{
+        margin-bottom: 50px;
     }
 }
