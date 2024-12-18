@@ -102,8 +102,8 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($product_to_check->images as $key => $image)
-                                    <tr>
+                                @foreach ($product_to_check->images as $key => $image)   
+                                <tr>
                                         <td>Immagine n.{{ $key + 1 }}</td>
                                         <td>
                                             @if ($image->labels)

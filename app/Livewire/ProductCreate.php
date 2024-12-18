@@ -73,6 +73,8 @@ class ProductCreate extends Component
         }
         session()->flash('success', 'Prodotto aggiunto con successo');
         $this->cleanForm();
+
+        
     }
 
 
