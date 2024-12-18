@@ -43,90 +43,7 @@
                                 <span class="visually-hidden">Next</span>
                             </button>
                         </div>
-                        {{-- @foreach ($product_to_check->images as $key => $image)
-                            <div class="col-md-5 ps-3">
-                                <div class="card-body">
-                                    <h5>Labels</h5>
-                                    @if ($image->labels)
-                                        @foreach ($image->labels as $label)
-                                            #{{ $label }},
-                                        @endforeach
-                                    @else
-                                        <p class="fst-italic">No labels</p>
-                                    @endif
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="card-body">
-                                    <h5>Ratings immagine</h5>
-                                    <div class="row justify-content-center">
-                                        <div class="col-2">
-                                            <div class="text-center mx-auto {{ $image->adult }}"></div>
-                                        </div>
-                                        <div class="col-10">adult</div>
-                                    </div>
-                                    <div class="row justify-content-center">
-                                        <div class="col-2">
-                                            <div class="text-center mx-auto {{ $image->violence }}"></div>
-                                        </div>
-                                        <div class="col-10">violence</div>
-                                    </div>
-                                    <div class="row justify-content-center">
-                                        <div class="col-2">
-                                            <div class="text-center mx-auto {{ $image->spoof }}"></div>
-                                        </div>
-                                        <div class="col-10">spoof</div>
-                                    </div>
-                                    <div class="row justify-content-center">
-                                        <div class="col-2">
-                                            <div class="text-center mx-auto {{ $image->racy }}"></div>
-                                        </div>
-                                        <div class="col-10">racy</div>
-                                    </div>
-                                    <div class="row justify-content-center">
-                                        <div class="col-2">
-                                            <div class="text-center mx-auto {{ $image->medical }}"></div>
-                                        </div>
-                                        <div class="col-10">medical</div>
-                                    </div>
-                                </div>
-                            </div>
-                        @endforeach --}}
-                            
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th>Immagine</th>
-                                    <th>Labels</th>
-                                    <th>Ratings</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach ($product_to_check->images as $key => $image)   
-                                <tr>
-                                        <td>Immagine n.{{ $key + 1 }}</td>
-                                        <td>
-                                            @if ($image->labels)
-                                                @foreach ($image->labels as $label)
-                                                    #{{ $label }},
-                                                @endforeach
-                                            @else
-                                                <span class="fst-italic">No labels</span>
-                                            @endif
-                                        </td>
-                                        <td>
-                                            <ul class="list-unstyled">
-                                                <li><strong>Adult:</strong> <span class="{{ $image->adult }}"></span></li>
-                                                <li><strong>Violence:</strong> <span class="{{ $image->violence }}"></span></li>
-                                                <li><strong>Spoof:</strong> <span class="{{ $image->spoof }}"></span></li>
-                                                <li><strong>Racy:</strong> <span class="{{ $image->racy }}"></span></li>
-                                                <li><strong>Medical:</strong> <span class="{{ $image->medical }}"></span></li>
-                                            </ul>
-                                        </td>
-                                    </tr>
-                                @endforeach
-                            </tbody>
-                        </table>
+
                     @else
                         <div class="text-center">
                             <img class="img-fluid rounded shadow" src="https://picsum.photos/200"
@@ -135,14 +52,71 @@
                     @endif
                 </div>
 
-                <div class="col-10 col-lg-4 d-flex flex-column justify-content-center align-items-center mt-4 mt-lg-0">
-                    <div>
-                        <h2 class="h4 fw-bold">{{ $product_to_check->title }}</h2>
+                <div class="col-12 col-lg-5 p-5 p-md-1">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Immagine</th>
+                                <th>Tags</th>
+                                <th>Criteri</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach ($product_to_check->images as $key => $image)   
+                            <tr>
+                                    <td>Immagine n.{{ $key + 1 }}</td>
+                                    <td>
+                                        @if ($image->labels)
+                                            @foreach ($image->labels as $label)
+                                                #{{ $label }},
+                                            @endforeach
+                                        @else
+                                            <span class="fst-italic">No labels</span>
+                                        @endif
+                                    </td>
+                                    <td>
+                                        <ul class="list-unstyled">
+                                            <li><strong>Adult:</strong> <span class="{{ $image->adult }}"></span></li>
+                                            <li><strong>Violence:</strong> <span class="{{ $image->violence }}"></span></li>
+                                            <li><strong>Spoof:</strong> <span class="{{ $image->spoof }}"></span></li>
+                                            <li><strong>Racy:</strong> <span class="{{ $image->racy }}"></span></li>
+                                            <li><strong>Medical:</strong> <span class="{{ $image->medical }}"></span></li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="col-12 col-lg-8 d-flex flex-column justify-content-center align-items-center mt-4 mt-lg-0">
+                    <div class="table shadow">
+                        <h2 class="text-uppercase fw-bold">{{ $product_to_check->title }}</h2>
+                        <hr>
                         <h5>{{ __('ui.Autore') }}: <span class="fw-bold">{{ $product_to_check->user->name }}</span>
                         </h5>
+                        <hr>
                         <h4 class="text-primary fw-bold">{{ number_format($product_to_check->price, 2) }} €</h4>
+                        <hr>
                         <h6 class="text-muted fst-italic">{{ __('ui.' . $product_to_check->category->name) }}</h6>
+                        <hr>
+                        <h5>{{__('ui.Descrizione')}}</h4>
                         <p class="mt-3">{{ $product_to_check->description }}</p>
+                        <div class="d-flex gap-3 pt-4">
+                            <form action="{{ route('reject.product', ['product' => $product_to_check]) }}" method="POST"
+                                class="flex-fill">
+                                @csrf
+                                @method('PATCH')
+                                <button class="btn btn-outline-danger w-100 py-2">{{ __('ui.Rifiuta') }}</button>
+                            </form>
+    
+                            <form action="{{ route('accept.product', ['product' => $product_to_check]) }}" method="POST"
+                                class="flex-fill">
+                                @csrf
+                                @method('PATCH')
+                                <button class="btn btn-outline-success w-100 py-2">{{ __('ui.Accetta') }}</button>
+                            </form>
+                        </div>
                     </div>
 
                     @if (session()->has('message'))
@@ -150,23 +124,8 @@
                             {{ session('message') }}
                         </div>
                     @endif
-
-                    <div class="d-flex gap-3 pt-4">
-                        <form action="{{ route('reject.product', ['product' => $product_to_check]) }}" method="POST"
-                            class="flex-fill">
-                            @csrf
-                            @method('PATCH')
-                            <button class="btn btn-outline-danger w-100 py-2">{{ __('ui.Rifiuta') }}</button>
-                        </form>
-
-                        <form action="{{ route('accept.product', ['product' => $product_to_check]) }}" method="POST"
-                            class="flex-fill">
-                            @csrf
-                            @method('PATCH')
-                            <button class="btn btn-outline-success w-100 py-2">{{ __('ui.Accetta') }}</button>
-                        </form>
-                    </div>
                 </div>
+
             </div>
         </div>
     @else

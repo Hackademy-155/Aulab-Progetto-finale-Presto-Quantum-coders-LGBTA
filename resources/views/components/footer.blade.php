@@ -50,6 +50,6 @@
   <!-- Copyright -->
   <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
     © 2024 Copyright:
-    <a class="footer-brand" href="#!">Quantum-coders</a>
+    <a class="footer-brand" target="_blank" href="https://github.com/Hackademy-155/Aulab-Progetto-finale-Presto-Quantum-coders-LGBTA">Quantum-coders</a>
   </div>
 </footer>

@@ -741,10 +741,85 @@ footer {
 
 
 
+/* Tabella */
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: var(--main-color1);
+    color: var(--secondary-color1);
+    border: 1px solid var(--secondary-color1);
+    overflow: hidden;
+}
+
+thead {
+    background-color: var(--secondary-color1);
+    color: var(--main-color2);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+thead th {
+    padding: 12px 15px;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: var(--main-color2);
+}
+
+tbody tr:nth-child(even) {
+    background-color: var(--main-color1);
+}
+
+tbody tr:hover {
+    background: linear-gradient(90deg, var(--secondary-color1), var(--main-color1));
+    color: var(--main-color2);
+    cursor: pointer;
+}
+
+tbody td {
+    padding: 10px 15px;
+    text-align: center;
+}
+
+
+ul.list-unstyled {
+    padding: 10px;
+    margin: 0;
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+ul.list-unstyled li {
+    margin: 5px 0;
+}
+
+ul.list-unstyled li strong {
+    color: var(--secondary-color2);
+}
+
+
+.table{
+    margin-top: 120px;
+    padding: 50px 50px;
+    border-radius: 10%;
+}
+
+.table h2{
+  font-weight: bolder;
+  text-decoration: underline;
+  background: linear-gradient(270deg, var(--acc), var(--secondary-color1));
+  background-clip: text;
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent; 
+}
 
 
 
 /* Offcanvas */
+
 .OffCanvas-custom {
     background: linear-gradient(290deg, var(--main-color2), var(--secondary-color1));
     font-weight: bolder;
