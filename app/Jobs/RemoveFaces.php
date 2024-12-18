@@ -8,7 +8,7 @@ use Spatie\Image\Enums\AlignPosition;
 use Spatie\Image\Image as SpatieImage;
 use Illuminate\Foundation\Queue\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
-use Google\Cloud\Vision\V1\Client\ImageAnnotatorClient;
+use Google\Cloud\Vision\V1\ImageAnnotatorClient;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
@@ -34,7 +34,7 @@ class RemoveFaces implements ShouldQueue
         }
         $srcPath = storage_path('app/public/' . $i->path);
         $image = file_get_contents($srcPath);
-        putenv('GOOGLE_APPLICATION_CREDENTIALS' . base_path('google_credential.json'));
+        putenv('GOOGLE_APPLICATION_CREDENTIALS=' . base_path('google_credential.json'));
         $imageAnnotator = new ImageAnnotatorClient();
         $response = $imageAnnotator->faceDetection($image);
         $faces = $response->getFaceAnnotations();
