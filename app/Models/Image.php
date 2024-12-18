@@ -18,8 +18,9 @@ class Image extends Model
     {
         return $this->belongsTo(Product::class);
     }
-    public static function getUrlByFilePath($filePath, $w = null, $h = null){
-        if(!$w && !$h){
+    public static function getUrlByFilePath($filePath, $w = null, $h = null)
+    {
+        if (!$w && !$h) {
             return Storage::url($filePath);
         }
         $path = dirname($filePath);
@@ -27,13 +28,15 @@ class Image extends Model
         $file = "{$path}/crop_{$w}x{$h}_{$filename}";
         return Storage::url($file);
     }
-    public function getUrl($w = null, $h = null){
+    public function getUrl($w = null, $h = null)
+    {
         return self::getUrlByFilePath($this->path, $w, $h);
     }
 
-    protected function casts(): array{
+    protected function casts(): array
+    {
         return [
-            'labels'=>'array',
+            'labels' => 'array',
         ];
     }
 }
