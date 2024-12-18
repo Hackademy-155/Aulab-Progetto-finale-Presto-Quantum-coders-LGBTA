@@ -66,7 +66,7 @@ class ProductCreate extends Component
                 $newFileName = "products/{$this->product->id}";
                 $newImage = $this->product->images()->create(['path' => $image->store($newFileName, 'public')]);
                 RemoveFaces::withChain([
-                    new ResizeImage($newImage->path, 800, 600),
+                    new ResizeImage($newImage->path, 571, 450),
                     new GoogleVisionSafeSearch($newImage->id),
                     new GoogleVisionLabelImage($newImage->id)
                 ])->dispatch($newImage->id);

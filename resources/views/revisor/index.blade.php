@@ -26,7 +26,7 @@
                             <div class="carousel-inner d-flex">
                                 @foreach ($product_to_check->images as $key => $image)
                                     <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
-                                        <img src="{{ $image->getUrl(800, 600) }}" class="d-block"
+                                        <img src="{{ $image->getUrl(571, 450) }}" class="d-block"
                                             alt="Immagine {{ $key + 1 }} dell'articolo {{ $product_to_check->title }}">
                                     </div>
                                 @endforeach

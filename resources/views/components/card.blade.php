@@ -2,7 +2,7 @@
 
     <div class="main-images">
         <img class="rounded-4"
-            src="{{ $product->images->isNotEmpty() ? $product->images->first()->getUrl(800, 600) : 'https://picsum.photos/300' }}"
+            src="{{ $product->images->isNotEmpty() ? $product->images->first()->getUrl(571, 450) : 'https://picsum.photos/300' }}"
             alt="Immagine del prodotto {{ $product->name }} ">
     </div>
     <div class="shoe-details">

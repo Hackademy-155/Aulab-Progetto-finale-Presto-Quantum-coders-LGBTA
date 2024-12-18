@@ -19,7 +19,7 @@
                         <div class="carousel-inner">
                             @foreach ($product->images as $key => $image)
                                 <div class="carousel-item @if ($loop->first) active @endif">
-                                    <img src="{{ $image->getUrl(800, 600) }}" class="d-block w-100 zoom-on-hover"
+                                    <img src="{{ $image->getUrl(571, 450) }}" class="d-block w-100 zoom-on-hover"
                                         alt="Immagine {{ $key + 1 }} dell'articolo {{ $product->title }}">
                                 </div>
                             @endforeach
